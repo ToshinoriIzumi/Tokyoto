@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 2022_08_26_013623) do
     t.index ["city_id"], name: "index_conditions_supports_on_city_id"
     t.index ["income_id"], name: "index_conditions_supports_on_income_id"
     t.index ["status_id"], name: "index_conditions_supports_on_status_id"
+    t.index ["support_id", "city_id", "income_id", "age_id", "status_id", "benefit_id"], name: "condition_combination", unique: true
     t.index ["support_id"], name: "index_conditions_supports_on_support_id"
   end
 

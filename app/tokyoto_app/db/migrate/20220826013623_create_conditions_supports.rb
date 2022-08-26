@@ -11,6 +11,6 @@ class CreateConditionsSupports < ActiveRecord::Migration[6.0]
       t.timestamps
     end
 
-    # add_index :conditions_supports, :column_name, name: 'condition_combination' [:support_id, :city_id, :income_id, :age_id, :status_id, :benefit_id], unique: true
+    add_index :conditions_supports, :column_name, name: 'condition_combination', [:support_id, :city_id, :income_id, :age_id, :status_id, :benefit_id], unique: true
   end
 end

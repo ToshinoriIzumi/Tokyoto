@@ -24,3 +24,5 @@ RUN git clone https://github.com/rbenv/rbenv.git ~/.rbenv && \
     $HOME/.rbenv/shims/gem install bundler && \
     $HOME/.rbenv/shims/gem install rails -v 6.0.5
 RUN echo "export LANG=ja_JP.UTF-8" >> ~/.bashrc
+
+# CMD cd /home/rails/tokyoto_app && bin/rails s -b 0.0.0.0

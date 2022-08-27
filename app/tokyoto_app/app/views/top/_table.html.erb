@@ -1,0 +1,26 @@
+<table>
+  <thead>
+    <tr>
+      <th>制度名</th>
+      <th>申込期限</th>
+      <th>公式サイト</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% supports.each do |support| %>
+      <tr>
+        <td><%= link_to "#{support.support_name}", top_path(support) %></td>
+        <td>
+          <% if support.application_limit.empty? %>
+            <%= "なし" %>
+          <% else%>
+            <%= support.application_limit %>
+          <% end %>
+        </td>
+        <td><%= link_to "公式サイト", support.url %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

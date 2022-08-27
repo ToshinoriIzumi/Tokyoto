@@ -1,0 +1,5 @@
+<%= search_form_for @q, url: '/search' do |f| %>
+  <%= f.label :support_name_cont, '制度名' %>
+  <%= f.search_field :support_name_cont %>
+  <%= f.submit '検索' %>
+<% end %>

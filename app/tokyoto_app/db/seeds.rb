@@ -6,3 +6,10 @@ Support.create!(
   application_limit: '',
   url: 'https://www.city.shinagawa.tokyo.jp/PC/kodomo/kodomo-hitorioya/hpg000001247.html'
 )
+Support.create!(
+  support_name: '認証保育所・認可外保育施設の保育料助成',
+  content: '都内の認証保育所・認可外保育施設（認証保育所を除く、一定の要件を満たす施設が対象）を利用する方の負担を軽減するため、保育料の助成を実施しています。',
+  application_method: '',
+  application_limit: '',
+  url: 'https://www.city.shinjuku.lg.jp/kodomo/file03_04_00011.html'
+)

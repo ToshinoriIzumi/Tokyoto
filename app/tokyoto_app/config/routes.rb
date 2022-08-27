@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   root "top#index"
-  resources :top, only: %i[top show]
-  get 'search', to: 'top#search'
+  resources :top, only: %i[index show]
+  get "search", to: "top#search"
 end

@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(version: 2022_08_26_013623) do
     t.integer "is_myself", default: 0, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["money", "is_myself"], name: "index_incomes_on_money_and_is_myself", unique: true
   end
 
   create_table "statuses", force: :cascade do |t|

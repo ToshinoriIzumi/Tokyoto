@@ -1,5 +1,11 @@
-<h1>データ一覧</h1>
-
-<%= render "search_form" %>
-
-<%= render partial: "table", locals: {supports: @supports} %>
+<section class="">
+  <div class=" items-center px-4 py-5 lg:px-20">
+    <div class="mt-8">
+      <div class="mt-6">
+        <h1>データ一覧</h1>
+        <%= render "search_form" %>
+        <%= render partial: "table", locals: {supports: @supports} %>
+      </div>
+    </div>
+  </div>
+</section>

@@ -7,9 +7,10 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
   </head>
 
-  <body>
+  <body class="bg-white text-gray-600 work-sans leading-normal text-base tracking-normal">
     <%= yield %>
   </body>
 </html>

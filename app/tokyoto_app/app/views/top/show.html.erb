@@ -2,24 +2,24 @@
   <section class= "basic-info text-center">
     <h3 class= "font-bold text-4xl"><%= @support.support_name %></h3>
   </section>
-  <section class="gallery my-5">
-    <div class="shop-detail ml-3">
-      <div class="flex text-gray-500 text-base mb-4 flex-wrap">
-        <p class="px-4 mr-4 font-semibold text-center">制度内容</p>
-        <p class="text-base"><%= @support.content %></p>
-      </div>
-
-      <div class="flex text-gray-500 text-base mb-4 flex-wrap">
-        <p class="px-4 mr-4 font-semibold text-center">申請方法</p>
-        <p class="text-base"><%= @support.application_method %></p>
-      </div>
-      <div class="flex text-gray-500 text-base mb-4 flex-wrap">
-        <p class="px-4 mr-4 font-semibold">申請期限</p>
-        <p class="text-base"><%= @support.application_limit %></p>
-      </div>
-      <div class="flex text-gray-500 text-base mb-4 flex-wrap">
-        <p class="text-base"><%= link_to "公式サイト", @support.url %></p>
-      </div>
-    </div>
-  </section>
+  <table class="table-auto">
+    <tr>
+      <td class="border px-4 py-2">制度内容</td>
+      <td class="border px-4 py-2"><%= @support.content %></td>
+    </tr>
+    <tr>
+      <td class="border px-4 py-2">申請方法</td>
+      <td class="border px-4 py-2"><%= @support.application_method %></td>
+    </tr>
+    <tr>
+      <td class="border px-4 py-2">申請期限</td>
+      <td class="border px-4 py-2"><%= @support.application_limit %></td>
+    </tr>
+    <tr>
+      <td class="border px-4 py-2">公式サイト</td>
+      <td class="border px-4 py-2"><%= link_to @support.url, @support.url %></td>
+    </tr>
+  </table>
 </div>
+
+<%= link_to "制度一覧に戻る", root_path %>

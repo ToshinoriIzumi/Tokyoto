@@ -1,3 +1,4 @@
+
 class Income < ApplicationRecord
   has_many :contidions_supports, dependent: :destroy
 

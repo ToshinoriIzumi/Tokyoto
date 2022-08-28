@@ -73,3 +73,25 @@ Support.create!(
     },
   ]
 )
+
+Income.create!(
+  [
+    {
+      money: 200,
+      is_myself: 0
+    }
+  ]
+)
+
+ConditionsSupport.create!(
+  [
+    {
+      support_id: 1,
+      city_id: 1,
+      income_id: 1,
+      age_id: 1,
+      status_id: 1,
+      benefit_id: 1,
+    }
+  ]
+)

@@ -1,0 +1,13 @@
+<h1>ログインページ</h1>
+<%= form_with url: login_path, local: true do |f| %>
+  <div>
+    <%= f.label "メールアドレス" %>
+    <%= f.text_field :email %>
+  </div>
+  <div>
+    <%= f.label "パスワード" %>
+    <%= f.password_field :password %>
+  </div>
+  <%= f.submit 'ログイン' %>
+<% end %>
+<%= link_to "新規登録へ", new_user_path %>

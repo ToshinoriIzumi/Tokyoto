@@ -1,8 +1,25 @@
-<h1>制度詳細</h1>
-<div>
-  <div><%= @support.support_name %></div>
-  <div><%= @support.content %></div>
-  <div><%= @support.application_method %></div>
-  <div><%= @support.application_limit %></div>
-  <div><%= link_to "公式サイト", @support.url %></div>
+<div class="container mx-auto my-5 py-5 px-5 bg-white-100 md:rounded-3xl md:px-20">
+  <section class= "basic-info text-center">
+    <h3 class= "font-bold text-4xl"><%= @support.support_name %></h3>
+  </section>
+  <table class="table-auto">
+    <tr>
+      <td class="border px-4 py-2">制度内容</td>
+      <td class="border px-4 py-2"><%= @support.content %></td>
+    </tr>
+    <tr>
+      <td class="border px-4 py-2">申請方法</td>
+      <td class="border px-4 py-2"><%= @support.application_method %></td>
+    </tr>
+    <tr>
+      <td class="border px-4 py-2">申請期限</td>
+      <td class="border px-4 py-2"><%= @support.application_limit %></td>
+    </tr>
+    <tr>
+      <td class="border px-4 py-2">公式サイト</td>
+      <td class="border px-4 py-2"><%= link_to @support.url, @support.url %></td>
+    </tr>
+  </table>
 </div>
+
+<%= link_to "制度一覧に戻る", root_path %>

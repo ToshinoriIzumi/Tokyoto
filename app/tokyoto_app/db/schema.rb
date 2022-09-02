@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 2022_08_26_013623) do
   create_table "conditions_supports", force: :cascade do |t|
     t.bigint "support_id", null: false
     t.bigint "city_id", null: false
+    t.integer "dependents_num", null: false
     t.bigint "income_id", null: false
     t.bigint "age_id", null: false
     t.bigint "status_id", null: false

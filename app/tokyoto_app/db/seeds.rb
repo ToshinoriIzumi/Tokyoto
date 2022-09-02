@@ -77,7 +77,7 @@ Support.create!(
 Income.create!(
   [
     {
-      money: 200,
+      money: 1920000,
       is_myself: 0
     }
   ]
@@ -88,9 +88,10 @@ ConditionsSupport.create!(
     {
       support_id: 1,
       city_id: 1,
+      dependents_num: 0
       income_id: 1,
       age_id: 1,
-      status_id: 1,
+      status_id: 4,
       benefit_id: 1,
     }
   ]

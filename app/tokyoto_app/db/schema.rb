@@ -83,7 +83,7 @@ ActiveRecord::Schema.define(version: 2022_08_31_005359) do
     t.string "salt"
     t.string "first_name", null: false
     t.string "last_name", null: false
-    t.string "role", default: "0", null: false
+    t.integer "role", default: 0, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_users_on_email", unique: true

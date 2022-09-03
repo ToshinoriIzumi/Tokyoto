@@ -6,7 +6,7 @@ class SorceryCore < ActiveRecord::Migration[6.0]
       t.string :salt
       t.string :first_name, null: false
       t.string :last_name, null: false
-      t.string :role, null:false, default: 0
+      t.integer :role, null:false, default: 0
 
       t.timestamps                null: false
     end

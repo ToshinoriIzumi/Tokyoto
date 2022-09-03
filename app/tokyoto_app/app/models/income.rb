@@ -4,5 +4,5 @@ class Income < ApplicationRecord
 
   validates :money, presence: true, uniqueness: true
   validates :is_myself, presence: true
-  enum is_myself: { user: 0, other: 1 }
+  enum is_myself: { user: 0, other: 1 , household: 2 }
 end

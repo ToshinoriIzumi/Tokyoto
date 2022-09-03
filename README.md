@@ -10,6 +10,13 @@
 4. Dockerコンテナの起動
     - bash run.sh
 
+### Railsサーバーの起動方法
+1. Dockerコンテナに入る。
+    - docker exec -it rails_web /bin/bash
+2. Railsサーバーの起動
+    - cd ./tokyoto_app
+    - bin/rails s -b 0.0.0.0
+
 ### アプリ停止方法
 1. フォルダの移動
     - cd ./shell

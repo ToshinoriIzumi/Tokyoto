@@ -5,7 +5,7 @@ class TopController < ApplicationController
   def index
     @supports = Support.all
   end
-  
+
   def search
     @results = @q.result
   end

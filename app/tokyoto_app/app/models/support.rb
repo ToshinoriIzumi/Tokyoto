@@ -1,5 +1,5 @@
 class Support < ApplicationRecord
-  has_many :contidions_supports, dependent: :destroy
+  has_many :conditions_supports, dependent: :destroy
 
   validates :support_name, presence: true
   validates :content, presence: true

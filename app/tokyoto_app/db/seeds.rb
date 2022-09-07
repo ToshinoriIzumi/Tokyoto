@@ -73,3 +73,17 @@ Support.create!(
     },
   ]
 )
+
+City.create!(
+  [
+    {
+      city_name: '品川区'
+    },
+    {
+      city_name: '新宿区'
+    },
+    {
+      city_name: '中央区'
+    }
+  ]
+)

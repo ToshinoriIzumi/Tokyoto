@@ -15,9 +15,7 @@ class TopController < ApplicationController
   end
 
   private
-
   def set_q
     @q = ConditionsSupport.ransack(params[:q])
   end
-
 end

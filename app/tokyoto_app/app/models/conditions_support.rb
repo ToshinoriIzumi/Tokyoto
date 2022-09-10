@@ -6,4 +6,5 @@ class ConditionsSupport < ApplicationRecord
   belongs_to :status
   belongs_to :benefit
 
+  scope :age_search, -> {where max}
 end

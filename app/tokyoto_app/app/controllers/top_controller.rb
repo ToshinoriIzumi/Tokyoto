@@ -1,9 +1,11 @@
 class TopController < ApplicationController
   before_action :set_q, only: [:index, :search]
+  skip_before_action :require_login
+
   def index
     @supports = Support.all
   end
-  
+
   def search
     @results = @q.result
   end

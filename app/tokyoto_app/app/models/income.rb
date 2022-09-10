@@ -1,6 +1,6 @@
 
 class Income < ApplicationRecord
-  has_many :contidions_supports, dependent: :destroy
+  has_many :conditions_supports, dependent: :destroy
 
   validates :money, presence: true, uniqueness: true
   validates :is_myself, presence: true

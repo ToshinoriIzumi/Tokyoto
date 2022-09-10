@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_31_005359) do
+ActiveRecord::Schema.define(version: 2022_09_05_135009) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,12 +53,18 @@ ActiveRecord::Schema.define(version: 2022_08_31_005359) do
     t.index ["support_id"], name: "index_conditions_supports_on_support_id"
   end
 
+  create_table "hospitals", force: :cascade do |t|
+    t.bigint "city_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["city_id"], name: "index_hospitals_on_city_id"
+  end
+
   create_table "incomes", force: :cascade do |t|
     t.integer "money", null: false
     t.integer "is_myself", default: 0, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["money", "is_myself"], name: "index_incomes_on_money_and_is_myself", unique: true
   end
 
   create_table "statuses", force: :cascade do |t|
@@ -95,4 +101,5 @@ ActiveRecord::Schema.define(version: 2022_08_31_005359) do
   add_foreign_key "conditions_supports", "incomes"
   add_foreign_key "conditions_supports", "statuses"
   add_foreign_key "conditions_supports", "supports"
+  add_foreign_key "hospitals", "cities"
 end

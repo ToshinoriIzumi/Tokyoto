@@ -6,4 +6,5 @@ class ConditionsSupport < ApplicationRecord
   belongs_to :status
   belongs_to :benefit
 
+  # validates :dependents_num, presence: true
 end

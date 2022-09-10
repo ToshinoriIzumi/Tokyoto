@@ -3,6 +3,7 @@ class CreateConditionsSupports < ActiveRecord::Migration[6.0]
     create_table :conditions_supports do |t|
       t.references :support, null: false, foreign_key: true
       t.references :city, null: false, foreign_key: true
+      t.integer :dependents_num, null: false
       t.references :income, null: false, foreign_key: true
       t.references :age, null: false, foreign_key: true
       t.references :status, null: false, foreign_key: true

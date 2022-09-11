@@ -11,7 +11,7 @@
   </head>
 
   <body class="bg-white text-gray-600 work-sans leading-normal text-base tracking-normal">
-    <% if true %>
+    <% if logged_in? %>
       <%= render 'shared/header' %>
     <% else %>
       <%= render 'shared/before_login_header' %>

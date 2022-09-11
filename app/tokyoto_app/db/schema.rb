@@ -38,7 +38,6 @@ ActiveRecord::Schema.define(version: 2022_09_05_135009) do
   create_table "conditions_supports", force: :cascade do |t|
     t.bigint "support_id", null: false
     t.bigint "city_id", null: false
-    t.integer "dependents_num", null: false
     t.bigint "income_id", null: false
     t.bigint "age_id", null: false
     t.bigint "status_id", null: false
@@ -56,6 +55,10 @@ ActiveRecord::Schema.define(version: 2022_09_05_135009) do
 
   create_table "hospitals", force: :cascade do |t|
     t.bigint "city_id", null: false
+    t.string "name", null: false
+    t.float "latitude", null: false
+    t.float "longitude", null: false
+    t.string "address", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["city_id"], name: "index_hospitals_on_city_id"

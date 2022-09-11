@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_31_005359) do
+ActiveRecord::Schema.define(version: 2022_09_11_090216) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -86,6 +86,11 @@ ActiveRecord::Schema.define(version: 2022_08_31_005359) do
     t.integer "role", default: 0, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "user_name"
+    t.integer "income"
+    t.integer "child_num"
+    t.bigint "city_id"
+    t.index ["city_id"], name: "index_users_on_city_id"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
@@ -95,4 +100,5 @@ ActiveRecord::Schema.define(version: 2022_08_31_005359) do
   add_foreign_key "conditions_supports", "incomes"
   add_foreign_key "conditions_supports", "statuses"
   add_foreign_key "conditions_supports", "supports"
+  add_foreign_key "users", "cities"
 end

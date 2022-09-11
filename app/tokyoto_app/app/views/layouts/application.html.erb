@@ -11,6 +11,12 @@
   </head>
 
   <body class="bg-white text-gray-600 work-sans leading-normal text-base tracking-normal">
+    <% if logged_in? %>
+      <%= render 'shared/header' %>
+    <% else %>
+      <%= render 'shared/before_login_header' %>
+    <% end %>
+
     <section class="">
       <div class=" items-center px-4 py-5 lg:px-20">
         <div class="mt-8">
@@ -21,5 +27,8 @@
         </div>
       </div>
     </section>
+
+    <%= render 'shared/footer'%>
+  
   </body>
 </html>

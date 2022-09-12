@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_11_090216) do
+ActiveRecord::Schema.define(version: 2022_09_11_110230) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,14 @@ ActiveRecord::Schema.define(version: 2022_09_11_090216) do
     t.integer "money", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "children", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.integer "age"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_children_on_user_id"
   end
 
   create_table "cities", force: :cascade do |t|
@@ -87,18 +95,16 @@ ActiveRecord::Schema.define(version: 2022_09_11_090216) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "user_name"
+    t.integer "city_id"
     t.integer "income"
-    t.integer "child_num"
-    t.bigint "city_id"
-    t.index ["city_id"], name: "index_users_on_city_id"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "children", "users"
   add_foreign_key "conditions_supports", "ages"
   add_foreign_key "conditions_supports", "benefits"
   add_foreign_key "conditions_supports", "cities"
   add_foreign_key "conditions_supports", "incomes"
   add_foreign_key "conditions_supports", "statuses"
   add_foreign_key "conditions_supports", "supports"
-  add_foreign_key "users", "cities"
 end

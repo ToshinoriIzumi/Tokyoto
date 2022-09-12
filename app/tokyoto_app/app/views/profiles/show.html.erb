@@ -1,0 +1,22 @@
+<h1>プロフィール詳細</h1>
+<p>姓 <%= current_user.last_name %></p>
+<p>名 <%= current_user.first_name %></p>
+<p>メールアドレス <%= current_user.email %></p>
+<% if current_user.user_name? %>
+  <p>ユーザーネーム <%= current_user.user_name %></p>
+<% end %>
+<% if @city %>
+  <p>住んでいる地域 <%= @city.city_name %></p>
+<% end %>
+<% if current_user.income? %>
+  <p>収入<%= current_user.income %>円</p>
+<% end %>
+<% if @children %>
+  <% i = @children.length %>
+  <% i.times do %>
+    <p>子供の年齢 <%= @children[i - 1].age %>歳</p>
+  <% end %>
+<% end %>
+
+<%= link_to  "プロフィールを編集する", edit_profile_path %>
+<%= link_to "トップページへ", top_index_path %>

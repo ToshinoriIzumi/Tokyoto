@@ -1,9 +1,9 @@
 <h1>データ一覧</h1>
 <% if logged_in? %>
   <%= link_to 'ログアウト', logout_path, method: :delete %>
-  <p><%= current_user.last_name + 'さん' %></p>
+    <p><%= link_to "#{current_user.last_name}さん", edit_profile_path %></p>
 <% else %>
   <%= link_to 'ログイン', login_path %>
 <% end %>
 <%= render "search_form" %>
-<%= render partial: "table", locals: {supports: @supports} %>
+<%= render partial: "table", locals: { supports: @supports } %>

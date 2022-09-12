@@ -3,7 +3,7 @@
 <p>名 <%= current_user.first_name %></p>
 <p>メールアドレス <%= current_user.email %></p>
 <% if current_user.user_name? %>
-  <p>ユーザーネーム <%= current_user.user_name %></p>
+  <p>ユーザーネーム <%= current_user.user_name %>さん</p>
 <% end %>
 <% if @city %>
   <p>住んでいる地域 <%= @city.city_name %></p>

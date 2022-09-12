@@ -1,7 +1,11 @@
 <h1>データ一覧</h1>
 <% if logged_in? %>
   <%= link_to 'ログアウト', logout_path, method: :delete %>
-    <p><%= link_to "#{current_user.last_name}さん", edit_profile_path %></p>
+  <% if current_user.user_name? %>
+    <p><%= link_to "#{current_user.user_name}さん", profile_path %></p>
+  <% else %>
+    <p><%= link_to "#{current_user.last_name}さん", profile_path %></p>
+  <% end %>
 <% else %>
   <%= link_to 'ログイン', login_path %>
 <% end %>

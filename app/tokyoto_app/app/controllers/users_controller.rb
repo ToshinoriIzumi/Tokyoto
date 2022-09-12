@@ -9,9 +9,9 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       auto_login(@user)
-      redirect_to top_index_path, notice: '新規登録に成功しました'
+      redirect_to edit_profile_path, notice: 'ユーザー情報を登録しました。プロフィール情報を入力してください'
     else
-      flash.now[:alert] = '新規登録に失敗しました'
+      flash.now[:alert] = 'ユーザー情報の登録に失敗しました'
       render :new
     end
   end

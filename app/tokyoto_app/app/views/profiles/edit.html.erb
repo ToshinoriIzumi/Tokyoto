@@ -14,7 +14,7 @@
       <%= user_f.number_field :income, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" %>
     </div>
 
-    <%= fields_for :child, @user.children[0] do |child_f| %>
+    <%= user_f.fields_for :children do |child_f| %>
       <div class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
         <%= child_f.label '子供の年齢' %>
         <%= child_f.number_field :age, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" %>

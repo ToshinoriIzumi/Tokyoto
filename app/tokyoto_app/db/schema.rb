@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 2022_09_05_135009) do
   create_table "conditions_supports", force: :cascade do |t|
     t.bigint "support_id", null: false
     t.bigint "city_id", null: false
+    t.integer "dependents_num", null: false
     t.bigint "income_id", null: false
     t.bigint "age_id", null: false
     t.bigint "status_id", null: false
@@ -69,6 +70,7 @@ ActiveRecord::Schema.define(version: 2022_09_05_135009) do
     t.integer "is_myself", default: 0, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["money", "is_myself"], name: "index_incomes_on_money_and_is_myself", unique: true
   end
 
   create_table "statuses", force: :cascade do |t|

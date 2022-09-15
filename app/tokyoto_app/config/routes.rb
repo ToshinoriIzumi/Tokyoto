@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   get "search", to: "top#search"
   resources :top, only: %i[index show]
   resources :users, only: %i[new create]
-  resource :profile, only: %i[show edit update]
+  resource :profile
 end

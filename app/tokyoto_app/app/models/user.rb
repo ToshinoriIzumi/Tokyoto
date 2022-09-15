@@ -3,6 +3,7 @@ class User < ApplicationRecord
 
   has_many :children, dependent: :destroy
   accepts_nested_attributes_for :children
+  # accepts_nested_attributes_for :children, allow_destroy: true
 
   validates :password, length: { minimum: 3 }, if: -> { new_record? || changes[:crypted_password] }
   validates :password, confirmation: true, if: -> { new_record? || changes[:crypted_password] }

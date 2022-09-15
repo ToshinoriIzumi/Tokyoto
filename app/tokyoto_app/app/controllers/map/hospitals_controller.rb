@@ -1,3 +1,5 @@
 class Map::HospitalsController < ApplicationController
-    def index;end
+    def index
+        @cities = City.all
+    end
 end

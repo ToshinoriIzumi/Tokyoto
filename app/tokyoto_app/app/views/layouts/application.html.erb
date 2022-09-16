@@ -16,17 +16,12 @@
     <% else %>
       <%= render 'shared/before_login_header' %>
     <% end %>
-
-    <section class="">
-      <div class=" items-center px-4 py-5 lg:px-20">
-        <div class="mt-8">
-          <div class="mt-6">
-            <%= render 'shared/flash_message' %>
-            <%= yield %>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div class="container px-3 md:px-5 py-3 mx-auto">
+      <%= render 'shared/flash_message' %>
+      <main class="flex-grow">
+        <%= yield %>
+      </main>
+    </div>
 
     <%= render 'shared/footer'%>
   

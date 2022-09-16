@@ -1,30 +1,51 @@
-<div class="container mx-auto">
-  <h1 class="text-xl font-bold mb-2">新規登録</h1>
-  <%= form_with model: @user, local: true do |f| %>
-    <div class="form-group grid-cols-2">
-      <div class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
-        <%= f.label "姓" %>
-        <%= f.text_field :last_name, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/6 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" %>
+<section>
+  <div class=" items-center px-5 py-12 lg:px-20">
+    <div class="flex flex-col w-full max-w-md p-10 mx-auto my-6 transition duration-500 ease-in-out transform bg-white rounded-lg md:mt-0">
+      <div class="mt-8">
+        <div class="mt-6">
+          <h1 class="text-xl font-bold mb-2">新規登録</h1>
+          <%= form_with model:@user, local: true, class: "space-y-6" do |f| %>
+            <div>
+              <%= f.label "姓" %>
+              <div class="mt-1">
+                <%= f.text_field :last_name, class: "block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:border-transparent focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-300 border-gray-500" %>
+              </div>
+            </div>
+            <div class="space-y-1">
+              <%= f.label "名" %>
+              <div class="mt-1">
+                <%= f.text_field :first_name, class: "block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:border-transparent focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-300 border-gray-500" %>
+              </div>
+            </div>
+            <div class="space-y-1">
+              <%= f.label "メールアドレス" %>
+              <div class="mt-1">
+                <%= f.text_field :email, class: "block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:border-transparent focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-300 border-gray-500" %>
+              </div>
+            </div>
+            <div class="space-y-1">
+              <%= f.label "パスワード" %>
+              <div class="mt-1">
+                <%= f.password_field :password, class: "block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:border-transparent focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-300 border-gray-500" %>
+              </div>
+            </div>
+            <div class="space-y-1">
+              <%= f.label "パスワード確認" %>
+              <div class="mt-1">
+                <%= f.password_field :password_confirmation, class: "block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:border-transparent focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-300 border-gray-500" %>
+              </div>
+            </div>
+            <div>
+              <%= f.submit '登録する', class: "flex items-center justify-center w-full px-10 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-blue-600 rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" %>
+            </div>
+          <% end %>
+            <div class="flex items-center justify-between">
+              <div class="text-sm">
+                <%= link_to "トップページへ", top_index_path, { class: "font-medium text-blue-600 hover:text-blue-500 mr-2" } %>
+              </div>
+            </div>
+        </div>
       </div>
-      <div class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
-        <%= f.label "名" %>
-        <%= f.text_field :first_name, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/6 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" %>
-      </div>
-      <div class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
-        <%= f.label "メールアドレス" %>
-        <%= f.text_field :email, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/6 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" %>
-      </div>
-      <div class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
-        <%= f.label "パスワード" %>
-        <%= f.password_field :password, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/6 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" %>
-      </div>
-      <div class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
-        <%= f.label "パスワード確認" %>
-        <%= f.password_field :password_confirmation, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/6 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" %>
-      </div>
-      <%= f.submit '登録する', class: "text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" %>
     </div>
-  <% end %>
-  <%= link_to 'ログインページへ', login_path %>
-  <%= link_to 'トップページへ', top_index_path %>
-</div>
+  </div>
+</section>

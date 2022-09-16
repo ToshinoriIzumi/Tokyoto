@@ -5,7 +5,8 @@ table_names = [
   'statuses',
   'age',
   'benefit',
-  'conditions_support'
+  'conditions_support',
+  'hospitals'
 ]
 
 table_names.each do |table_name|

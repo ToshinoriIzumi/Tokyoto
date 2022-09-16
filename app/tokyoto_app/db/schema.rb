@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2022_09_05_135009) do
   end
 
   create_table "benefits", force: :cascade do |t|
-    t.integer "money", null: false
+    t.integer "money"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -66,8 +66,8 @@ ActiveRecord::Schema.define(version: 2022_09_05_135009) do
   end
 
   create_table "incomes", force: :cascade do |t|
-    t.integer "money", null: false
-    t.integer "is_myself", default: 0, null: false
+    t.integer "money"
+    t.integer "is_myself", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["money", "is_myself"], name: "index_incomes_on_money_and_is_myself", unique: true

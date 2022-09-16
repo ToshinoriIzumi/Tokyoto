@@ -12,11 +12,21 @@ Income.create!(
     { money: 4364000, is_myself: 0 },
     { money: 4744000, is_myself: 0 },
     { money: 5124000, is_myself: 0 },
-    { money: 117200000000000, is_myself: 0 },
+    { money: 10000000, is_myself: 0 },
     { money: 3060000, is_myself: 0 },
     { money: 3440000, is_myself: 0 },
     { money: 3500000, is_myself: 1 },
     { money: 3880000, is_myself: 1 },
-    { money: 870000, is_myself: 0 }
+    { money: 870000, is_myself: 0 },
+    { money: 4057000, is_myself: 0 },
+    { money: 4966000, is_myself: 0 },
+    { money: 5772000, is_myself: 0 },
+    { money: 6396000, is_myself: 0 },
+    { money: 7228000, is_myself: 0 },
+    { money: 2805000, is_myself: 0 },
+    { money: 3532000, is_myself: 0 },
+    { money: 4175000, is_myself: 0 },
+    { money: 4674000, is_myself: 0 },
+    { money: 5405000, is_myself: 0 },
   ]
 )

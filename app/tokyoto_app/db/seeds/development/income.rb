@@ -12,7 +12,7 @@ Income.create!(
     { money: 4364000, is_myself: 0 },
     { money: 4744000, is_myself: 0 },
     { money: 5124000, is_myself: 0 },
-    { money: nil, is_myself: 0 },
+    { money: 117200000000000, is_myself: 0 },
     { money: 3060000, is_myself: 0 },
     { money: 3440000, is_myself: 0 },
     { money: 3500000, is_myself: 1 },

@@ -114,5 +114,19 @@ Support.create!(
       application_limit: "",
       url: "https://www.city.shinagawa.tokyo.jp/PC/kodomo/kodomo-hitorioya/hpg000016382.html"
     },
+    {
+      support_name: "学習塾等受講料貸付金",
+      content: "受験生チャレンジ支援貸付事業貸付金は、中学3年生とそれに準ずる方、高校3年生とそれに準ずる方を養育されている方に対して、学習塾などの費用や、高校や大学などの受験費用について貸付を行うことにより、一定所得以下の世帯の子どもへの支援を目的とした貸付金です。",
+      application_method: "",
+      application_limit: "",
+      url: "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-seikatsukomaru/hpg000004859.html"
+    },
+    {
+      support_name: "受験料貸付金",
+      content: "受験生チャレンジ支援貸付事業貸付金は、中学3年生とそれに準ずる方、高校3年生とそれに準ずる方を養育されている方に対して、学習塾などの費用や、高校や大学などの受験費用について貸付を行うことにより、一定所得以下の世帯の子どもへの支援を目的とした貸付金です。",
+      application_method: "",
+      application_limit: "",
+      url: "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-seikatsukomaru/hpg000004859.html"
+    },
   ]
 )

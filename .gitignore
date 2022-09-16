@@ -35,3 +35,4 @@ app/tokyoto_app/yarn-error.log
 app/tokyoto_app/yarn-debug.log*
 app/tokyoto_app/.yarn-integrity
 .data/
+app/tokyoto_app/app/javascript/packs/map/hospitals/config/const.js

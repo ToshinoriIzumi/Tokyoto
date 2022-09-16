@@ -16,4 +16,8 @@ table_names.each do |table_name|
     puts "Creating #{table_name}.rb..."
     require path
   end
+
+rescue => e
+  puts e.message
+  ActiveRecord::Rollback
 end

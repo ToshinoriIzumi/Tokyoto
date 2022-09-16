@@ -9,7 +9,7 @@ class ProfilesController < ApplicationController
 
   def create
     @user = current_user
-    if @user.update
+    if @user.update(profile_params)
       redirect_to root_path, notice: 'プロフィール情報を登録しました。'
     else
       flash.now[:alert] = 'プロフィール情報の登録に失敗しました。'

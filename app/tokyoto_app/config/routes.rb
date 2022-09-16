@@ -8,4 +8,7 @@ Rails.application.routes.draw do
   resources :top, only: %i[index show]
   resources :users, only: %i[new create]
   resource :profile
+  get "hospitals/index", to: "hospitals#index"
+  get "hospitals/search", to: "hospitals#search"
+  get "map/hospitals", to: "map/hospitals#index"
 end

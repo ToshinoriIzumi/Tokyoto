@@ -8,9 +8,7 @@ class ProfilesController < ApplicationController
   end
 
   def create
-    @user = User.new(profile_params)
-    binding.irb
-    @children = current_user.children.create(profile_params[:children_attributes])
+    @user = current_user
     if @user.update
       redirect_to root_path, notice: 'プロフィール情報を登録しました。'
     else
@@ -43,6 +41,5 @@ class ProfilesController < ApplicationController
 
   def profile_params
     params.require(:user).permit(:user_name, :income, :city_id, children_attributes: [:age])
-    # params.require(:user).permit(:user_name, :income, :city_id, children_attributes: [:age, :user_id, :_destroy, :id])
   end
 end

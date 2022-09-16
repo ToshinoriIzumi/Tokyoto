@@ -50,7 +50,7 @@ ConditionsSupport.create!(
       city_id: 1,
       dependents_num: -1,
       income_id: 13,
-      age_id: 6,
+      age_id: 7,
       status_id: 1,
       benefit_id: 8
     },
@@ -59,18 +59,18 @@ ConditionsSupport.create!(
       city_id: 1,
       dependents_num: -1,
       income_id: 13,
-      age_id: 6,
+      age_id: 7,
       status_id: 1,
-      benefit_id: 12
+      benefit_id: 6
     },
     {
       support_id: 14,
       city_id: 1,
-      dependents_num: 1,
+      dependents_num: -1,
       income_id: 13,
-      age_id: 6,
+      age_id: 7,
       status_id: 1,
-      benefit_id: 13
+      benefit_id: 16
     },
   ]
 )

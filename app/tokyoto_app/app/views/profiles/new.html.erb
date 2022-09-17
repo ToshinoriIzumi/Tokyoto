@@ -1,5 +1,5 @@
 <section>
-  <div class="items-center px-5 py-12 lg:px-20">
+  <div class=" items-center px-5 py-12 lg:px-20">
     <div class="flex flex-col w-full max-w-md p-10 mx-auto my-6 transition duration-500 ease-in-out transform bg-white rounded-lg md:mt-0">
       <div class="mt-8">
         <div class="mt-6">
@@ -22,7 +22,7 @@
                   <%= user_f.number_field :income, class: "block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:border-transparent focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-300 border-gray-500" %>
                 </div>
               </div>
-                <%= user_f.fields_for :children do |child_f| %>
+                <%= user_f.fields_for :children, include_id: false do |child_f| %>
                   <div class="mt-1">
                     <%= child_f.label '子供の年齢' %>
                     <%= child_f.number_field :age, class: "block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:border-transparent focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-300 border-gray-500" %>

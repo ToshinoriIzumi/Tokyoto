@@ -9,11 +9,12 @@
   <p>住んでいる地域 <%= @city.city_name %></p>
 <% end %>
 <% if current_user.income? %>
-  <p>収入 <%= current_user.income %>円</p>
+  <p>収入<%= current_user.income %>円</p>
 <% end %>
 <% if @children %>
-  <% @children.each do |child| %>
-    <p>子供の年齢 <%= child.age %>歳</p>
+  <% i = @children.length %>
+  <% i.times do %>
+    <p>子供の年齢 <%= @children[i - 1].age %>歳</p>
   <% end %>
 <% end %>
 

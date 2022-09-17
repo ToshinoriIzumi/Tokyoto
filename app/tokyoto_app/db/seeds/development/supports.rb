@@ -128,5 +128,12 @@ Support.create!(
       application_limit: "",
       url: "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-seikatsukomaru/hpg000004859.html"
     },
+    {
+      support_name: "養育費相談支援事業",
+      content: "養育費相談では、大切な養育費を確実に確保するために、専門の相談員が相談に応じ、よりよい解決のための助言等を行っています。離婚を考えている方、養育費の取決めをしないまま離婚をした方、養育費の取決めはしたけれどもその後養育費を受け取れなくなっている方で、養育費を確実にするための支援を利用したいと考えている方はぜひご利用ください。",
+      application_method: "",
+      application_limit: "",
+      url: "https://www.city.shinagawa.tokyo.jp/PC/kodomo/kodomo-hitorioya/hpg000030880.html"
+    },
   ]
 )

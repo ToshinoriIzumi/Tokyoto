@@ -117,5 +117,32 @@ ConditionsSupport.create!(
       status_id: 1,
       benefit_id: 14
     },
+    {
+      support_id: 5,
+      city_id: 1,
+      dependents_num: 1,
+      income_id: 5,
+      age_id: 10,
+      status_id: 1,
+      benefit_id: 9
+    },
+    {
+      support_id: 7,
+      city_id: 1,
+      dependents_num: 1,
+      income_id: 13,
+      age_id: 5,
+      status_id: 4,
+      benefit_id: 18
+    },
+    {
+      support_id: 19,
+      city_id: 1,
+      dependents_num: -1,
+      income_id: 13,
+      age_id: 6,
+      status_id: 1,
+      benefit_id: 3
+    },
   ]
 )

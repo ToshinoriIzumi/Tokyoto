@@ -1,5 +1,5 @@
 class ProfilesController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update]
+  before_action :set_user, only: [:show, :edit, :update, :user_supports]
 
   def new
     @user = User.new
@@ -17,7 +17,7 @@ class ProfilesController < ApplicationController
   end
 
   def show; end
-  
+
   def edit
     @cities = City.all
   end
@@ -29,6 +29,10 @@ class ProfilesController < ApplicationController
       flash.now[:alert] = 'プロフィールを更新できませんでした'
       render :edit
     end
+  end
+
+  def user_supports
+    @user_supports = ConditionsSupport.joins(:income, :age).where(city_id: @user.city_id, incomes: { money: @user.income..}, ages: {min: ..@user.children.first.age, max: @user.children.first.age..})
   end
 
   private

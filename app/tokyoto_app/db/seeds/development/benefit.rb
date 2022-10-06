@@ -17,5 +17,7 @@ Benefit.create!(
     { money: 38000 },
     { money: 200000 },
     { money: 27400 },
+    { money: 25700 },
+    
   ]
 )

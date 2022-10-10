@@ -17,6 +17,7 @@ begin
       puts "Creating #{table_name}.rb..."
       require path
     end
+  end
 
 rescue => e
   puts e.message

@@ -10,16 +10,18 @@ table_names = [
 ]
 
 begin
-  table_names.each do |table_name|
-    path = Rails.root.join("db/seeds/#{Rails.env}/#{table_name}.rb")
+  ActiveRecord::Base.transaction do
+    table_names.each do |table_name|
+      path = Rails.root.join("db/seeds/#{Rails.env}/#{table_name}.rb")
 
-    if File.exists?(path)
-      puts "Creating #{table_name}.rb..."
-      require path
+      if File.exists?(path)
+        puts "Creating #{table_name}.rb..."
+        require path
+      end
     end
   end
 
-rescue => e
+rescue  => e
   puts e.message
   ActiveRecord::Rollback
 end

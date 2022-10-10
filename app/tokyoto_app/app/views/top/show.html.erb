@@ -1,25 +1,52 @@
-<div class="container mx-auto my-5 py-5 px-5 bg-white-100 md:rounded-3xl md:px-20">
-  <section class= "basic-info text-center">
+<div class="mx-5 my-10">
+  <section class= "mb-10 basic-info text-center">
     <h3 class= "font-bold text-4xl"><%= @support.support_name %></h3>
   </section>
-  <table class="table-auto">
-    <tr>
-      <td class="border px-4 py-2">制度内容</td>
-      <td class="border px-4 py-2"><%= @support.content %></td>
-    </tr>
-    <tr>
-      <td class="border px-4 py-2">申請方法</td>
-      <td class="border px-4 py-2"><%= @support.application_method %></td>
-    </tr>
-    <tr>
-      <td class="border px-4 py-2">申請期限</td>
-      <td class="border px-4 py-2"><%= @support.application_limit %></td>
-    </tr>
-    <tr>
-      <td class="border px-4 py-2">公式サイト</td>
-      <td class="border px-4 py-2"><%= link_to @support.url, @support.url %></td>
-    </tr>
+  <table class="mb-10 table-fixed text-left text-gray-600">
+      <thead class="text-sm text-center bg-gray-100">
+          <tr>
+              <th scope="col" class="w-1/6 py-3 px-6">
+                  項目
+              </th>
+              <th scope="col" class="py-3 px-6 text-left">
+                  内容
+              </th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr class="border-b dark:bg-gray-800">
+              <th scope="row" class="py-4 px-6 font-bold text-center">
+                  制度内容
+              </th>
+              <td class="py-4 px-6">
+                  <%= @support.content %>
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800">
+              <th scope="row" class="py-4 px-6 font-bold text-center">
+                  申請方法
+              </th>
+              <td class="py-4 px-6">
+                  <%= @support.application_method %>
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800">
+              <th scope="row" class="py-4 px-6 font-bold text-center">
+                  申請期限
+              </th>
+              <td class="py-4 px-6">
+                  <%= @support.application_limit %>
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800">
+              <th scope="row" class="py-4 px-6 font-bold text-center">
+                  公式サイト
+              </th>
+              <td class="py-4 px-6">
+                  <%= link_to @support.url, @support.url %>
+              </td>
+          </tr>                                    
+      </tbody>
   </table>
+  <%= link_to "制度一覧に戻る", root_path, class: "mx-10" %>
 </div>
-
-<%= link_to "制度一覧に戻る", root_path %>

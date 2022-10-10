@@ -1,5 +1,5 @@
-<%= render 'search_form' %>
-
-<p class="text-2xl">データ一覧</p>
-
-<%= render partial: "result", locals: {conditions_supports: @results} %>
+<div class="mx-5 my-10">
+  <%= render 'search_form' %>
+  <p class="text-2xl">データ一覧</p>
+  <%= render partial: "result", locals: {conditions_supports: @results} %>
+</div>

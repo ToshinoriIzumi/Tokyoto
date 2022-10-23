@@ -56,6 +56,7 @@ RSpec.describe User, type: :model do
     user.valid?
     expect(user.errors[:role]).to include("can't be blank")
   end
+  # テスト通らない。実装ミスorテストミス
 
   it 'パスワードがなければ無効であること' do
     user = User.new(password: nil)

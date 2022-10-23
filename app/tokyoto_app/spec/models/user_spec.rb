@@ -13,7 +13,7 @@ RSpec.describe User, type: :model do
     expect(user).to be_valid
   end
 
-  it '性がなければ無効であること' do
+  it '姓がなければ無効であること' do
     user = User.new(last_name: nil)
     user.valid?
     expect(user.errors[:last_name]).to include("can't be blank")

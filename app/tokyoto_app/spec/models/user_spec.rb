@@ -56,13 +56,12 @@ RSpec.describe User, type: :model do
     user.valid?
     expect(user.errors[:role]).to include("can't be blank")
   end
-  # テスト通らない。実装ミスorテストミス
+  # テスト通らない。実装不足orテストミス
 
   it 'パスワードがなければ無効であること' do
     user = User.new(password: nil)
     user.valid?
     expect(user.errors[:password]).to include("is too short (minimum is 3 characters)")
-    # can't be blankがerrorsオブジェクトにない。バリデーションでlength minimum 3を設定するとcan't be blankがなくなる？
   end
 
   it 'パスワード確認がなければ無効であること' do

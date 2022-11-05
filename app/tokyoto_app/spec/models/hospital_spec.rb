@@ -27,7 +27,7 @@ RSpec.describe Hospital, type: :model do
   end
 
   # ユニーク制約のテストの書き方確認
-  xit '地区idと病院名が一意でなければ無効であること' do
+  it '地区idと病院名が一意でなければ無効であること' do
     Hospital.create(
       city_id: 1,
       name: '病院1',
@@ -43,7 +43,7 @@ RSpec.describe Hospital, type: :model do
       address: '東京都test2区test22-2-2',
     )
     hospital.valid?
-    
+    expect(hospital.errors[:name]).to include("has already been taken")
   end
 
   it '緯度がなければ無効であること'  do

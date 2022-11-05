@@ -1,12 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe Support, type: :model do
-  it '支援名、支援内容、url、タグがあれば有効であること' do
+  it '支援名、支援内容、urlがあれば有効であること' do
     support = Support.new(
       support_name: 'support1',
       content: 'support1_content',
       url: 'https://www.support1.com',
-      tag: 'tag1',
     )
     expect(support).to be_valid
   end
@@ -34,10 +33,4 @@ RSpec.describe Support, type: :model do
 
   end
   # urlのチェックいる？ https~とか、pdfを参考リンクにしたい場合はない？
-
-  it 'タグがなければ無効であること' do
-    support = Support.new(tag: nil)
-    support.valid?
-    expect(support.errors[:tag]).to include("can't be blank")
-  end
 end

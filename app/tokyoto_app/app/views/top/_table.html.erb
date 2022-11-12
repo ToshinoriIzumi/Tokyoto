@@ -1,30 +1,15 @@
 <% supports.each do |support| %>
   <section class="mb-6">
     <div class="max-w-7xl px-8 py-4 bg-white rounded-lg shadow-md dark:bg-gray-800">
-      <div class="flex items-center justify-between border-black-600">
-        <% case support.tag %>
-        <% when "医療" then %>
-          <p class="px-3 py-1 text-sm font-bold text-gray-100 transition-colors duration-300 transform bg-orange-400 rounded">
-            <%= support.tag %>
-          </p>
-        <% when "教育" then %>
-          <p class="px-3 py-1 text-sm font-bold text-gray-100 transition-colors duration-300 transform bg-teal-400 rounded">
-            <%= support.tag %>
-          </p>
-        <% when "住宅" then %>
-          <p class="px-3 py-1 text-sm font-bold text-gray-100 transition-colors duration-300 transform bg-blue-400 rounded">
-            <%= support.tag %>
-          </p>
-        <% when "育児" then %>
-          <p class="px-3 py-1 text-sm font-bold text-gray-100 transition-colors duration-300 transform bg-yellow-400 rounded">
-            <%= support.tag %>
-          </p>
-        <% else %>
-         <p class="px-3 py-1 text-sm font-bold text-gray-100 transition-colors duration-300 transform bg-gray-500 rounded">
-            <%= support.tag %>
+
+      <div class="flex items-center border-black-600">
+        <% support.tags.each do |tag| %>
+          <p class="px-3 py-1 mr-3 text-sm font-bold text-gray-100 transition-colors bg-<%= tag.color %>-400 rounded">
+              <%= tag.name %>
           </p>
         <% end %>
       </div>
+
       <div class="mt-2">
         <%= link_to "#{support.support_name}", top_path(support), class: "text-2xl font-bold text-gray-700 dark:text-white hover:text-gray-600 dark:hover:text-gray-200 hover:underline" %>
       </div>

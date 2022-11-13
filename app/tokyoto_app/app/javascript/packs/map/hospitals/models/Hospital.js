@@ -1,11 +1,12 @@
 import Ajax from "./Ajax";
 
 class Hospital {
-    constructor(id, name, latitude, longitude) {
+    constructor(id, name, latitude, longitude, center) {
         this.id = id;
         this.name = name;
         this.latitude = latitude;
         this.longitude = longitude;
+        this.center = center;
     }
 
     static async search_by(city_id) {
@@ -13,7 +14,10 @@ class Hospital {
             'http://localhost:3000/hospitals/search',
             {city_id: city_id}
         );
-        return this.#build(res.data);
+        return { 
+            'hospitals': this.#build(res.data['hospitals']),
+            'center': res.data['center']
+        };
     }
 
     static #build(data) {

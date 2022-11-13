@@ -103,16 +103,34 @@ RSpec.describe ConditionsSupport, type: :model do
   end
 
   # scopeのテストよく分からん
-  # describe 'scope' do
-  #   xit 'age_searchで正しい検索ができること' do
-  #     age = Age.create(min: 0, max: 20)
-  #     ConditionsSupport.new(age_id: age.id)
-  #     binding.pry
-  #     expect(ConditionsSupport.age_search(20)).to include(age.min)
-  #   end
+  describe 'scope' do
+    fit 'age_searchで正しい検索ができること' do
+      support = Support.create(
+        support_name: 'support1',
+        content: 'support1_content',
+        url: 'https://www.support1.com',
+      )
+      city = City.create(city_name: 'test区')
+      income = Income.create(money: 2000000, is_myself: 0)
+      age = Age.create(min: 0, max: 20)
+      status = Status.create(status: 0)
+      benefit = Benefit.create(money: 400000)
 
-  #   xit 'age_searchで検索ができないこと' do
+      conditions_support = ConditionsSupport.new(
+        support_id: support.id,
+        city_id: city.id,
+        dependents_num: 1,
+        income_id: income.id,
+        age_id: age.id,
+        status_id: status.id,
+        benefit_id: benefit.id
+      )
+      conditions_support.save
+      expect(conditions_support.age_search(20)).to include(age)
+    end
 
-  #   end
-  # end
+    fit 'age_searchで検索ができないこと' do
+
+    end
+  end
 end

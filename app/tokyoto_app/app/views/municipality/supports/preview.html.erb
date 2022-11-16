@@ -1,0 +1,78 @@
+<div class="mx-5 my-10">
+  <section class= "mb-10 basic-info text-center">
+    <h3 class= "font-bold text-4xl">入力内容の確認</h3>
+  </section>
+  <table class="mb-10 table-fixed text-left text-gray-600 mx-auto">
+    <thead class="text-sm text-center">
+      <tr>
+          <th scope="col" class="w-1/6 py-3 px-6"></th>
+          <th scope="col" class="py-3 px-6 text-left"></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr class="border-b dark:bg-gray-800">
+            <th scope="row" class="py-4 px-6 font-bold text-center">
+                制度名
+            </th>
+            <td class="py-4 px-6">
+                <%= @support.support_name %>
+            </td>
+        </tr>
+        <tr class="border-b dark:bg-gray-800">
+            <th scope="row" class="py-4 px-6 font-bold text-center">
+                制度内容
+            </th>
+            <td class="py-4 px-6">
+                <%= @support.content %>
+            </td>
+        </tr>
+        <tr class="border-b dark:bg-gray-800">
+            <th scope="row" class="py-4 px-6 font-bold text-center">
+                申請方法
+            </th>
+            <td class="py-4 px-6">
+                <%= @support.application_method %>
+            </td>
+        </tr>
+        <tr class="border-b dark:bg-gray-800">
+            <th scope="row" class="py-4 px-6 font-bold text-center">
+                申請期限
+            </th>
+            <td class="py-4 px-6">
+                <%= @support.application_limit %>
+            </td>
+        </tr>
+        <tr class="border-b dark:bg-gray-800">
+            <th scope="row" class="py-4 px-6 font-bold text-center">
+                公式サイト
+            </th>
+            <td class="py-4 px-6">
+                <%= link_to @support.url, @support.url %>
+            </td>
+        </tr>                                    
+    </tbody>
+  </table>
+
+  <div class="flex justify-center">
+    <div class="text-sm">
+      <%= form_with model: @support, url: back_municipality_supports_path, class: "mx-10", local: true do |f| %>
+        <%= f.hidden_field :support_name %>
+        <%= f.hidden_field :content %>
+        <%= f.hidden_field :application_method %>
+        <%= f.hidden_field :application_limit %>
+        <%= f.hidden_field :url %>
+        <%= f.submit '入力画面に戻る' %>
+        <% end %>
+      </div>
+      <div class="text-sm">
+        <%= form_with model: @support, url: municipality_supports_path, class: "mx-10", local: true do |f| %>
+          <%= f.hidden_field :support_name %>
+          <%= f.hidden_field :content %>
+          <%= f.hidden_field :application_method %>
+          <%= f.hidden_field :application_limit %>
+          <%= f.hidden_field :url %>
+          <%= f.submit '送信する' %>
+        <% end %>
+      </div>
+    </div>
+</div>

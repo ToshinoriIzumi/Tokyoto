@@ -15,8 +15,8 @@ Rails.application.routes.draw do
   
   namespace :municipality do
     resources :supports do
-      get "preview", on: :member
-      post "back", on: :member
+      post "preview", on: :collection
+      post "back", on: :collection
     end
     get "login", to: "municipality_sessions#new"
     post "login", to: "municipality_sessions#create"

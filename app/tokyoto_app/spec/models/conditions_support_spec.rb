@@ -102,9 +102,8 @@ RSpec.describe ConditionsSupport, type: :model do
     end
   end
 
-  # scopeのテストよく分からん
   describe 'scope' do
-    fit 'age_searchで正しい検索ができること' do
+    it 'age_searchで正しい検索ができること' do
       support = Support.create(
         support_name: 'support1',
         content: 'support1_content',
@@ -116,7 +115,7 @@ RSpec.describe ConditionsSupport, type: :model do
       status = Status.create(status: 0)
       benefit = Benefit.create(money: 400000)
 
-      conditions_support = ConditionsSupport.new(
+      conditions_support = ConditionsSupport.create(
         support_id: support.id,
         city_id: city.id,
         dependents_num: 1,
@@ -125,12 +124,7 @@ RSpec.describe ConditionsSupport, type: :model do
         status_id: status.id,
         benefit_id: benefit.id
       )
-      conditions_support.save
-      expect(conditions_support.age_search(20)).to include(age)
-    end
-
-    fit 'age_searchで検索ができないこと' do
-
+      expect(ConditionsSupport.age_search(20)).to include(conditions_support)
     end
   end
 end

@@ -8,7 +8,6 @@ class GoogleMapView {
         
         window.initMap = function() {
             const google_map_controller = new GoogleMapController(
-                { lat: 35.7073, lng: 139.6638 },
                 12,
                 "map",
             )

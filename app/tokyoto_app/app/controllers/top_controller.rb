@@ -16,6 +16,6 @@ class TopController < ApplicationController
 
   private
   def set_query
-    @query = ConditionsSupport.ransack(params[:q])
+    @query = ConditionsSupport.ransack(params[:query])
   end
 end

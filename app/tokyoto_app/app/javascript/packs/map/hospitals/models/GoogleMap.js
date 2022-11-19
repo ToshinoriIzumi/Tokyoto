@@ -24,27 +24,23 @@ class GoogleMap {
         );
     }
 
-    async #make_makers() {
-        await this.model_list.then((model) => {
-            this.makers = model.map((data) => { 
-                const position =  {
-                    lat: parseFloat(data.latitude),
-                    lng: parseFloat(data.longitude)
-                }
-                return new google.maps.Marker({
-                    position: position,
-                    map: this.map
-                });
+    #make_makers() {
+        this.makers = this.model_list.map((data) => { 
+            const position =  {
+                lat: parseFloat(data.latitude),
+                lng: parseFloat(data.longitude)
+            }
+            return new google.maps.Marker({
+                position: position,
+                map: this.map
             });
         });
     }
 
-    async #make_info_windows() {
-        await this.model_list.then((model) => {
-            this.info_windows = model.map((data) => {
-                return new google.maps.InfoWindow({
-                    content: '<div>' + data.name + '</div>'
-                });
+    #make_info_windows() {
+        this.info_windows = this.model_list.map((data) => {
+            return new google.maps.InfoWindow({
+                content: '<div>' + data.name + '</div>'
             });
         });
 

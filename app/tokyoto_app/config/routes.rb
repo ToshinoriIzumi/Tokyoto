@@ -12,4 +12,12 @@ Rails.application.routes.draw do
   get "hospitals/index", to: "hospitals#index"
   get "hospitals/search", to: "hospitals#search"
   get "map/hospitals", to: "map/hospitals#index"
+  
+  namespace :municipality do
+    resources :supports
+    get "login", to: "municipality_sessions#new"
+    post "login", to: "municipality_sessions#create"
+    delete "logout", to: "municipality_sessions#destroy"
+    get "preview", to: "supports#preview"
+  end
 end

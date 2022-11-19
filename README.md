@@ -31,7 +31,7 @@
     - 下記を参照にGoogleMapsApiKeyを作成する。
         - https://developers.google.com/maps/documentation/javascript/cloud-setup
         - https://developers.google.com/maps/documentation/javascript/get-api-key
-3. コピーした設定ファイルのconst GOOGLE_MAP_API_KEY = '作成したキー'になるように記載する。
+3. コピーした設定ファイルのexport const GOOGLE_MAP_API_KEY = '作成したキー'になるように記載する。
 
 ### アプリ停止方法
 1. フォルダの移動

@@ -41,6 +41,8 @@ ActiveRecord::Schema.define(version: 2022_11_19_024955) do
     t.string "city_name", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.float "latitude", null: false
+    t.float "longitude", null: false
   end
 
   create_table "conditions_supports", force: :cascade do |t|

@@ -4,39 +4,7 @@
       <div class="mt-8">
         <div class="mt-6">
           <h1 class="text-xl font-bold mb-2">プロフィール登録</h1>
-          <%= form_with model: @user, url: profile_path, class: "space-y-6", local: true do |user_f| %>
-            <div class="space-y-1">
-              <%= user_f.label "ユーザーネーム" %>
-              <div class="mt-1">
-                <%= user_f.text_field :user_name, class: "block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:border-transparent focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-300 border-gray-500" %>
-              </div>
-              <div class="space-y-1">
-                <%= user_f.label "住んでいる場所" %>
-                <div class="mt-1">
-                  <%= user_f.collection_select :city_id, @cities, :id, :city_name, class: "block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:border-transparent focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-300 border-gray-500" %>
-                </div>
-              </div>
-              <div class="space-y-1">
-                <%= user_f.label '収入' %>
-                <div class="mt-1">
-                  <%= user_f.number_field :income, class: "block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:border-transparent focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-300 border-gray-500" %>
-                </div>
-              </div>
-                <%= user_f.fields_for :children, include_id: false do |child_f| %>
-                  <div class="mt-1">
-                    <%= child_f.label '子供の年齢' %>
-                    <%= child_f.number_field :age, class: "block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:border-transparent focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-300 border-gray-500" %>
-                  </div>
-                <% end %>
-                <%= user_f.submit '登録する', class: "flex items-center justify-center w-full px-10 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-blue-600 rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" %>
-              </div>
-            <% end %>
-            <div class="flex items-center justify-between">
-              <div class="text-sm">
-                <%= link_to "トップページへ", top_index_path, { class: "font-medium text-blue-600 hover:text-blue-500 mr-2" } %>
-              </div>
-            </div>
-          </div>
+          <%= render 'form' %>
         </div>
       </div>
     </div>

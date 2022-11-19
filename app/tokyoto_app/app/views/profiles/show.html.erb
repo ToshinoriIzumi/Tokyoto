@@ -1,22 +1,78 @@
-<h1>プロフィール詳細</h1>
-<p>姓 <%= current_user.last_name %></p>
-<p>名 <%= current_user.first_name %></p>
-<p>メールアドレス <%= current_user.email %></p>
-<% if current_user.user_name? %>
-  <p>ユーザーネーム <%= current_user.user_name %>さん</p>
-<% end %>
-<% if @city %>
-  <p>住んでいる地域 <%= @city.city_name %></p>
-<% end %>
-<% if current_user.income? %>
-  <p>収入<%= current_user.income %>円</p>
-<% end %>
-<% if @children %>
-  <% i = @children.length %>
-  <% i.times do %>
-    <p>子供の年齢 <%= @children[i - 1].age %>歳</p>
-  <% end %>
-<% end %>
+<div class="mx-20 my-10">
+  <h1 class='mb-10 basic-info text-center font-bold text-4xl'>プロフィール詳細</h1>
+  <div class='flex'>
+    <div class='text-2xl font-bold'>属性情報</div>
+    <%= link_to  "編集", edit_profile_path, class: 'ml-auto px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-500' %>
+  </div>
+  <div class='my-8'>
+    <div class='my-2'>
+      氏名
+    </div>
+    <div class='text-xl flex flex-row space-x-2'>
+      <div class='border-b p-2 flex-1'>
+        <%= current_user.last_name %>
+      </div>
+      <div class='border-b p-2  flex-1'>
+        <%= current_user.first_name %>
+      </div>
+    </div>
+  </div>
 
-<%= link_to  "プロフィールを編集する", edit_profile_path %>
-<%= link_to "トップページへ", top_index_path %>
+  <div class='my-8'>
+    <div class='my-2'>
+      メールアドレス
+    </div>
+    <div class='border-b p-2 text-xl'>
+      <%= current_user.email %>
+    </div>
+  </div>
+
+  <% if current_user.user_name? %>
+    <div class='my-8'>
+     <div class='my-2'>
+        ユーザーネーム
+      </div>
+      <div class='border-b p-2 text-xl'>
+        <%= current_user.user_name %>
+      </div>
+    </div>
+  <% end %> 
+
+  <% if @city %>
+    <div class='my-8'>
+      <div class='my-2'>
+        お住まいの地域
+      </div>
+      <div class='border-b p-2 text-xl'>
+        <%= @city.city_name %>
+      </div>
+    </div>
+  <% end %>
+
+  <% if current_user.income? %>
+    <div class='my-8'>
+      <div class='my-2'>
+        収入
+      </div>
+      <div class='border-b p-2 text-xl'>
+        <%= current_user.income %> 円
+      </div>
+    </div>
+  <% end %>
+
+  <% if @children %>
+    <% i = @children.length %>
+    <% i.times do %>
+    <div class='my-8'>
+        <div class='my-2'>
+          子供の年齢 
+        </div>
+        <div class='border-b p-2 text-xl'>
+          <%= @children[i - 1].age %> 歳
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+
+</div>
+

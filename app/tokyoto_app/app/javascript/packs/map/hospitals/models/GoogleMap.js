@@ -39,8 +39,16 @@ class GoogleMap {
 
     #make_info_windows() {
         this.info_windows = this.model_list.map((data) => {
+            let content = '<div>' + data.name + '</div>';
+            if (typeof data.url !== 'undefined') {
+                content += '<div><a href="' + data.url + '" target="_blank">ホームページはこちら</a></div>';
+            }
+            
+            if (typeof data.phone_number !== 'undefined') {
+                content += '<div>' + data.phone_number + '</div>'
+            }
             return new google.maps.InfoWindow({
-                content: '<div>' + data.name + '</div>'
+                content: content
             });
         });
 

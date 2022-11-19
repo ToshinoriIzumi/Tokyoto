@@ -1,5 +1,5 @@
 class ProfilesController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :user_supports]
+  before_action :set_profile, only: [:show, :edit, :update, :user_supports]
 
   def new
     @user = User.new
@@ -37,7 +37,7 @@ class ProfilesController < ApplicationController
 
   private
 
-  def set_user
+  def set_profile
     @user = User.find(current_user.id)
     @children = Child.where(user_id: @user.id)
     @city = City.find_by(id: @user.city_id)

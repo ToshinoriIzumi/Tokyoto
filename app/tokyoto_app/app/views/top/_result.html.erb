@@ -5,7 +5,7 @@
 
       <div class="flex items-center border-black-600">
         <% conditions_support.support.tags.each do |tag| %>
-          <p class="px-3 py-1 mr-3 text-sm font-bold text-gray-100 transition-colors bg-<%= tag.color %>-400 rounded">
+          <p class="px-3 py-1 mr-3 text-sm font-bold text-gray-100 transition-colors bg-<%= tag.decorate.color %>-400 rounded">
               <%= tag.name %>
           </p>
         <% end %>

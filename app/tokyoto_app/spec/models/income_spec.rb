@@ -10,7 +10,6 @@ RSpec.describe Income, type: :model do
     income = Income.new(money: nil)
     income.valid?
     expect(income.errors[:money]).to include("can't be blank")
-    # 実装不足orテストミス
   end
 
   it '本人フラグがなければ無効であること' do

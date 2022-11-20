@@ -31,7 +31,6 @@ RSpec.describe User, type: :model do
     expect(user.errors[:email]).to include('has already been taken')
   end
 
-  # テスト通らない。実装不足orテストミス
   it 'roleがなければ無効であること' do
     user = FactoryBot.build(:user, role: nil)
     user.valid?

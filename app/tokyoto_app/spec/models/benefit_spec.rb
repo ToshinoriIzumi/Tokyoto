@@ -22,6 +22,6 @@ RSpec.describe Benefit, type: :model do
   end
 
   xit '給付方法がなければ無効であること' do
-    
+
   end
 end

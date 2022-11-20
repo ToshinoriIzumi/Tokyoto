@@ -1,9 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Hospital, type: :model do
-  # 連絡先、営業時間あってもいいかも
-  # FactoryBotでcityとhospitalを関連付けてリファクタ
-  # rand以外の方法
   it '地区id、病院名、緯度、経度、住所があれば有効であること' do
     hospital = Hospital.new(
       city_id: 1,
@@ -26,7 +23,6 @@ RSpec.describe Hospital, type: :model do
     expect(hospital.errors[:name]).to include("can't be blank")
   end
 
-  # ユニーク制約のテストの書き方確認
   it '地区idと病院名が一意でなければ無効であること' do
     Hospital.create(
       city_id: 1,

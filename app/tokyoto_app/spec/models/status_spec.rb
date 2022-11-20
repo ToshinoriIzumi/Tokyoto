@@ -17,6 +17,5 @@ RSpec.describe Status, type: :model do
     status = Status.new(status: 0)
     status.valid?
     expect(status.errors[:status]).to include("has been taken")
-    # 実装不足orテストミス
   end
 end

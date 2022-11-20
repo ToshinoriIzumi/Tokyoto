@@ -39,7 +39,9 @@ RSpec.describe ConditionsSupport, type: :model do
     end
 
     it '扶養家族数がなければ無効であること' do
-
+      conditions_support = ConditionsSupport.new(dependents_num: nil)
+      conditions_support.valid?
+      expect(conditions_support.errors[:support]).to include('must exist')
     end
 
     it '所得額idがなければ無効であること' do

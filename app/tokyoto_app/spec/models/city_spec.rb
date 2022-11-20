@@ -6,7 +6,6 @@ RSpec.describe City, type: :model do
     expect(city).to be_valid
   end
 
-  # これいる？
   xit '地区名が~区・市・村？で終わること' do
 
   end

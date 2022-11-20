@@ -27,10 +27,4 @@ RSpec.describe Support, type: :model do
     support.valid?
     expect(support.errors[:url]).to include("can't be blank")
   end
-
-  # urlが重複したら無効にしたい…
-  xit 'urlと支援名が重複していれば無効であること' do
-
-  end
-  # urlのチェックいる？ https~とか、pdfを参考リンクにしたい場合はない？
 end

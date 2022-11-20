@@ -1,4 +1,4 @@
-class Municipality::SupportsController < ApplicationController
+class Municipality::SupportsController < Municipality::BaseController
   before_action :set_support, only: %i[show edit update destroy]
 
   def index;end

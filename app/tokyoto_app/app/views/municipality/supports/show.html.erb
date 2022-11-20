@@ -1,0 +1,130 @@
+<div class="mx-5 my-10">
+  <section class= "mb-10 basic-info text-center">
+  <p>NO.<%= @support.id %><p>
+    <h3 class= "font-bold text-4xl"><%= @support.support_name %></h3>
+  </section>
+  <table class="mb-10 table-fixed text-left text-gray-600">
+  
+      <thead class="text-sm text-center bg-gray-100">
+          <tr>
+              <th scope="col" class="w-1/6 py-3 px-6">
+                  項目
+              </th>
+              <th scope="col" class="py-3 px-6 text-left">
+                  内容
+              </th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr class="border-b dark:bg-gray-800">
+              <th scope="row" class="py-4 px-6 font-bold text-center">
+                  制度内容
+              </th>
+              <td class="py-4 px-6">
+                  <%= @support.content %>
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800">
+              <th scope="row" class="py-4 px-6 font-bold text-center">
+                  申請方法
+              </th>
+              <td class="py-4 px-6">
+                  <%= @support.application_method %>
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800">
+              <th scope="row" class="py-4 px-6 font-bold text-center">
+                  申請期限
+              </th>
+              <td class="py-4 px-6">
+                  <%= @support.application_limit %>
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800">
+              <th scope="row" class="py-4 px-6 font-bold text-center">
+                  公式サイト
+              </th>
+              <td class="py-4 px-6">
+                  <%= link_to @support.url, @support.url %>
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800">
+              <th scope="row" class="py-4 px-6 font-bold text-center">
+                  条件１
+              </th>
+              <td>
+              <table>
+                    <tr>
+                        <th scope="col" class="py-3 px-6 text-left">
+                            対象年齢
+                        </th>
+                        <td>
+                            00歳〜00歳
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="col" class="py-3 px-6 text-left">
+                            所得制限 
+                        </th>
+                        <td>
+                            年収000万円〜000万円
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="col" class="py-3 px-6 text-left">
+                             その他
+                        </th>
+                        <td>
+                            その他注意事項
+                        </td>
+                    </tr>
+                </table>
+              </td>
+          </tr>
+        <tr class="border-b dark:bg-gray-800">
+              <th scope="row" class="py-4 px-6 font-bold text-center">
+                  条件2
+              </th>
+              <td>
+              <table>
+                    <tr>
+                        <th scope="col" class="py-3 px-6 text-left">
+                            対象年齢
+                        </th>
+                        <td>
+                            00歳〜00歳
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="col" class="py-3 px-6 text-left">
+                            所得制限 
+                        </th>
+                        <td>
+                            年収000万円〜000万円
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="col" class="py-3 px-6 text-left">
+                             その他
+                        </th>
+                        <td>
+                            その他注意事項
+                        </td>
+                    </tr>
+                </table>
+              </td>
+          </tr>
+      </tbody>
+  </table>
+    <p class="text-right">作成日時  <%= @support.created_at %><p>
+    <p class="text-right">変更日時  <%= @support.updated_at %><p>
+  <%= link_to "制度一覧に戻る", root_path, class: "mx-10" %>
+
+    <div class="row">
+        <div class="text-right">
+            <button class="shadow-lg bg-yellow-500 shadow-yellow-500/50 text-white rounded px-2 py-1">公開</button>
+            <button class="shadow-lg bg-green-500 shadow-green-500/50 text-white rounded px-2 py-1">編集</button>
+            <button class="shadow-lg bg-red-500 shadow-red-500/50 text-white rounded px-2 py-1">削除</button>
+        </div>
+    </dev>
+</div>

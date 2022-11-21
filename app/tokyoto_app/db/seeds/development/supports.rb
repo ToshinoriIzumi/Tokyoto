@@ -6,7 +6,6 @@ Support.create!(
       application_method: "申請を行う方により必要書類が異なるため、「子ども家庭部子ども家庭課育成支援係（区役所本庁舎2階16番窓口）」へ事前にご連絡をお願いします。交付申請をした日から助成の対象となります。公式HPを参照",
       application_limit: "",
       url: "https://www.city.shinagawa.tokyo.jp/PC/kodomo/kodomo-hitorioya/hpg000001247.html",
-      tag: "医療"
     },
     {
       support_name: "認証保育所・認可外保育施設の保育料助成",
@@ -14,7 +13,6 @@ Support.create!(
       application_method: "申請書を記入し、必要書類を添付して区に郵送していただくか、直接お持ちください。",
       application_limit: "",
       url: "https://www.city.shinjuku.lg.jp/kodomo/file03_04_00011.html",
-      tag: "教育"
     },
     {
       support_name: "民間賃貸住宅家賃助成",
@@ -22,7 +20,6 @@ Support.create!(
       application_method: "",
       application_limit: "令和3年度の募集期間は、10月1日（金）から10月15日（金）",
       url: "https://www.city.shinjuku.lg.jp/seikatsu/file07_02_00001.html",
-      tag: "住宅"
     },
     {
       support_name: "出産育児一時金",
@@ -30,7 +27,6 @@ Support.create!(
       application_method: "公式HP参照",
       application_limit: "",
       url: "https://www.city.shinjuku.lg.jp/hoken/file02_04_00007.html",
-      tag: "育児"
     },
     {
       support_name: "就学援助",
@@ -38,7 +34,6 @@ Support.create!(
       application_method: "新宿区立小・中学校へお子さんが通学されている方は、学校に申請書がありますので、ご記入の上、必要書類（詳細は申請書に記載しています。）を添付して学校へご提出ください。",
       application_limit: "なし",
       url: "https://www.city.shinjuku.lg.jp/kodomo/file04_04_00005.html",
-      tag: "教育"
     },
     {
       support_name: "産後の家事育成助成",
@@ -46,7 +41,6 @@ Support.create!(
       application_method: "公式HP参照",
       application_limit: "なし",
       url: "https://www.city.shinjuku.lg.jp/kodomo/file03_02_00001.html",
-      tag: "育児"
     },
     {
       support_name: "私立幼稚園補助金",
@@ -54,7 +48,6 @@ Support.create!(
       application_method: "郵送か窓口申請",
       application_limit: "",
       url: "https://www.city.shinjuku.lg.jp/kodomo/file04_07_00003.html",
-      tag: "教育"
     },
     {
       support_name: "児童扶養手当",
@@ -62,7 +55,6 @@ Support.create!(
       application_method: "",
       application_limit: "",
       url: "https://www.city.shinagawa.tokyo.jp/PC/kodomo/kodomo-hitorioya/hpg000001248.html",
-      tag: "育児"
     },
     {
       support_name: "児童育成手当",
@@ -70,7 +62,6 @@ Support.create!(
       application_method: "",
       application_limit: "",
       url: "https://www.city.shinagawa.tokyo.jp/PC/kodomo/kodomo-hitorioya/hpg000001249.html",
-      tag: "育児"
     },
     {
       support_name: "自立支援教育訓練給付金",
@@ -78,7 +69,6 @@ Support.create!(
       application_method: "",
       application_limit: "",
       url: "https://www.city.shinagawa.tokyo.jp/PC/kodomo/kodomo-hitorioya/hpg000016382.html",
-      tag: "就業支援"
     },
     {
       support_name: "ひとり親家庭住宅入居支援事業",
@@ -86,7 +76,6 @@ Support.create!(
       application_method: "",
       application_limit: "",
       url: "https://www.city.shinagawa.tokyo.jp/PC/kodomo/kodomo-hitorioya/20200116093231.html",
-      tag: "住宅"
     },
     {
       support_name: "東京都母子及び父子福祉資金",
@@ -94,7 +83,6 @@ Support.create!(
       application_method: "",
       application_limit: "",
       url: "https://www.city.shinagawa.tokyo.jp/PC/kodomo/kodomo-hitorioya/hpg000030884.html",
-      tag: "貸付金"
     },
     {
       support_name: "令和4年度低所得の子育て世帯生活支援特別給付金（ひとり親世帯分）",
@@ -102,7 +90,6 @@ Support.create!(
       application_method: "",
       application_limit: "",
       url: "https://www.city.shinagawa.tokyo.jp/PC/kodomo/kodomo-hitorioya/20220602092306.html",
-      tag: "給付金"
     },
     {
       support_name: "自立支援教育訓練給付金",
@@ -110,7 +97,6 @@ Support.create!(
       application_method: "",
       application_limit: "",
       url: "https://www.city.shinagawa.tokyo.jp/PC/kodomo/kodomo-hitorioya/hpg000016382.html",
-      tag: "就業支援"
     },
     {
       support_name: "高等職業訓練促進給付金",
@@ -118,7 +104,6 @@ Support.create!(
       application_method: "",
       application_limit: "",
       url: "https://www.city.shinagawa.tokyo.jp/PC/kodomo/kodomo-hitorioya/hpg000016382.html",
-      tag: "就業支援"
     },
     {
       support_name: "高等職業訓練修了支援給付金",
@@ -126,7 +111,6 @@ Support.create!(
       application_method: "",
       application_limit: "",
       url: "https://www.city.shinagawa.tokyo.jp/PC/kodomo/kodomo-hitorioya/hpg000016382.html",
-      tag: "就業支援"
     },
     {
       support_name: "学習塾等受講料貸付金",
@@ -134,7 +118,6 @@ Support.create!(
       application_method: "",
       application_limit: "",
       url: "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-seikatsukomaru/hpg000004859.html",
-      tag: "教育"
     },
     {
       support_name: "受験料貸付金",
@@ -142,7 +125,6 @@ Support.create!(
       application_method: "",
       application_limit: "",
       url: "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-seikatsukomaru/hpg000004859.html",
-      tag: "教育"
     },
     {
       support_name: "養育費相談支援事業",
@@ -150,7 +132,6 @@ Support.create!(
       application_method: "",
       application_limit: "",
       url: "https://www.city.shinagawa.tokyo.jp/PC/kodomo/kodomo-hitorioya/hpg000030880.html",
-      tag: "育児"
     },
   ]
 )

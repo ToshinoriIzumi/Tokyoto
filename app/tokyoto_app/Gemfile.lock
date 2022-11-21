@@ -340,8 +340,8 @@ DEPENDENCIES
   byebug
   cancancan (= 3.3.0)
   capybara (>= 2.15)
-  factory_bot_rails
   draper
+  factory_bot_rails
   jbuilder (~> 2.7)
   listen (~> 3.2)
   pg (>= 0.18, < 2.0)

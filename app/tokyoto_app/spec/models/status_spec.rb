@@ -12,7 +12,7 @@ RSpec.describe Status, type: :model do
     expect(status.errors[:status]).to include("can't be blank")
   end
 
-  it '請求者が一意でなければ無効であること' do
+  xit '請求者が一意でなければ無効であること' do
     Status.create(status: 0)
     status = Status.new(status: 0)
     status.valid?

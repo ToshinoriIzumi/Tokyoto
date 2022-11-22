@@ -26,6 +26,13 @@ RSpec.describe Child, type: :model do
     expect(child.errors[:age]).to include("is not a number")
   end
 
+  # 文字列で作っても数値で登録される？
+  fit '年齢が数値でなければ無効であること' do
+    child = Child.new(age: '5')
+    child.valid?
+    expect(child.errors[:age]).to include("is not a number")
+  end
+
   it '年齢が0以上でなければ無効であること' do
     child = Child.new(age: -1)
     child.valid?

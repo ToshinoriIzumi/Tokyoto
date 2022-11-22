@@ -128,5 +128,9 @@ RSpec.describe ConditionsSupport, type: :model do
       )
       expect(ConditionsSupport.age_search(20)).to include(conditions_support)
     end
+
+    it 'age_searchで条件にあわない制度がヒットしないこと' do
+      
+    end
   end
 end

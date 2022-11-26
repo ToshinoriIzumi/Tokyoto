@@ -1,0 +1,45 @@
+<section>
+  <div class=" items-center px-5 py-12 lg:px-20">
+    <div class="flex flex-col w-full max-w-md p-10 mx-auto my-6 transition duration-500 ease-in-out transform bg-white rounded-lg md:mt-0">
+      <div class="mt-8">
+        <div class="mt-6">
+          <h1 class="text-xl font-bold mb-2">制度編集</h1>
+          <%= form_with model: [:municipality, @support], local: true, class: "space-y-6" do |f| %>
+            <div class="space-y-1">
+              <%= f.label "制度名(必須)" %>
+              <%= f.text_field :support_name, class: "block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:border-transparent focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-300 border-gray-500" %>
+            </div>
+          
+            <div class="space-y-1">
+              <%= f.label "制度内容(必須)" %>
+              <%= f.text_area :content, class: "block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:border-transparent focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-300 border-gray-500" %>
+            </div>
+          
+            <div class="space-y-1">
+              <%= f.label "URL(必須)" %>
+              <%= f.text_field :url, class: "block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:border-transparent focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-300 border-gray-500" %>
+              </div>
+          
+            <div class="space-y-1">
+              <%= f.label "申し込み方法" %>
+              <%= f.text_field :application_method, class: "block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:border-transparent focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-300 border-gray-500" %>
+              </div>
+          
+            <div class="space-y-1">
+              <%= f.label "申し込み期限" %>
+              <%= f.text_field :application_limit, class: "block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:border-transparent focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-300 border-gray-500" %>
+              </div>
+          
+              <%= f.submit class: "flex items-center justify-center w-full px-10 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-blue-600 rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" %>
+            </div>
+              <div class="flex items-center justify-between">
+                <div class="text-sm">
+                  <%= link_to "制度一覧へ戻る", municipality_supports_path, { class: "font-medium text-blue-600 hover:text-blue-500 mr-2" } %>
+                </div>
+              </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

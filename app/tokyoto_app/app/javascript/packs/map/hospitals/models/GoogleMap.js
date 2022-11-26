@@ -39,9 +39,9 @@ class GoogleMap {
 
     #make_info_windows() {
         this.info_windows = this.model_list.map((data) => {
-            let content = '<div>' + data.name + '</div>';
+            let content = '<div class="name">' + data.name + '</div>';
             if (typeof data.url !== 'undefined') {
-                content += '<div><a href="' + data.url + '" target="_blank">ホームページはこちら</a></div>';
+                content += '<div class="url"><a href="' + data.url + '" target="_blank">ホームページはこちら</a></div>';
             }
             
             if (typeof data.phone_number !== 'undefined') {

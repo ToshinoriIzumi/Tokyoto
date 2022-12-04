@@ -106,6 +106,7 @@ ActiveRecord::Schema.define(version: 2022_11_19_024955) do
     t.string "url", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "state", null: false
   end
 
   create_table "tags", force: :cascade do |t|

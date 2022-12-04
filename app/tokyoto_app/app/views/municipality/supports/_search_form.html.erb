@@ -1,19 +1,18 @@
-<%= search_form_for @q, url: search_municipality_supports_path do |f| %>
+<%= form_with model: @search_support_form, scope: :q , url: municipality_supports_path, method: :get, local: :true, html: { class: 'form-inline' } do |f| %>
   <div class="flex flex-row space-x-4 mx-1 mb-3">
     <div class="flex-1">
-      <%= f.label :support_support_name_cont, "制度名" , class: "block mb-2 text-xl font-medium text-gray-600 dark:text-gray-300" %>
-      <%= f.search_field :support_support_name_cont, class: "block mb-4 p-4 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500",placeholder: "記入例（医療）" %>
+      <%= f.label :support_name, "制度名" , class: "block mb-2 text-xl font-medium text-gray-600 dark:text-gray-300" %>
+      <%= f.search_field :support_name, class: "block mb-4 p-4 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500",placeholder: "記入例（医療）" %>
     </div>
-    <%# タグ %>
     <div class="flex-1">
-      <%= f.label :city_city_name_cont, "地区名" , class: "block mb-2 text-xl font-medium text-gray-600 dark:text-gray-300" %>
-      <%= f.search_field :city_city_name_cont, class: "block mb-4 p-4 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500",placeholder: "記入例（港区）" %>
+      <%= f.label :tag_id, "タグ名" , class: "block mb-2 text-xl font-medium text-gray-600 dark:text-gray-300" %>
+      <%= f.select :tag_id, Tag.pluck(:name, :id) , { include_blank: "タグ" },  class: "block mb-4 p-4 w-full bg-gray-50 rounded-lg border border-gray-300 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" %>
     </div>
-    <%# ステータス %>
     <div class="flex-1">
-      <%= f.label :support_support_state_cont, "ステータス" , class: "block mb-2 text-xl font-medium text-gray-600 dark:text-gray-300" %>
-      <%= f.select :support_state_cont,  options_for_select({draft: 0, published: 1, publish_wait: 2 }, 1), placeholder: "記入例（3,000,000）", class: "block mb-4 p-4 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500",placeholder: "記入例（3,000,000）" %>
+      <%= f.label :state, "ステータス" , class: "block mb-2 text-xl font-medium text-gray-600 dark:text-gray-300" %>
+      <%= f.select :state,  Support.states_i18n.invert, { include_blank: "ステータス" },{class: "block mb-4 p-4 w-full bg-gray-50 rounded-lg border border-gray-300 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"} %>
     </div>
+
     <div class="mt-10" >
       <%= f.submit "検索", class: "px-6 py-3 text-xl bg-yellow-600 text-white font-semibold rounded hover:bg-yellow-500" %>
     </div>

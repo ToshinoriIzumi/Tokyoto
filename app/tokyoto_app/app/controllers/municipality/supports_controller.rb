@@ -2,10 +2,7 @@ class Municipality::SupportsController < ApplicationController
   before_action :set_support, only: %i[show edit update destroy]
 
   def index
-    @supports = Support.all
-  end
-
-  def search
+    search_params.values.map {|params| @serch_flg = true if params.present? } if search_params.present?
     @search_supports_form = SearchSupportsForm.new(search_params)
     @supports = @search_supports_form.search
   end
@@ -46,7 +43,6 @@ class Municipality::SupportsController < ApplicationController
   end
 
   def destroy
-    binding.pry
     @support.support_tags.destroy
     redirect_to municipality_supports_path, notice: '削除しました。'
   end
@@ -56,8 +52,6 @@ class Municipality::SupportsController < ApplicationController
   def set_support
     @support = Support.find(params[:id])
   end
-
-  def 
 
   def support_params
     params.require(:support).permit(:support_name, :content, :url, :application_method, :application_limit)

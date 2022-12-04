@@ -16,7 +16,7 @@ RSpec.describe City, type: :model do
     expect(city.errors[:city_name]).to include("can't be blank")
   end
 
-  fit 'city_nameが一意でなければ無効であること' do
+  it 'city_nameが一意でなければ無効であること' do
     City.create(city_name: 'test区', latitude: 35.6130639, longitude: 139.6996014)
     city = City.new(city_name: 'test区')
     city.valid?

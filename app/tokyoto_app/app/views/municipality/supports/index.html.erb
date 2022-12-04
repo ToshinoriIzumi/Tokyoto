@@ -1,4 +1,8 @@
 <div class="mx-5 my-10">
   <%= render "search_form" %>
+  <% if @serch_flg %>
+    <p class="text-2xl">データ一覧</p>
+    <p class="text-xl my-3">あなたが利用できる支援は、<%= @supports.count %>件です。</p>
+  <% end%>
   <%= render partial: "table", locals: { supports: @supports } %>
 </div>

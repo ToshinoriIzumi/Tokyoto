@@ -122,9 +122,9 @@
 
     <div class="row">
         <div class="text-right">
-            <button class="shadow-lg bg-yellow-500 shadow-yellow-500/50 text-white rounded px-2 py-1">公開</button>
-            <button class="shadow-lg bg-green-500 shadow-green-500/50 text-white rounded px-2 py-1">編集</button>
-            <button class="shadow-lg bg-red-500 shadow-red-500/50 text-white rounded px-2 py-1">削除</button>
+            <%= button_to '公開', class: "shadow-lg bg-yellow-500 shadow-yellow-500/50 text-white rounded px-2 py-1" %>
+            <button class="shadow-lg bg-green-500 shadow-green-500/50 text-white rounded px-2 py-1", preview_municipality_supports_path>編集</button>
+            <button class="shadow-lg bg-red-500 shadow-red-500/50 text-white rounded px-2 py-1", method: :delete, data:{ confirm='削除しますか？', municipality_supports_path }>削除</button>
         </div>
     </dev>
 </div>

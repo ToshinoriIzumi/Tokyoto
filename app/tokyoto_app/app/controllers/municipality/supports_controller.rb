@@ -1,7 +1,8 @@
 class Municipality::SupportsController < ApplicationController
   before_action :set_support, only: %i[show edit update destroy]
 
-  def index;end
+  def index
+  end
 
   def new
     @support = Support.new

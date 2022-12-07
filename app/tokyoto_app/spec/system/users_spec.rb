@@ -5,7 +5,7 @@ RSpec.describe "Users", type: :system do
 
   describe '退会処理' do
     before { login(user) }
-    fit '退会するを選ぶと退会処理が行われて、トップページにリダイレクトされる' do
+    it '退会するを選ぶと退会処理が行われて、トップページにリダイレクトされる' do
       visit profile_path
       expect {
         click_link '退会する'
@@ -13,7 +13,7 @@ RSpec.describe "Users", type: :system do
 
       expect(current_path).to eq root_path
       within('header') {
-        expect(page).not_to have_content('さん')
+        expect(page).to have_content('新規登録')
       }
     end
   end

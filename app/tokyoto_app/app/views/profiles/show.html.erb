@@ -9,7 +9,7 @@
   <p>住んでいる地域 <%= @city.city_name %></p>
 <% end %>
 <% if current_user.income? %>
-  <p>収入<%= current_user.income %>円</p>
+  <p>収入<%= current_user.income / 10000 %>万円</p>
 <% end %>
 <% if @children %>
   <% i = @children.length %>

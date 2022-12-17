@@ -2,7 +2,7 @@ class Municipality::SupportsController < ApplicationController
   before_action :set_support, only: %i[show edit update destroy]
 
   def index
-    search_params.values.map {|params| @serch_flg = true if params.present? } if search_params.present?
+    @search_flg = !search_flg.empty? if search_params
     @search_supports_form = SearchSupportsForm.new(search_params)
     @supports = @search_supports_form.search
   end
@@ -59,5 +59,9 @@ class Municipality::SupportsController < ApplicationController
 
   def search_params
     params[:q]&.permit(:support_name, :tag_id, :state)
+  end
+
+  def search_flg
+    search_params.values.map {|params|} 
   end
 end

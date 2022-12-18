@@ -1,0 +1,7 @@
+ja:
+  enums:
+    support:
+      state:
+        draft: "下書き"
+        published: "公開済み"
+        publish_wait: "公開待ち"

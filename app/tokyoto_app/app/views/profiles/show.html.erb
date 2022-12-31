@@ -20,3 +20,5 @@
 
 <%= link_to  "プロフィールを編集する", edit_profile_path %>
 <%= link_to "トップページへ", top_index_path %>
+<%= link_to "退会する",user_path(current_user.id), method: :delete, "data-confirm" => "本当に退会しますか？" %>
+

@@ -21,5 +21,13 @@ module TokyotoApp
       g.test_framework false
       g.skip_routes false
     end
+
+    config.generators do |g|
+      g.test_framework :rspec,
+        view_spec: false,
+        helper_spec: false,
+        request_spec: false,
+        routing_spec: false
+    end
   end
 end

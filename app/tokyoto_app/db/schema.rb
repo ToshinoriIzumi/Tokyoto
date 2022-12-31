@@ -72,6 +72,8 @@ ActiveRecord::Schema.define(version: 2022_11_19_024955) do
     t.string "address", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "url"
+    t.string "phone_number"
     t.index ["city_id"], name: "index_hospitals_on_city_id"
   end
 

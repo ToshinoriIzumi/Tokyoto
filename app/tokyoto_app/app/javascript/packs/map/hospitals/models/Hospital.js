@@ -2,12 +2,13 @@ import Ajax from "./Ajax";
 import { HOSPITAL_API_URL } from "./../config/const";
 
 class Hospital {
-    constructor(id, name, latitude, longitude, center) {
+    constructor(id, name, latitude, longitude, url, phone_number) {
         this.id = id;
         this.name = name;
         this.latitude = latitude;
         this.longitude = longitude;
-        this.center = center;
+        this.url = url;
+        this.phone_number = phone_number;
     }
 
     static async search_by(city_id) {
@@ -27,7 +28,9 @@ class Hospital {
                 response_data['id'],
                 response_data['name'],
                 response_data['latitude'],
-                response_data['longitude']
+                response_data['longitude'],
+                response_data['url'],
+                response_data['phone_number']
             );
         });
     }

@@ -1,2 +1,3 @@
 // ここにGoogleMap用のキーを設定して下さい。
 export const GOOGLE_MAP_API_KEY = '';
+export const HOSPITAL_API_URL = 'http://localhost:3000';

@@ -15,11 +15,7 @@ environment app_env
 
 # Specifies the `port` that Puma will listen on to receive requests; default is 3000.
 #
-if app_env == "production"
-    bind "unix://#{Rails.root}/tmp/sockets/puma.sock"
-else
-    port ENV.fetch("PORT") { 3000 }
-end
+port ENV.fetch("PORT") { 3000 }
 
 # Specifies the `pidfile` that Puma will use.
 pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }

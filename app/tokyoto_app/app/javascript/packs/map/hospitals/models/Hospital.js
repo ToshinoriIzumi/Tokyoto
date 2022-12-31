@@ -1,4 +1,5 @@
 import Ajax from "./Ajax";
+import { HOSPITAL_API_URL } from "./../config/const";
 
 class Hospital {
     constructor(id, name, latitude, longitude, center) {
@@ -11,7 +12,7 @@ class Hospital {
 
     static async search_by(city_id) {
         const res = await Ajax.get(
-            'http://localhost:3000/hospitals/search',
+            `${HOSPITAL_API_URL}/hospitals/search`,
             {city_id: city_id}
         );
         return { 

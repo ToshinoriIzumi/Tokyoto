@@ -1,5 +1,5 @@
 class TopController < ApplicationController
-  before_action :set_q, only: [:index, :search]
+  before_action :set_query, only: [:index, :search]
   skip_before_action :require_login
 
   def index
@@ -7,7 +7,7 @@ class TopController < ApplicationController
   end
 
   def search
-    @results = @q.result
+    @results = @query.result
   end
 
   def show
@@ -15,7 +15,7 @@ class TopController < ApplicationController
   end
 
   private
-  def set_q
-    @q = ConditionsSupport.ransack(params[:q])
+  def set_query
+    @query = ConditionsSupport.ransack(params[:query])
   end
 end

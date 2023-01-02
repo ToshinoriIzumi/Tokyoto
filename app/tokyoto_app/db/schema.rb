@@ -78,12 +78,9 @@ ActiveRecord::Schema.define(version: 2023_01_02_104241) do
     t.string "address", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-<<<<<<< HEAD
     t.string "url"
     t.string "phone_number"
-=======
     t.index ["address"], name: "index_hospitals_on_address", unique: true
->>>>>>> 0b6af89 (fix 既存のデータベースに戻し,unique制約などを修正 #64)
     t.index ["city_id"], name: "index_hospitals_on_city_id"
     t.index ["latitude"], name: "index_hospitals_on_latitude", unique: true
     t.index ["longitude"], name: "index_hospitals_on_longitude", unique: true

@@ -4,9 +4,10 @@ class ConditionsSupport < ApplicationRecord
   belongs_to :income
   belongs_to :age
   belongs_to :status
-  belongs_to :benefit
-  has_many :conditions_supports_benefit, foreign_key: [:condition_id, :support_id]
-  has_many :conditions_supports_status, foreign_key: [:condition_id, :support_id]
+  has_one :condition
+
+  validates :dependents_num, presence: true
+  validates :payment, presence: true
 
   self.primary_key = :condition_id, :support_id
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_01_02_093337) do
+ActiveRecord::Schema.define(version: 2023_01_02_104241) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,9 +20,7 @@ ActiveRecord::Schema.define(version: 2023_01_02_093337) do
     t.integer "max", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["max"], name: "index_ages_on_max", unique: true
     t.index ["min", "max"], name: "index_ages_on_min_and_max", unique: true
-    t.index ["min"], name: "index_ages_on_min", unique: true
   end
 
   create_table "children", force: :cascade do |t|
@@ -44,6 +42,23 @@ ActiveRecord::Schema.define(version: 2023_01_02_093337) do
   create_table "conditions", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "conditions_supports", primary_key: ["condition_id", "support_id"], force: :cascade do |t|
+    t.bigint "condition_id", null: false
+    t.bigint "support_id", null: false
+    t.bigint "city_id", null: false
+    t.integer "dependents_num", null: false
+    t.integer "payment", null: false
+    t.bigint "income_id", null: false
+    t.bigint "age_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["age_id"], name: "index_conditions_supports_on_age_id"
+    t.index ["city_id"], name: "index_conditions_supports_on_city_id"
+    t.index ["condition_id"], name: "index_conditions_supports_on_condition_id"
+    t.index ["income_id"], name: "index_conditions_supports_on_income_id"
+    t.index ["support_id"], name: "index_conditions_supports_on_support_id"
   end
 
   create_table "condtions_supports_statuses", force: :cascade do |t|
@@ -80,7 +95,6 @@ ActiveRecord::Schema.define(version: 2023_01_02_093337) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["money", "is_myself"], name: "index_incomes_on_money_and_is_myself", unique: true
-    t.index ["money"], name: "index_incomes_on_money", unique: true
   end
 
   create_table "statuses", force: :cascade do |t|
@@ -136,6 +150,11 @@ ActiveRecord::Schema.define(version: 2023_01_02_093337) do
   end
 
   add_foreign_key "children", "users"
+  add_foreign_key "conditions_supports", "ages"
+  add_foreign_key "conditions_supports", "cities"
+  add_foreign_key "conditions_supports", "conditions"
+  add_foreign_key "conditions_supports", "incomes"
+  add_foreign_key "conditions_supports", "supports"
   add_foreign_key "condtions_supports_statuses", "conditions"
   add_foreign_key "condtions_supports_statuses", "statuses"
   add_foreign_key "hospitals", "cities"

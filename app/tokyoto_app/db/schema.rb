@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_12_131304) do
+ActiveRecord::Schema.define(version: 2023_01_02_093337) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,13 +20,9 @@ ActiveRecord::Schema.define(version: 2022_11_12_131304) do
     t.integer "max", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["max"], name: "index_ages_on_max", unique: true
     t.index ["min", "max"], name: "index_ages_on_min_and_max", unique: true
-  end
-
-  create_table "benefits", force: :cascade do |t|
-    t.integer "money"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.index ["min"], name: "index_ages_on_min", unique: true
   end
 
   create_table "children", force: :cascade do |t|
@@ -45,32 +41,37 @@ ActiveRecord::Schema.define(version: 2022_11_12_131304) do
     t.float "longitude", null: false
   end
 
-  create_table "conditions_supports", primary_key: ["condition_id", "support_id"], force: :cascade do |t|
-    t.bigserial "condition_id", null: false
-    t.bigint "support_id", null: false
-    t.bigint "city_id", null: false
-    t.integer "dependents_num", null: false
-    t.bigint "income_id", null: false
-    t.bigint "age_id", null: false
+  create_table "conditions", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["age_id"], name: "index_conditions_supports_on_age_id"
-    t.index ["city_id"], name: "index_conditions_supports_on_city_id"
-    t.index ["income_id"], name: "index_conditions_supports_on_income_id"
-    t.index ["support_id"], name: "index_conditions_supports_on_support_id"
+  end
+
+  create_table "condtions_supports_statuses", force: :cascade do |t|
+    t.bigint "condition_id", null: false
+    t.bigint "status_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["condition_id"], name: "index_condtions_supports_statuses_on_condition_id"
+    t.index ["status_id"], name: "index_condtions_supports_statuses_on_status_id"
   end
 
   create_table "hospitals", force: :cascade do |t|
     t.bigint "city_id", null: false
     t.string "name", null: false
-    t.float "latitude", null: false
-    t.float "longitude", null: false
+    t.float "latitude"
+    t.float "longitude"
     t.string "address", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+<<<<<<< HEAD
     t.string "url"
     t.string "phone_number"
+=======
+    t.index ["address"], name: "index_hospitals_on_address", unique: true
+>>>>>>> 0b6af89 (fix 既存のデータベースに戻し,unique制約などを修正 #64)
     t.index ["city_id"], name: "index_hospitals_on_city_id"
+    t.index ["latitude"], name: "index_hospitals_on_latitude", unique: true
+    t.index ["longitude"], name: "index_hospitals_on_longitude", unique: true
   end
 
   create_table "incomes", force: :cascade do |t|
@@ -79,12 +80,14 @@ ActiveRecord::Schema.define(version: 2022_11_12_131304) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["money", "is_myself"], name: "index_incomes_on_money_and_is_myself", unique: true
+    t.index ["money"], name: "index_incomes_on_money", unique: true
   end
 
   create_table "statuses", force: :cascade do |t|
-    t.integer "status", default: 0, null: false
+    t.string "status", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["status"], name: "index_statuses_on_status", unique: true
   end
 
   create_table "support_tags", force: :cascade do |t|
@@ -104,13 +107,17 @@ ActiveRecord::Schema.define(version: 2022_11_12_131304) do
     t.string "url", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["support_name"], name: "index_supports_on_support_name", unique: true
+    t.index ["url"], name: "index_supports_on_url", unique: true
   end
 
   create_table "tags", force: :cascade do |t|
     t.string "name", null: false
-    t.string "color"
+    t.string "color", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["color"], name: "index_tags_on_color", unique: true
+    t.index ["name"], name: "index_tags_on_name", unique: true
   end
 
   create_table "users", force: :cascade do |t|
@@ -129,10 +136,8 @@ ActiveRecord::Schema.define(version: 2022_11_12_131304) do
   end
 
   add_foreign_key "children", "users"
-  add_foreign_key "conditions_supports", "ages"
-  add_foreign_key "conditions_supports", "cities"
-  add_foreign_key "conditions_supports", "incomes"
-  add_foreign_key "conditions_supports", "supports"
+  add_foreign_key "condtions_supports_statuses", "conditions"
+  add_foreign_key "condtions_supports_statuses", "statuses"
   add_foreign_key "hospitals", "cities"
   add_foreign_key "support_tags", "supports"
   add_foreign_key "support_tags", "tags"

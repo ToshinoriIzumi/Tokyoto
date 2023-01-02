@@ -1,17 +1,17 @@
 class CreateConditionsSupports < ActiveRecord::Migration[6.0]
   def change
-    create_table :conditions_supports do |t|
+    create_table :conditions_supports, id: false do |t|
+      t.bigserial :condition_id, limit: 8, null: false
       t.references :support, null: false, foreign_key: true
       t.references :city, null: false, foreign_key: true
       t.integer :dependents_num, null: false
       t.references :income, null: false, foreign_key: true
       t.references :age, null: false, foreign_key: true
-      t.references :status, null: false, foreign_key: true
-      t.references :benefit, null: false, foreign_key: true
 
       t.timestamps
     end
 
-    add_index :conditions_supports, [:support_id, :city_id, :income_id, :age_id, :status_id, :benefit_id], name: 'condition_combination',  unique: true
+    sql = 'ALTER TABLE conditions_supports ADD PRIMARY KEY (condition_id, support_id);'
+    ActiveRecord::Base.connection.execute(sql)
   end
 end

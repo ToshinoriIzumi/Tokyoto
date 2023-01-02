@@ -5,8 +5,8 @@ class ConditionsSupport < ApplicationRecord
   belongs_to :age
   belongs_to :status
   belongs_to :benefit
-  #belongs_to :conditions_supports_benefit, foreign_key: [:condition_id, :support_id]
-  #belongs_to :conditions_supports_status, foreign_key: [:condition_id, :support_id]
+  has_many :conditions_supports_benefit, foreign_key: [:condition_id, :support_id]
+  has_many :conditions_supports_status, foreign_key: [:condition_id, :support_id]
 
   self.primary_key = :condition_id, :support_id
 

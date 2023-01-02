@@ -4,7 +4,12 @@ class ConditionsSupport < ApplicationRecord
   belongs_to :income
   belongs_to :age
   belongs_to :status
-  belongs_to :benefit
+  has_one :condition
+
+  validates :dependents_num, presence: true
+  validates :payment, presence: true
+
+  self.primary_key = :condition_id, :support_id
 
   scope :age_search, -> (number){ joins(:age).where("min <= ? and ? <= max", number, number)}
 

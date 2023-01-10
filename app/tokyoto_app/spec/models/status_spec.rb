@@ -1,21 +1,16 @@
 require 'rails_helper'
 
 RSpec.describe Status, type: :model do
-  it '請求者があれば有効であること' do
-    status = Status.new(status: 0)
+  before { status = Status.new(status: "テスト条件") }
+
+  it '条件がある場合、有効であること' do
     expect(status).to be_valid
   end
 
-  it '請求者がなければ無効であること' do
-    status = Status.new(status: nil)
-    status.valid?
+  it '条件がない場合、無効であること' do
+    status.status = nil
+    expect(conditions_supports_status).to be_invalid
+    # status.valid?
     expect(status.errors[:status]).to include("can't be blank")
-  end
-
-  xit '請求者が一意でなければ無効であること' do
-    Status.create(status: 0)
-    status = Status.new(status: 0)
-    status.valid?
-    expect(status.errors[:status]).to include("has been taken")
   end
 end

@@ -1,11 +1,12 @@
 FactoryBot.define do
   factory :conditions_support do
-    dependents_num { 1 }
-    association :support
+    # これでええんか…？
+    # https://swfz.hatenablog.com/entry/2019/01/27/102711
+    id { [association :support, association :condition] }
     association :city
     association :income
     association :age
-    association :status
-    association :benefit
+    payment { 100000 }
+    dependents_num { 1 }
   end
 end

@@ -1,8 +1,8 @@
 FactoryBot.define do
   factory :conditions_support do
-    # これでええんか…？
+    # ダメらしい
     # https://swfz.hatenablog.com/entry/2019/01/27/102711
-    id { [association :support, association :condition] }
+    # id [association :support, association :condition]
     association :city
     association :income
     association :age

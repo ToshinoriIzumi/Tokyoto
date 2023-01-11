@@ -12,6 +12,13 @@ RSpec.describe Income, type: :model do
     expect(income.errors[:money]).to include("can't be blank")
   end
 
+  it 'moneyが一意でなければ無効であること' do
+    Income.create(money: 2000000)
+    incom = Income.new(money: 2000000)
+    income.valid?
+    expect(income.errors[:money]).to include("has already been taken")
+  end
+
   it '本人フラグがなければ無効であること' do
     income = Income.new(is_myself: nil)
     income.valid?

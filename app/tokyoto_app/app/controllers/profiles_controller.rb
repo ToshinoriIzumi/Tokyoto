@@ -1,4 +1,5 @@
 class ProfilesController < ApplicationController
+  include ApplicationHelper
   before_action :set_user, only: [:show, :edit, :update, :user_supports]
 
   def new

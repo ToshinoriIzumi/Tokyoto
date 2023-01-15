@@ -1,4 +1,5 @@
 class TopController < ApplicationController
+  include ApplicationHelper
   before_action :set_query, only: [:index, :search]
   skip_before_action :require_login
 

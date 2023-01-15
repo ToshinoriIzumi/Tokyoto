@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_01_02_104241) do
+ActiveRecord::Schema.define(version: 2023_01_02_100226) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 2023_01_02_104241) do
     t.datetime "updated_at", precision: 6, null: false
     t.float "latitude", null: false
     t.float "longitude", null: false
+    t.index ["latitude", "longitude"], name: "index_cities_on_latitude_and_longitude", unique: true
   end
 
   create_table "conditions", force: :cascade do |t|
@@ -48,8 +49,7 @@ ActiveRecord::Schema.define(version: 2023_01_02_104241) do
     t.bigint "condition_id", null: false
     t.bigint "support_id", null: false
     t.bigint "city_id", null: false
-    t.integer "dependents_num", null: false
-    t.integer "payment", null: false
+    t.string "payment", null: false
     t.bigint "income_id", null: false
     t.bigint "age_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -73,8 +73,8 @@ ActiveRecord::Schema.define(version: 2023_01_02_104241) do
   create_table "hospitals", force: :cascade do |t|
     t.bigint "city_id", null: false
     t.string "name", null: false
-    t.float "latitude"
-    t.float "longitude"
+    t.float "latitude", null: false
+    t.float "longitude", null: false
     t.string "address", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -82,8 +82,7 @@ ActiveRecord::Schema.define(version: 2023_01_02_104241) do
     t.string "phone_number"
     t.index ["address"], name: "index_hospitals_on_address", unique: true
     t.index ["city_id"], name: "index_hospitals_on_city_id"
-    t.index ["latitude"], name: "index_hospitals_on_latitude", unique: true
-    t.index ["longitude"], name: "index_hospitals_on_longitude", unique: true
+    t.index ["latitude", "longitude"], name: "index_hospitals_on_latitude_and_longitude", unique: true
   end
 
   create_table "incomes", force: :cascade do |t|
@@ -124,10 +123,8 @@ ActiveRecord::Schema.define(version: 2023_01_02_104241) do
 
   create_table "tags", force: :cascade do |t|
     t.string "name", null: false
-    t.string "color", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["color"], name: "index_tags_on_color", unique: true
     t.index ["name"], name: "index_tags_on_name", unique: true
   end
 

@@ -1,9 +1,8 @@
 class CreateAges < ActiveRecord::Migration[6.0]
   def change
     create_table :ages do |t|
-      t.integer :min, null: false, index: {unique: true}
-      t.integer :max, null: false, index: {unique: true}
-
+      t.integer :min, null: false
+      t.integer :max, null: false
       t.timestamps
     end
     add_index :ages, [:min, :max], unique: true

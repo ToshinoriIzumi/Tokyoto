@@ -4,8 +4,7 @@ class CreateConditionsSupports < ActiveRecord::Migration[6.0]
       t.references :condition, null: false, foreign_key: true
       t.references :support, null: false, foreign_key: true
       t.references :city, null: false, foreign_key: true
-      t.integer :dependents_num, null: false
-      t.integer :payment, null: false
+      t.string :payment, null: false
       t.references :income, null: false, foreign_key: true
       t.references :age, null: false, foreign_key: true
 

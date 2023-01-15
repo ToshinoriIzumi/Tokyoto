@@ -20,6 +20,5 @@ SupportTag.create!(
     { support_id: 17, tag_id: 2 },
     { support_id: 18, tag_id: 3 },
     { support_id: 19, tag_id: 4 },
-
   ]
 )

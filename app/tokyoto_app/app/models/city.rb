@@ -4,5 +4,5 @@ class City < ApplicationRecord
 
   validates :city_name, presence: true
   validates :latitude, presence: true
-  validates :longitude, presence: true
+  validates :longitude, presence: true, uniqueness: { scope: [:latitude] }
 end

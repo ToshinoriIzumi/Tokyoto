@@ -6,7 +6,6 @@ class ConditionsSupport < ApplicationRecord
   belongs_to :status
   has_one :condition
 
-  validates :dependents_num, presence: true
   validates :payment, presence: true
 
   self.primary_key = :condition_id, :support_id

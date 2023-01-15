@@ -3,6 +3,6 @@ class Support < ApplicationRecord
   has_many :support_tags, dependent: :destroy
   has_many :tags, through: :support_tags
 
-  validates :support_name, presence: true, uniqueness: true
+  validates :support_name, presence: true
   validates :content, presence: true
 end

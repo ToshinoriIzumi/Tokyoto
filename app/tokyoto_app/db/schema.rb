@@ -61,13 +61,13 @@ ActiveRecord::Schema.define(version: 2023_01_02_100226) do
     t.index ["support_id"], name: "index_conditions_supports_on_support_id"
   end
 
-  create_table "condtions_supports_statuses", force: :cascade do |t|
+  create_table "conditions_supports_statuses", force: :cascade do |t|
     t.bigint "condition_id", null: false
     t.bigint "status_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["condition_id"], name: "index_condtions_supports_statuses_on_condition_id"
-    t.index ["status_id"], name: "index_condtions_supports_statuses_on_status_id"
+    t.index ["condition_id"], name: "index_conditions_supports_statuses_on_condition_id"
+    t.index ["status_id"], name: "index_conditions_supports_statuses_on_status_id"
   end
 
   create_table "hospitals", force: :cascade do |t|
@@ -149,8 +149,8 @@ ActiveRecord::Schema.define(version: 2023_01_02_100226) do
   add_foreign_key "conditions_supports", "conditions"
   add_foreign_key "conditions_supports", "incomes"
   add_foreign_key "conditions_supports", "supports"
-  add_foreign_key "condtions_supports_statuses", "conditions"
-  add_foreign_key "condtions_supports_statuses", "statuses"
+  add_foreign_key "conditions_supports_statuses", "conditions"
+  add_foreign_key "conditions_supports_statuses", "statuses"
   add_foreign_key "hospitals", "cities"
   add_foreign_key "support_tags", "supports"
   add_foreign_key "support_tags", "tags"

@@ -10,6 +10,7 @@ class ProfileForm
 
   # バリデーション他に付けたほうが良いものあるか？
   validates :city_id, presence: true
+  validates :user_name, presence: true
   validates :income, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
   validates :age, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
@@ -18,8 +19,8 @@ class ProfileForm
 
   def save
     user = User.find(id) # find_byのほうが良い？
+    return false if invalid?
     user.update(user_name: user_name, city_id: city_id, income: income)
-
     if user.children.present?
       Child.where(user_id: id).update(age: age)
     else

@@ -1,7 +1,8 @@
 class ProfilesController < ApplicationController
+  before_action :set_cities, only: [:new, :create, :edit, :update]
+
   def new
     @profile_form = ProfileForm.new
-    @cities = City.all
   end
 
   def create
@@ -24,19 +25,26 @@ class ProfilesController < ApplicationController
   def edit
     user = current_user
     @profile_form = ProfileForm.new(id: user.id, user_name: user.user_name, city_id: user.city_id, income: user.income, age: user.children[0].age)
-    @cities = City.all
   end
 
   def update
     @profile_form = ProfileForm.new(profile_params)
     @profile_form.id = current_user.id
-    @profile_form.save
-    redirect_to profile_path
+    if @profile_form.save
+      redirect_to profile_path, notice: 'プロフィールを変更しました。'
+    else
+      flash.now[:alert] = 'プロフィールを変更できませんでした。'
+      render :edit
+    end
   end
 
   private
 
   def profile_params
     params.require(:profile_form).permit(:user_name, :city_id, :income, :age)
+  end
+
+  def set_cities
+    @cities = City.all
   end
 end

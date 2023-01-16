@@ -3,7 +3,6 @@ class ConditionsSupport < ApplicationRecord
   belongs_to :city
   belongs_to :income
   belongs_to :age
-  belongs_to :status
   belongs_to :condition
 
   validates :payment, presence: true

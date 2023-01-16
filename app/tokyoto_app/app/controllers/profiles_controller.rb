@@ -1,4 +1,5 @@
 class ProfilesController < ApplicationController
+  include ApplicationHelper
   before_action :set_user, only: [:show, :edit, :update, :user_supports]
 
   def new
@@ -39,11 +40,15 @@ class ProfilesController < ApplicationController
 
   def set_user
     @user = User.find(current_user.id)
+    @user.income = income_to_view(@user.income)
     @children = Child.where(user_id: @user.id)
     @city = City.find_by(id: @user.city_id)
   end
 
   def profile_params
-    params.require(:user).permit(:user_name, :income, :city_id, children_attributes: [:age])
+    profile_params = params.require(:user).permit(:user_name, :income, :city_id, children_attributes: [:age])
+    profile_params[:income] = income_to_db(profile_params[:income])
+
+    return profile_params
   end
 end

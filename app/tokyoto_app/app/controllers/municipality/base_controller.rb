@@ -4,7 +4,7 @@ class Municipality::BaseController < ApplicationController
 
   private
     def not_authenticated
-      flash[:info] = 'ログインしてください'
+      flash[:alert] = 'ログインしてください'
       redirect_to main_app.login_path
     end
 

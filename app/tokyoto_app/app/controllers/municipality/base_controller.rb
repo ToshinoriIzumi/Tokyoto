@@ -1,6 +1,6 @@
 class Municipality::BaseController < ApplicationController
   layout 'municipality/layouts/application'
-  before_action :require_login
+  before_action :check_admin
 
   private
     def not_authenticated
@@ -9,6 +9,6 @@ class Municipality::BaseController < ApplicationController
     end
 
     def check_admin
-      redirect_to root_path, warning: '権限がありません' unless current_user.admin?
+      redirect_to root_path, alert: '権限がありません' unless current_user.admin?
     end
 end

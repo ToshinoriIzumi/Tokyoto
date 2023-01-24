@@ -117,6 +117,7 @@ ActiveRecord::Schema.define(version: 2023_01_02_100226) do
     t.string "url", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "state", null: false
     t.index ["support_name"], name: "index_supports_on_support_name", unique: true
     t.index ["url"], name: "index_supports_on_url", unique: true
   end

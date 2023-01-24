@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_12_131304) do
+ActiveRecord::Schema.define(version: 2022_11_19_024955) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -89,6 +89,15 @@ ActiveRecord::Schema.define(version: 2022_11_12_131304) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "support_tags", force: :cascade do |t|
+    t.bigint "support_id", null: false
+    t.bigint "tag_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["support_id"], name: "index_support_tags_on_support_id"
+    t.index ["tag_id"], name: "index_support_tags_on_tag_id"
+  end
+
   create_table "supports", force: :cascade do |t|
     t.string "support_name", null: false
     t.text "content", null: false
@@ -97,7 +106,12 @@ ActiveRecord::Schema.define(version: 2022_11_12_131304) do
     t.string "url", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "tag"
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -123,4 +137,6 @@ ActiveRecord::Schema.define(version: 2022_11_12_131304) do
   add_foreign_key "conditions_supports", "statuses"
   add_foreign_key "conditions_supports", "supports"
   add_foreign_key "hospitals", "cities"
+  add_foreign_key "support_tags", "supports"
+  add_foreign_key "support_tags", "tags"
 end

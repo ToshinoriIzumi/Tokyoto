@@ -6,7 +6,9 @@ table_names = [
   'age',
   'benefit',
   'conditions_support',
-  'hospitals'
+  'hospitals',
+  'tags',
+  'support_tags'
 ]
 
 begin

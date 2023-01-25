@@ -31,9 +31,9 @@ class ProfilesController < ApplicationController
     @profile_form = ProfileForm.new(profile_params)
     @profile_form.id = current_user.id
     if @profile_form.save
-      redirect_to profile_path, notice: 'プロフィールを変更しました。'
+      redirect_to profile_path, notice: 'プロフィールを更新しました。'
     else
-      flash.now[:alert] = 'プロフィールを変更できませんでした。'
+      flash.now[:alert] = 'プロフィールを更新できませんでした。'
       render :edit
     end
   end

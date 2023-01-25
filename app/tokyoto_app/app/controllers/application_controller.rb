@@ -13,4 +13,5 @@ class ApplicationController < ActionController::Base
       flash[:info] = 'プロフィールを登録すると、より便利な機能が使えます'
     end
   end
+
 end

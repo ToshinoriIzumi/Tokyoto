@@ -1,3 +1,4 @@
+# 対象者の条件はenumで管理？string？
 Status.create!(
   [
     { status: 0 },

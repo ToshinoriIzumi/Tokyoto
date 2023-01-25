@@ -81,6 +81,8 @@ GEM
       xpath (~> 3.2)
     childprocess (4.1.0)
     coderay (1.1.3)
+    composite_primary_keys (12.0.10)
+      activerecord (~> 6.0.0)
     concurrent-ruby (1.1.10)
     crass (1.0.6)
     diff-lcs (1.5.0)
@@ -345,6 +347,7 @@ DEPENDENCIES
   byebug
   cancancan (= 3.3.0)
   capybara (>= 2.15)
+  composite_primary_keys (~> 12.0)
   draper
   enum_help
   factory_bot_rails

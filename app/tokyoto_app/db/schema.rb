@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_19_024955) do
+ActiveRecord::Schema.define(version: 2023_01_02_100226) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,12 +21,6 @@ ActiveRecord::Schema.define(version: 2022_11_19_024955) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["min", "max"], name: "index_ages_on_min_and_max", unique: true
-  end
-
-  create_table "benefits", force: :cascade do |t|
-    t.integer "money"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "children", force: :cascade do |t|
@@ -43,25 +37,37 @@ ActiveRecord::Schema.define(version: 2022_11_19_024955) do
     t.datetime "updated_at", precision: 6, null: false
     t.float "latitude", null: false
     t.float "longitude", null: false
+    t.index ["latitude", "longitude"], name: "index_cities_on_latitude_and_longitude", unique: true
   end
 
-  create_table "conditions_supports", force: :cascade do |t|
+  create_table "conditions", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "conditions_supports", primary_key: ["condition_id", "support_id"], force: :cascade do |t|
+    t.bigint "condition_id", null: false
     t.bigint "support_id", null: false
     t.bigint "city_id", null: false
-    t.integer "dependents_num", null: false
+    t.string "payment", null: false
     t.bigint "income_id", null: false
     t.bigint "age_id", null: false
-    t.bigint "status_id", null: false
-    t.bigint "benefit_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["age_id"], name: "index_conditions_supports_on_age_id"
-    t.index ["benefit_id"], name: "index_conditions_supports_on_benefit_id"
     t.index ["city_id"], name: "index_conditions_supports_on_city_id"
+    t.index ["condition_id"], name: "index_conditions_supports_on_condition_id"
     t.index ["income_id"], name: "index_conditions_supports_on_income_id"
-    t.index ["status_id"], name: "index_conditions_supports_on_status_id"
-    t.index ["support_id", "city_id", "income_id", "age_id", "status_id", "benefit_id"], name: "condition_combination", unique: true
     t.index ["support_id"], name: "index_conditions_supports_on_support_id"
+  end
+
+  create_table "conditions_supports_statuses", force: :cascade do |t|
+    t.bigint "condition_id", null: false
+    t.bigint "status_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["condition_id"], name: "index_conditions_supports_statuses_on_condition_id"
+    t.index ["status_id"], name: "index_conditions_supports_statuses_on_status_id"
   end
 
   create_table "hospitals", force: :cascade do |t|
@@ -74,7 +80,9 @@ ActiveRecord::Schema.define(version: 2022_11_19_024955) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "url"
     t.string "phone_number"
+    t.index ["address"], name: "index_hospitals_on_address", unique: true
     t.index ["city_id"], name: "index_hospitals_on_city_id"
+    t.index ["latitude", "longitude"], name: "index_hospitals_on_latitude_and_longitude", unique: true
   end
 
   create_table "incomes", force: :cascade do |t|
@@ -86,9 +94,10 @@ ActiveRecord::Schema.define(version: 2022_11_19_024955) do
   end
 
   create_table "statuses", force: :cascade do |t|
-    t.integer "status", default: 0, null: false
+    t.string "status", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["status"], name: "index_statuses_on_status", unique: true
   end
 
   create_table "support_tags", force: :cascade do |t|
@@ -109,12 +118,15 @@ ActiveRecord::Schema.define(version: 2022_11_19_024955) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "state", null: false
+    t.index ["support_name"], name: "index_supports_on_support_name", unique: true
+    t.index ["url"], name: "index_supports_on_url", unique: true
   end
 
   create_table "tags", force: :cascade do |t|
     t.string "name", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["name"], name: "index_tags_on_name", unique: true
   end
 
   create_table "users", force: :cascade do |t|
@@ -134,11 +146,12 @@ ActiveRecord::Schema.define(version: 2022_11_19_024955) do
 
   add_foreign_key "children", "users"
   add_foreign_key "conditions_supports", "ages"
-  add_foreign_key "conditions_supports", "benefits"
   add_foreign_key "conditions_supports", "cities"
+  add_foreign_key "conditions_supports", "conditions"
   add_foreign_key "conditions_supports", "incomes"
-  add_foreign_key "conditions_supports", "statuses"
   add_foreign_key "conditions_supports", "supports"
+  add_foreign_key "conditions_supports_statuses", "conditions"
+  add_foreign_key "conditions_supports_statuses", "statuses"
   add_foreign_key "hospitals", "cities"
   add_foreign_key "support_tags", "supports"
   add_foreign_key "support_tags", "tags"

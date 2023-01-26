@@ -1,24 +1,16 @@
 <h1>プロフィール詳細</h1>
-<p>姓 <%= current_user.last_name %></p>
-<p>名 <%= current_user.first_name %></p>
-<p>メールアドレス <%= current_user.email %></p>
-<% if current_user.user_name? %>
-  <p>ユーザーネーム <%= current_user.user_name %>さん</p>
-<% end %>
-<% if @city %>
-  <p>住んでいる地域 <%= @city.city_name %></p>
-<% end %>
-<% if current_user.income? %>
-  <p>収入<%= current_user.income / 10000 %>万円</p>
-<% end %>
-<% if @children %>
-  <% i = @children.length %>
-  <% i.times do %>
-    <p>子供の年齢 <%= @children[i - 1].age %>歳</p>
+<div>姓 <%= @user.last_name %></div>
+<div>名 <%= @user.first_name %></div>
+<div>メールアドレス <%= @user.email %></div>
+<div>ユーザーネーム <%= show_user_name %>さん</div>
+<div>住んでいる地域 <%= show_city_name %></div>
+<div>収入（単位：万円）<%= show_income %>万円</div>
+<div>子供の年齢
+  <% @user.children.each do |child|%>
+    <%= child.age %>歳
   <% end %>
-<% end %>
+</div>
 
 <%= link_to  "プロフィールを編集する", edit_profile_path %>
 <%= link_to "トップページへ", top_index_path %>
 <%= link_to "退会する",user_path(current_user.id), method: :delete, "data-confirm" => "本当に退会しますか？" %>
-

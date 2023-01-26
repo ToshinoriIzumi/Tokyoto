@@ -1,54 +1,49 @@
 class ProfilesController < ApplicationController
-  include ApplicationHelper
-  before_action :set_user, only: [:show, :edit, :update, :user_supports]
+  before_action :set_cities, only: [:new, :create, :edit, :update]
 
   def new
-    @user = User.new
-    @user.children.build
-    @cities = City.all
+    @profile_form = ProfileForm.new
   end
 
   def create
-    @user = current_user
-    if @user.update(profile_params)
-      redirect_to root_path, notice: 'プロフィール情報を登録しました。'
+    @profile_form = ProfileForm.new(profile_params)
+    @profile_form.id = current_user.id
+    if @profile_form.save
+      redirect_to root_path, notice: 'プロフィールを登録しました。'
     else
-      flash.now[:alert] = 'プロフィール情報の登録に失敗しました。'
+      flash.now[:alert] = 'プロフィールを登録できませんでした。'
+      render :new
     end
   end
 
-  def show; end
+  def show
+    @user = User.find(current_user.id)
+    @profile_form = ProfileForm.new(id: @user.id)
+    @city = City.find(current_user.city_id)
+  end
 
   def edit
-    @cities = City.all
+    user = current_user
+    @profile_form = ProfileForm.new(id: user.id, user_name: user.user_name, city_id: user.city_id, income: user.income, age: user.children[0].age)
   end
 
   def update
-    if @user.update(profile_params)
-      redirect_to profile_path, notice: 'プロフィールを更新しました'
+    @profile_form = ProfileForm.new(profile_params)
+    @profile_form.id = current_user.id
+    if @profile_form.save
+      redirect_to profile_path, notice: 'プロフィールを更新しました。'
     else
-      flash.now[:alert] = 'プロフィールを更新できませんでした'
+      flash.now[:alert] = 'プロフィールを更新できませんでした。'
       render :edit
     end
   end
 
-  def user_supports
-    @user_supports = ConditionsSupport.joins(:income, :age).where(city_id: @user.city_id, incomes: { money: @user.income..}, ages: {min: ..@user.children.first.age, max: @user.children.first.age..})
-  end
-
   private
 
-  def set_user
-    @user = User.find(current_user.id)
-    @user.income = income_to_view(@user.income)
-    @children = Child.where(user_id: @user.id)
-    @city = City.find_by(id: @user.city_id)
-  end
-
   def profile_params
-    profile_params = params.require(:user).permit(:user_name, :income, :city_id, children_attributes: [:age])
-    profile_params[:income] = income_to_db(profile_params[:income])
-
-    return profile_params
+    params.require(:profile_form).permit(:user_name, :city_id, :income, :age)
   end
+
+  def set_cities
+    @cities = City.all
 end

@@ -46,5 +46,4 @@ class ProfilesController < ApplicationController
 
   def set_cities
     @cities = City.all
-  end
 end

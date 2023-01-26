@@ -34,6 +34,9 @@ gem 'rails_admin', '3.0.0'
 gem 'cancancan', '3.3.0'
 gem 'pry-rails'
 gem 'draper'
+gem 'composite_primary_keys', '~> 12.0'
+gem 'enum_help'
+gem 'rails-i18n'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

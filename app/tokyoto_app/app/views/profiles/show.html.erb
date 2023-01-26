@@ -4,7 +4,7 @@
 <div>メールアドレス <%= @user.email %></div>
 <div>ユーザーネーム <%= show_user_name %>さん</div>
 <div>住んでいる地域 <%= show_city_name %></div>
-<div>収入<%= show_income %>円</div>
+<div>収入（単位：万円）<%= show_income %>万円</div>
 <div>子供の年齢
   <% @user.children.each do |child|%>
     <%= child.age %>歳
@@ -13,3 +13,4 @@
 
 <%= link_to  "プロフィールを編集する", edit_profile_path %>
 <%= link_to "トップページへ", top_index_path %>
+<%= link_to "退会する",user_path(current_user.id), method: :delete, "data-confirm" => "本当に退会しますか？" %>

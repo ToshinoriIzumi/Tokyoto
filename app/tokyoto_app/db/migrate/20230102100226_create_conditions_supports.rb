@@ -7,6 +7,7 @@ class CreateConditionsSupports < ActiveRecord::Migration[6.0]
       t.string :payment, null: false
       t.references :income, null: false, foreign_key: true
       t.references :age, null: false, foreign_key: true
+      t.string :url, null: false, index: {unique: true}
 
       t.timestamps
     end

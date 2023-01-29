@@ -5,7 +5,6 @@ class CreateSupports < ActiveRecord::Migration[6.0]
       t.text :content, null: false
       t.text :application_method
       t.string :application_limit
-      t.string :url, null: false, index: {unique: true}
 
       t.timestamps
     end

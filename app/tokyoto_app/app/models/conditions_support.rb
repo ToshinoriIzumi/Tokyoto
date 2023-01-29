@@ -4,6 +4,8 @@ class ConditionsSupport < ApplicationRecord
   belongs_to :income
   belongs_to :age
   belongs_to :condition
+  has_many :conditions_supports_incomes, dependent: :destroy
+  has_many :incomes, through: :conditions_supports_incomes
 
   validates :payment, presence: true
 

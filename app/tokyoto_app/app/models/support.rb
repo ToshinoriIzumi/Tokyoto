@@ -5,7 +5,7 @@ class Support < ApplicationRecord
 
   validates :support_name, presence: true
   validates :content, presence: true
-  validates :url, presence: true
+  validates :state, presence: true
 
   enum state: { draft: 0, published: 1, publish_wait: 2 }
 

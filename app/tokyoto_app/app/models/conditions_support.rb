@@ -12,7 +12,7 @@ class ConditionsSupport < ApplicationRecord
   validates :payment_frequency, presence: true
 
   enum payment_limit: { fixed_amount: 0, monthly_limit: 1 , upper_limit: 2, full_payment: 3 }
-  enum payment_frequency: { lump: 0, every_one_month: 1 , every_two_months: 2, every_three_months: 3, every_four_months: 4 }
+  enum payment_frequency: { lump: 0, every_one_month: 1 , every_two_months: 2, every_three_months: 3, every_four_months: 4, non_listed: 5, no_transfers: 6 }
 
   scope :age_search, -> (number){ joins(:age).where("min <= ? and ? <= max", number, number)}
 

@@ -14,6 +14,9 @@ class TopController < ApplicationController
     @support = Support.find(params[:id])
   end
 
+  def terms_of_use
+  end
+
   private
   def set_q
     @q = ConditionsSupport.ransack(params[:q])

@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2023_02_01_140852) do
 
   create_table "children", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.date "age"
+    t.date "birth"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_children_on_user_id"

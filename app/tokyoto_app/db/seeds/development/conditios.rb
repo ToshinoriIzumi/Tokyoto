@@ -1,1 +1,0 @@
-ConditionsSupportStatus.create!()

@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   get "hospitals/search", to: "hospitals#search"
   get "map/hospitals", to: "map/hospitals#index"
   
+  get "privacy_policy", to: "top#privacy_policy"
+  
   namespace :municipality do
     resources :supports do
       post "preview", on: :collection

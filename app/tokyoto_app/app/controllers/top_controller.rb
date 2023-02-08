@@ -15,6 +15,9 @@ class TopController < ApplicationController
     @support = Support.find(params[:id])
   end
 
+  def privacy_policy
+  end
+
   private
   
   def set_query

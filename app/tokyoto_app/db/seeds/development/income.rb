@@ -1,5 +1,5 @@
 Income.create!(
   [
-    { money: 1000000000, is_myself: 0 },
+    { id: 1, money: 1000000000, is_myself: 0 },
   ]
 )

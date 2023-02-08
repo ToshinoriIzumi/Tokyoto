@@ -1,6 +1,7 @@
 ConditionsSupport.create!(
   [
     {
+      id: 1,
       condition_id: 1,
       support_id: 7,
       city_id: 7,

@@ -1,5 +1,5 @@
 Age.create!(
   [
-    { min: 3, max: 5 },
+    { id: 1, min: 3, max: 5 },
   ]
 )

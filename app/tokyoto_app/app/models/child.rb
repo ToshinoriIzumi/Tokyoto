@@ -1,5 +1,5 @@
 class Child < ApplicationRecord
   belongs_to :user
 
-  validates :age, presence: true
+  validates :birth, presence: true
 end

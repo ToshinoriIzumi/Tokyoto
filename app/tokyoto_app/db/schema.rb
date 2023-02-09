@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_01_02_100226) do
+ActiveRecord::Schema.define(version: 2023_02_01_140852) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2023_01_02_100226) do
 
   create_table "children", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.integer "age"
+    t.date "birth"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_children_on_user_id"
@@ -45,20 +45,34 @@ ActiveRecord::Schema.define(version: 2023_01_02_100226) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "conditions_supports", primary_key: ["condition_id", "support_id"], force: :cascade do |t|
+  create_table "conditions_supports", force: :cascade do |t|
     t.bigint "condition_id", null: false
     t.bigint "support_id", null: false
     t.bigint "city_id", null: false
-    t.string "payment", null: false
-    t.bigint "income_id", null: false
+    t.integer "payment", null: false
     t.bigint "age_id", null: false
+    t.string "url", null: false
+    t.integer "payment_limit", default: 0
+    t.integer "payment_frequency", default: 0
+    t.string "payment_month"
+    t.string "transfer_destination"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["age_id"], name: "index_conditions_supports_on_age_id"
     t.index ["city_id"], name: "index_conditions_supports_on_city_id"
+    t.index ["condition_id", "support_id"], name: "index_conditions_supports_on_condition_id_and_support_id", unique: true
     t.index ["condition_id"], name: "index_conditions_supports_on_condition_id"
-    t.index ["income_id"], name: "index_conditions_supports_on_income_id"
     t.index ["support_id"], name: "index_conditions_supports_on_support_id"
+    t.index ["url"], name: "index_conditions_supports_on_url", unique: true
+  end
+
+  create_table "conditions_supports_incomes", force: :cascade do |t|
+    t.bigint "conditions_support_id", null: false
+    t.bigint "income_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["conditions_support_id"], name: "index_conditions_supports_incomes_on_conditions_support_id"
+    t.index ["income_id"], name: "index_conditions_supports_incomes_on_income_id"
   end
 
   create_table "conditions_supports_statuses", force: :cascade do |t|
@@ -114,12 +128,12 @@ ActiveRecord::Schema.define(version: 2023_01_02_100226) do
     t.text "content", null: false
     t.text "application_method"
     t.string "application_limit"
-    t.string "url", null: false
+    t.string "update_method"
+    t.string "update_month"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "state", null: false
     t.index ["support_name"], name: "index_supports_on_support_name", unique: true
-    t.index ["url"], name: "index_supports_on_url", unique: true
   end
 
   create_table "tags", force: :cascade do |t|
@@ -133,12 +147,10 @@ ActiveRecord::Schema.define(version: 2023_01_02_100226) do
     t.string "email", null: false
     t.string "crypted_password"
     t.string "salt"
-    t.string "first_name", null: false
-    t.string "last_name", null: false
     t.integer "role", default: 0, null: false
+    t.string "user_name", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "user_name"
     t.integer "city_id"
     t.integer "income"
     t.index ["email"], name: "index_users_on_email", unique: true
@@ -148,8 +160,9 @@ ActiveRecord::Schema.define(version: 2023_01_02_100226) do
   add_foreign_key "conditions_supports", "ages"
   add_foreign_key "conditions_supports", "cities"
   add_foreign_key "conditions_supports", "conditions"
-  add_foreign_key "conditions_supports", "incomes"
   add_foreign_key "conditions_supports", "supports"
+  add_foreign_key "conditions_supports_incomes", "conditions_supports"
+  add_foreign_key "conditions_supports_incomes", "incomes"
   add_foreign_key "conditions_supports_statuses", "conditions"
   add_foreign_key "conditions_supports_statuses", "statuses"
   add_foreign_key "hospitals", "cities"

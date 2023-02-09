@@ -1,11 +1,7 @@
 # 対象者の条件はenumで管理？string？
 Status.create!(
   [
-    { status: 0 },
-    { status: 1 },
-    { status: 2 },
-    { status: 3 },
-    { status: 4 },
-    { status: 5 }
+    { id: 1, status: "令和4年4月1日以降に私立幼稚園に入園した、台東区住所を有する幼児と同一の世帯" },
+    { id: 2, status: "保護者の納付義務を負っている保護者"}
   ]
 )

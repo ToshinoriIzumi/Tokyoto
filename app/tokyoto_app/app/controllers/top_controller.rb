@@ -8,7 +8,8 @@ class TopController < ApplicationController
   end
 
   def search
-    @results = @query_fix.result
+    @results = @query.result
+    binding.pry
   end
 
   def show
@@ -16,11 +17,9 @@ class TopController < ApplicationController
   end
 
   private
-  
+
   def set_query
+    params[:query][:incomes_money_gt] = income_to_db(params[:query][:incomes_money_gt]) if !params[:query].nil?
     @query = ConditionsSupport.ransack(params[:query])
-    params[:query][:incomes_money_lt] = 
-      income_to_db(params[:query][:incomes_money_lt]) if !params[:query].nil?
-    @query_fix = ConditionsSupport.ransack(params[:query])
   end
 end

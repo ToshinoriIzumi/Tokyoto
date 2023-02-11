@@ -153,5 +153,24 @@ Support.create!(
       url: "https://www.city.shinagawa.tokyo.jp/PC/kodomo/kodomo-hitorioya/hpg000030880.html",
       state: 1,
     },
+    {
+      support_name: "母子・父子自立支援員による「子供の養育プラン（※）」作成支援",
+      content: "養育費を継続的に受け取ることができるよう、養育費の取り決めに関する公正証書の作成や家庭裁判所の調停申し立て等にかかる費用について、補助を行います。",
+      application_method: "事前のご予約をお願いします。- 必要書類：・公正証書の領収書（レシート）・
+      「必要書類　（共通）」
+      台東区養育費受け取り支援事業補助金交付申請書（区様式）
+      住民記録情報等の取得等に関する同意書（区様式）
+      「公正証書の場合」
+    　・公正証書（強制執行認諾文言がついているもの）
+      ・公証人手数料の領収書
+      「調停等の場合」
+      ・調停調書等
+      ・収入印紙代のレシート
+      ・戸籍謄本等取得代のレシート
+      ・裁判所からの連絡用切手代のレシート",
+      application_limit: "なし",
+      url: "https://www.city.taito.lg.jp/kosodatekyouiku/kosodate/mokutei/hitorioya/yoikuhi/youikuhiuketorisienn.html",
+      state: 1,
+    },
   ]
 )

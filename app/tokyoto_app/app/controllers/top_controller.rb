@@ -9,7 +9,6 @@ class TopController < ApplicationController
 
   def search
     @results = @query.result
-    binding.pry
   end
 
   def show

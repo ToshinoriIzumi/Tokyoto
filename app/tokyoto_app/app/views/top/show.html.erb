@@ -1,6 +1,6 @@
 <div class="mx-5 my-10">
   <section class= "mb-10 basic-info text-center">
-    <h3 class= "font-bold text-4xl"><%= @support.support_name %></h3>
+  <h3 class= "font-bold text-4xl"><%= @support.support_name %></h3>
   </section>
   <table class="mb-10 table-fixed text-left text-gray-600">
       <thead class="text-sm text-center bg-gray-100">
@@ -43,9 +43,9 @@
                   公式サイト
               </th>
               <td class="py-4 px-6">
-                  <%= link_to @support.url, @support.url %>
+                  <%#= link_to @support.url, @support.url %>
               </td>
-          </tr>                                    
+          </tr>
       </tbody>
   </table>
   <%= link_to "制度一覧に戻る", root_path, class: "mx-10" %>

@@ -14,7 +14,7 @@
         <%= link_to "#{support.support_name}", top_path(support), class: "text-2xl font-bold text-gray-700 dark:text-white hover:text-gray-600 dark:hover:text-gray-200 hover:underline" %>
       </div>
       <div class="flex items-center justify-between mt-4">
-          <%= link_to "公式サイト", support.url, target: "_blank", class: "text-blue-600 dark:text-blue-400 hover:underline" %>
+          <%#= link_to "公式サイト", support.url, target: "_blank", class: "text-blue-600 dark:text-blue-400 hover:underline" %>
           <div class="font-bold text-gray-700 cursor-pointer dark:text-gray-200">
             <% if support.application_limit.empty? %>
               <%= "締め切り： なし" %>

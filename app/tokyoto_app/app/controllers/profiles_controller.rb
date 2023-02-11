@@ -8,7 +8,6 @@ class ProfilesController < ApplicationController
   def create
     @profile_form = ProfileForm.new(profile_params)
     @profile_form.id = current_user.id
-    binding.pry
     if @profile_form.save
       redirect_to root_path, notice: 'プロフィールを登録しました。'
     else

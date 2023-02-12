@@ -24,7 +24,9 @@ class ProfileForm
     if user.children.present?
       Child.where(user_id: id).update(age: age)
     else
-      Child.create(age: age, user_id: id)
+      age.each do |i|
+        Child.create(age: i, user_id: id)
+      end
     end
   end
 

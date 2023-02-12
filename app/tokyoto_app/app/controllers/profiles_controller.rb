@@ -41,9 +41,10 @@ class ProfilesController < ApplicationController
   private
 
   def profile_params
-    params.require(:profile_form).permit(:user_name, :city_id, :income, :age)
+    params.require(:profile_form).permit(:user_name, :city_id, :income, { age: [] })
   end
 
   def set_cities
     @cities = City.all
+  end
 end

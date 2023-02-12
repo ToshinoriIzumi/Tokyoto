@@ -5,9 +5,9 @@ class Support < ApplicationRecord
 
   validates :support_name, presence: true
   validates :content, presence: true
-  validates :state, presence: true
+  validates :publish_state, presence: true
 
-  enum state: { draft: 0, published: 1, publish_wait: 2 }
+  enum publish_state: { draft: 0, published: 1, publish_wait: 2 }
 
   scope :by_tag, ->(tag_id) { joins(:tags).where(support_tags: { tag_id: tag_id }) }
   scope :support_name_contain, ->(support_name) { where('support_name LIKE ?', "%#{support_name}%") }

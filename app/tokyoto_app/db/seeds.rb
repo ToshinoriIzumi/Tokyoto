@@ -4,11 +4,13 @@ table_names = [
   'income',
   'statuses',
   'age',
-  'benefit',
-  'conditions_support',
+  'conditions',
+  'conditions_supports',
   'hospitals',
   'tags',
-  'support_tags'
+  'support_tags',
+  'conditions_supports_incomes',
+  'conditions_supports_statuses',
 ]
 
 begin

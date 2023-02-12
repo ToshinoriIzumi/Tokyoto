@@ -1,11 +1,11 @@
 class Support < ApplicationRecord
-  has_many :conditions_supports, dependent: :destroy, primary_key: [:condition_id, :support_id]
+  has_many :conditions_supports, dependent: :destroy
   has_many :support_tags
   has_many :tags, through: :support_tags
 
   validates :support_name, presence: true
   validates :content, presence: true
-  validates :url, presence: true
+  validates :state, presence: true
 
   enum state: { draft: 0, published: 1, publish_wait: 2 }
 

@@ -9,3 +9,4 @@ RSpec.describe Condition, type: :model do
     end
   end
 end
+

@@ -15,12 +15,12 @@
         <%= link_to "#{conditions_support.support.support_name}", top_path(conditions_support.support), class: "text-2xl font-bold text-gray-700 dark:text-white hover:text-gray-600 dark:hover:text-gray-200 hover:underline" %>
       </div>
       <div class="flex items-center justify-between mt-4">
-          <%= link_to "公式サイト", conditions_support.support.url, class: "text-blue-600 dark:text-blue-400 hover:underline" %>
+          <%#= link_to "公式サイト", conditions_support.support.url, class: "text-blue-600 dark:text-blue-400 hover:underline" %>
           <div class="font-bold text-gray-700 cursor-pointer dark:text-gray-200">
-            <% if conditions_support.support.application_limit.empty? %>
+            <% if conditions_support.support.user_application_limit.empty? %>
               <%= "締め切り： なし" %>
             <% else %>
-              <%= "締め切り：" + conditions_support.support.application_limit %>
+              <%= "締め切り：" + conditions_support.support.user_application_limit %>
             <% end %>
           </div>
       </div>

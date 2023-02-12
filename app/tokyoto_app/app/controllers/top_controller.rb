@@ -16,11 +16,11 @@ class TopController < ApplicationController
   end
 
   private
-  
+
   def set_query
     @query = ConditionsSupport.ransack(params[:query])
-    params[:query][:income_money_gt] = 
-      income_to_db(params[:query][:income_money_gt]) if !params[:query].nil?
+    params[:query][:incomes_money_gt] =
+      income_to_db(params[:query][:incomes_money_gt]) if !params[:query].nil?
     @query_fix = ConditionsSupport.ransack(params[:query])
   end
 end

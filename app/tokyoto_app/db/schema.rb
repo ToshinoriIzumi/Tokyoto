@@ -63,7 +63,6 @@ ActiveRecord::Schema.define(version: 2023_02_01_140852) do
     t.index ["condition_id", "support_id"], name: "index_conditions_supports_on_condition_id_and_support_id", unique: true
     t.index ["condition_id"], name: "index_conditions_supports_on_condition_id"
     t.index ["support_id"], name: "index_conditions_supports_on_support_id"
-    t.index ["url"], name: "index_conditions_supports_on_url", unique: true
   end
 
   create_table "conditions_supports_incomes", force: :cascade do |t|
@@ -126,13 +125,13 @@ ActiveRecord::Schema.define(version: 2023_02_01_140852) do
   create_table "supports", force: :cascade do |t|
     t.string "support_name", null: false
     t.text "content", null: false
-    t.text "application_method"
-    t.string "application_limit"
-    t.string "update_method"
-    t.string "update_month"
+    t.text "user_application_method"
+    t.string "user_application_limit"
+    t.string "user_renewal_method"
+    t.string "user_renewal_month"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "state", null: false
+    t.integer "publish_state", null: false
     t.index ["support_name"], name: "index_supports_on_support_name", unique: true
   end
 

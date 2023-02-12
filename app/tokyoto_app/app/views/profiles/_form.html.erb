@@ -1,33 +1,26 @@
 <%= form_with model: @profile_form, url: profile_path, method: method, class: "space-y-6",local: true do |f| %>
   <div class="space-y-1">
-    <%= f.label 'ユーザーネーム' %>
-    <div class="mt-1">
-      <%= f.text_field :user_name, class: "block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:border-transparent focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-300 border-gray-500" %>
-    </div>
-  </div>
-  <div class="space-y-1">
     <%= f.label '住んでいる場所' %>
     <div class="mt-1">
       <%= f.collection_select :city_id, @cities, :id, :city_name, class: "block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:border-transparent focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-300 border-gray-500" %>
     </div>
   </div>
   <div class="space-y-1">
-    <%= f.label '収入' %>
+    <%= f.label '収入(万円)' %>
     <div class="mt-1">
       <%= f.number_field :income, class: "block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:border-transparent focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-300 border-gray-500" %>
     </div>
   </div>
-  <div class="space-y-1" id="children_age_form">
+  <div class="space-y-1" id="children_birth_form">
     <%= f.label '子供の年齢' %>
     <div class="mt-1" id="children_age">
-      <%= number_field_tag "profile_form[age][]", nil, class: "children-age-form block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:border-transparent focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-300 border-gray-500" %>
-      <%= number_field_tag "profile_form[age][]", nil, class: "children-age-form block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:border-transparent focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-300 border-gray-500" %>
-    </div>
+      <%= date_field_tag "profile_form[birth][]", nil, class: "children-birth-form block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:border-transparent focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-300 border-gray-500" %>
+      <%= date_field_tag "profile_form[birth][]", nil, class: "children-birth-form block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:border-transparent focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-300 border-gray-500" %>
     <div>
-      <button type="button" id="child-age-input-plus" class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+      <button type="button" id="child-birth-input-plus" class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
         枠を追加
       </button>
-      <button type="button"  id="child-age-input-minus" class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+      <button type="button"  id="child-birth-input-minus" class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
         枠の削除
       </button>
     </div>

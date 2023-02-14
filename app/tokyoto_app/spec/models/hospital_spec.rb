@@ -2,92 +2,78 @@ require 'rails_helper'
 
 RSpec.describe Hospital, type: :model do
   describe 'validation' do
-    it '地区id、病院名、緯度、経度、住所があれば有効であること' do
-      hospital = Hospital.new(
-        city_id: 1,
-        name: '病院1',
-        latitude: rand,
-        longitude: rand,
+    before do
+      @city = City.create(
+        city_name: 'test区',
+        latitude: 35.6130639,
+        longitude: 139.6996014,
+      )
+      @hospital = Hospital.new(
+        city_id: @city.id,
+        name: 'test区',
+        latitude: 35.6130639,
+        longitude: 139.6996014,
         address: '東京都test1区test11-1-1',
+        url: 'https://www.test.com',
+        phone_number: '(03)0000-0000',
       )
     end
 
-    xit '地区idがなければ無効であること' do
-      hospital = Hospital.new(city_id: nil)
-      hospital.valid?
-      expect(hospital.errors[:city_id]).to include("can't be blank")
+    it '全てのカラムに情報があれば有効であること' do
+      expect(@hospital).to be_valid
+    end
+
+    it 'city_idがなければ無効であること' do
+      @hospital.city_id = nil
+      @hospital.valid?
+      expect(@hospital.errors[:city]).to include("を入力してください")
     end
 
     it '病院名がなければ無効であること' do
-      hospital = Hospital.new(name: nil)
-      hospital.valid?
-      expect(hospital.errors[:name]).to include("can't be blank")
-    end
-
-    xit '地区idと病院名が一意でなければ無効であること' do
-      Hospital.create(
-        city_id: 1,
-        name: '病院1',
-        latitude: rand,
-        longitude: rand,
-        address: '東京都test1区test11-1-1',
-      )
-      hospital = Hospital.new(
-        city_id: 1,
-        name: '病院1',
-        latitude: rand,
-        longitude: rand,
-        address: '東京都test2区test22-2-2',
-      )
-      hospital.valid?
-      expect(hospital.errors[:name]).to include("has already been taken")
+      @hospital.name = nil
+      @hospital.valid?
+      expect(@hospital.errors[:name]).to include("を入力してください")
     end
 
     it '緯度がなければ無効であること'  do
-      hospital = Hospital.new(latitude: nil)
-      hospital.valid?
-      expect(hospital.errors[:latitude]).to include("can't be blank")
+      @hospital.latitude = nil
+      @hospital.valid?
+      expect(@hospital.errors[:latitude]).to include("を入力してください")
     end
 
     it '経度がなければ無効であること' do
-      hospital = Hospital.new(longitude: nil)
-      hospital.valid?
-      expect(hospital.errors[:longitude]).to include("can't be blank")
+      @hospital.longitude = nil
+      @hospital.valid?
+      expect(@hospital.errors[:longitude]).to include("を入力してください")
+    end
+  
+    it '緯度と経度が一意でなければ無効であること' do
+      @hospital.save
+      another_hospital = Hospital.new(
+        city_id: @city.id,
+        name: 'test区',
+        latitude: 35.6130639,
+        longitude: 139.6996014,
+        address: '東京都test1区test11-1-1',
+        url: 'https://www.test.com',
+        phone_number: '(03)0000-0000',
+        )
+      another_hospital.valid?
+      expect(another_hospital.errors[:longitude]).to include('はすでに存在します')
     end
 
     it '住所がなければ無効であること' do
-      hospital = Hospital.new(address: nil)
-      hospital.valid?
-      expect(hospital.errors[:address]).to include("can't be blank")
-    end
-
-    xit '住所が重複していたら無効であること' do
-      Hospital.create(
-        city_id: 1,
-        name: '病院1',
-        latitude: rand,
-        longitude: rand,
-        address: '東京都test1区test11-1-1',
-      )
-      hospital = Hospital.new(
-        city_id: 2,
-        name: '病院2',
-        latitude: rand,
-        longitude: rand,
-        address: '東京都test1区test11-1-1',
-      )
-      hospital.valid?
-      expect(hospital.errors[:address]).to include("has already been taken")
+      @hospital.address = nil
+      @hospital.valid?
+      expect(@hospital.errors[:address]).to include("を入力してください")
     end
   end
 
   describe 'scope' do
     it 'search_byで検索した区の病院がヒットすること' do
-      
     end
 
     it 'search_byで検索した区以外の病院がヒットしないこと' do
-      
     end
   end
 end

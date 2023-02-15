@@ -1,8 +1,7 @@
-<%= javascript_pack_tag 'map/hospitals/application' %>
-
 <%= form_with url: '#' , model: @cities, remote: true do |f| %>
     <%= f.collection_select :city_id, @cities, :id, :city_name %>
     <%= f.submit '検索', id: 'search-button'%>
 <% end %>
 
+<%= javascript_pack_tag 'map/hospitals/application' %>
 <div id="map" style="width:500px; height:300px"></div>

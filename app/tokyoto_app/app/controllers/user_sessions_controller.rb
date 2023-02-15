@@ -7,6 +7,7 @@ class UserSessionsController < ApplicationController
     @user = login(params[:email], params[:password])
     if @user
       redirect_back_or_to top_index_path, notice: 'ログインしました'
+      info_profile
     else
       flash.now[:alert] = 'ログインできませんでした'
       render :new

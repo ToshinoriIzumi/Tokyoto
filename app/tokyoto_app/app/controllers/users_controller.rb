@@ -9,7 +9,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       auto_login(@user)
-      redirect_to new_profile_path, notice: 'ユーザー情報を登録しました。プロフィール情報を入力してください。'
+      redirect_to new_profile_path, notice: 'ユーザー情報を登録しました'
+      info_profile
     else
       flash.now[:alert] = 'ユーザー情報の登録に失敗しました。'
       render :new
@@ -25,6 +26,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation)
+    params.require(:user).permit(:email, :password, :password_confirmation, :user_name)
   end
 end

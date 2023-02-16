@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :child do
-    age { 5 }
+    birth {'2023-01-01'}
     association :user
   end
 end

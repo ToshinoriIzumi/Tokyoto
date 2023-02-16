@@ -1,12 +1,14 @@
 FactoryBot.define do
   factory :conditions_support do
-    # ダメらしい
-    # https://swfz.hatenablog.com/entry/2019/01/27/102711
-    # id [association :support, association :condition]
     association :city
-    association :income
+    association :condition
+    association :support
     association :age
     payment { 100000 }
-    dependents_num { 1 }
+    url { 'https://www.example.com' }
+    payment_limit { 0 }
+    payment_frequency { 5 }
+    payment_month { '記載なし' }
+    transfer_destination { '記載なし' }
   end
 end

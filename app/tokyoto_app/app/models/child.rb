@@ -3,7 +3,7 @@ class Child < ApplicationRecord
 
   validates :birth, presence: true
 
-  def age(date)
-    (Date.today.strftime('%Y%m%d').to_i - date.strftime('%Y%m%d').to_i) / 10000
+  def age
+    (Date.today.strftime('%Y%m%d').to_i - birth.strftime('%Y%m%d').to_i) / 10000
   end
 end

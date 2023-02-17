@@ -8,7 +8,7 @@ table_names = [
   'conditions_supports',
   'hospitals',
   'tags',
-  'support_tags',
+  'supports_tags',
   'conditions_supports_incomes',
   'conditions_supports_statuses',
 ]

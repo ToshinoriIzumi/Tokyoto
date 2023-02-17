@@ -11,7 +11,11 @@ ConditionsSupport.create!(
       payment_limit: 0,
       payment_frequency: 5,
       payment_month: "記載なし",
-      transfer_destination: "記載なし"
+      transfer_destination: "記載なし",
+      user_application_method: "各幼稚園を通じて、申請",
+      user_application_limit: "記載なし",
+      user_renewal_method: "記載なし",
+      user_renewal_month: "記載なし",
     },
   ]
 )

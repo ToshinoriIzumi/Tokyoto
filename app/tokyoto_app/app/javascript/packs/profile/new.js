@@ -1,15 +1,13 @@
-window.addEventListener('turbolinks:load', () => {
-    document.getElementById('child-age-input-plus').addEventListener('click', () => {
-        alert('plus');
+import BirthFormModel from "./birth_form_model";
+
+document.addEventListener('turbolinks:load', () => {
+    const formModel = new BirthFormModel();
+    document.getElementById('child-birth-input-plus').addEventListener('click', () => {
+        formModel.addElement();
         return;
     });
-    document.getElementById('child-age-input-minus').addEventListener('click', () => {
-        alert('minus');
+    document.getElementById('child-birth-input-minus').addEventListener('click', () => {
+        formModel.deleteElement();
         return;
     });
 });
-
-class AgeFormObject
-{
-    
-}

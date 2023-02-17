@@ -1,8 +1,10 @@
 class ProfilesController < ApplicationController
   before_action :set_cities, only: [:new, :create, :edit, :update]
+  before_action :set_births, only: [:create, :update]
 
   def new
     @profile_form = ProfileForm.new
+    @births = []
   end
 
   def create
@@ -24,7 +26,17 @@ class ProfilesController < ApplicationController
 
   def edit
     user = current_user
-    @profile_form = ProfileForm.new(id: user.id, city_id: user.city_id, income: user.income, birth: user.children[0].birth)
+    @births = []
+    user.children.each do |child|
+      @births.push(child.birth)
+    end
+    
+    @profile_form = ProfileForm.new(
+      id: user.id,
+      city_id: user.city_id,
+      income: user.income,
+      births: @births
+    )
   end
 
   def update
@@ -41,10 +53,14 @@ class ProfilesController < ApplicationController
   private
 
   def profile_params
-    params.require(:profile_form).permit(:city_id, :income, { birth: [] })
+    params.require(:profile_form).permit(:city_id, :income, { births: [] })
   end
 
   def set_cities
     @cities = City.all
+  end
+
+  def set_births
+    @births = profile_params[:births]
   end
 end

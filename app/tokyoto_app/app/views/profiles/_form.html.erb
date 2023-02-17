@@ -11,16 +11,28 @@
       <%= f.number_field :income, class: "block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:border-transparent focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-300 border-gray-500" %>
     </div>
   </div>
-  <div class="space-y-1" id="children_birth_form">
+  <div class="space-y-1">
     <%= f.label '子供の年齢' %>
-    <div class="mt-1" id="children_age">
-      <%= date_field_tag "profile_form[birth][]", nil, class: "children-birth-form block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:border-transparent focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-300 border-gray-500" %>
-      <%= date_field_tag "profile_form[birth][]", nil, class: "children-birth-form block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:border-transparent focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-300 border-gray-500" %>
+    <div class="mt-1" id="children_birth_form">
+      <% if births.empty? %>
+        <div id="birth_0">
+          <%= label_tag "第1子" %>
+          <%= date_field_tag "profile_form[births][]", nil, id: "birth_form_0", class: "children-birth-form block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:border-transparent focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-300 border-gray-500" %>
+        </div>
+      <% else %>
+        <% births.each_with_index do |birth, index| %>
+          <div id='<%= "birth_#{index.to_s}" %>'>
+            <%= label_tag "第#{(index + 1).to_s}子" %>
+            <%= date_field_tag "profile_form[births][]", birth, id: "birth_form_#{index}", class: "children-birth-form block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:border-transparent focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-300 border-gray-500" %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
     <div>
       <button type="button" id="child-birth-input-plus" class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
         枠を追加
       </button>
-      <button type="button"  id="child-birth-input-minus" class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+      <button type="button" id="child-birth-input-minus" class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
         枠の削除
       </button>
     </div>

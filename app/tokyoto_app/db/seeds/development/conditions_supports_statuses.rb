@@ -1,6 +1,7 @@
-ConditionsSupportStatus.create!(
+ConditionsSupportsStatus.create!(
   [
     {
+      id: 1,
       condition_id: 1,
       status_id: 1
     },

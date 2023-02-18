@@ -1870,5 +1870,377 @@ ConditionsSupportsStatus.create!(
       condition_id: 61,
       status_id: 16
     },
+    #私立幼稚園等保護者補助金-730万円以上-第一子-ある-ある
+    {
+      id: 368,
+      condition_id: 62,
+      status_id: 3
+    },
+    {
+      id: 369,
+      condition_id: 62,
+      status_id: 4
+    },
+    {
+      id: 370,
+      condition_id: 62,
+      status_id: 17
+    },
+    {
+      id: 371,
+      condition_id: 62,
+      status_id: 10
+    },
+    {
+      id: 372,
+      condition_id: 62,
+      status_id: 12
+    },
+    {
+      id: 373,
+      condition_id: 62,
+      status_id: 14
+    },
+    #私立幼稚園等保護者補助金-730万円以上-第一子-ある-ない
+    {
+      id: 374,
+      condition_id: 63,
+      status_id: 3
+    },
+    {
+      id: 375,
+      condition_id: 63,
+      status_id: 4
+    },
+    {
+      id: 376,
+      condition_id: 63,
+      status_id: 17
+    },
+    {
+      id: 377,
+      condition_id: 63,
+      status_id: 10
+    },
+    {
+      id: 378,
+      condition_id: 63,
+      status_id: 13
+    },
+    {
+      id: 379,
+      condition_id: 63,
+      status_id: 14
+    },
+    #私立幼稚園等保護者補助金-730万円以上-第一子-ない-ある
+    {
+      id: 380,
+      condition_id: 64,
+      status_id: 3
+    },
+    {
+      id: 381,
+      condition_id: 64,
+      status_id: 4
+    },
+    {
+      id: 382,
+      condition_id: 64,
+      status_id: 17
+    },
+    {
+      id: 383,
+      condition_id: 64,
+      status_id: 11
+    },
+    {
+      id: 384,
+      condition_id: 64,
+      status_id: 12
+    },
+    {
+      id: 385,
+      condition_id: 64,
+      status_id: 14
+    },
+    #私立幼稚園等保護者補助金-730万円以上-第一子-ない-ない
+    {
+      id: 386,
+      condition_id: 65,
+      status_id: 3
+    },
+    {
+      id: 387,
+      condition_id: 65,
+      status_id: 4
+    },
+    {
+      id: 388,
+      condition_id: 65,
+      status_id: 17
+    },
+    {
+      id: 389,
+      condition_id: 65,
+      status_id: 11
+    },
+    {
+      id: 390,
+      condition_id: 65,
+      status_id: 13
+    },
+    {
+      id: 391,
+      condition_id: 65,
+      status_id: 14
+    },
+    #私立幼稚園等保護者補助金-730万円以上-第二子-ある-ある
+    {
+      id: 392,
+      condition_id: 66,
+      status_id: 3
+    },
+    {
+      id: 393,
+      condition_id: 66,
+      status_id: 4
+    },
+    {
+      id: 394,
+      condition_id: 66,
+      status_id: 17
+    },
+    {
+      id: 395,
+      condition_id: 66,
+      status_id: 10
+    },
+    {
+      id: 396,
+      condition_id: 66,
+      status_id: 12
+    },
+    {
+      id: 397,
+      condition_id: 66,
+      status_id: 15
+    },
+    #私立幼稚園等保護者補助金-730万円以上-第二子-ある-ない
+    {
+      id: 398,
+      condition_id: 67,
+      status_id: 3
+    },
+    {
+      id: 399,
+      condition_id: 67,
+      status_id: 4
+    },
+    {
+      id: 400,
+      condition_id: 67,
+      status_id: 17
+    },
+    {
+      id: 401,
+      condition_id: 67,
+      status_id: 10
+    },
+    {
+      id: 402,
+      condition_id: 67,
+      status_id: 13
+    },
+    {
+      id: 403,
+      condition_id: 67,
+      status_id: 15
+    },
+    #私立幼稚園等保護者補助金-730万円以上-第二子-ない-ある
+    {
+      id: 404,
+      condition_id: 68,
+      status_id: 3
+    },
+    {
+      id: 405,
+      condition_id: 68,
+      status_id: 4
+    },
+    {
+      id: 406,
+      condition_id: 68,
+      status_id: 17
+    },
+    {
+      id: 407,
+      condition_id: 68,
+      status_id: 11
+    },
+    {
+      id: 408,
+      condition_id: 68,
+      status_id: 12
+    },
+    {
+      id: 409,
+      condition_id: 68,
+      status_id: 15
+    },
+    #私立幼稚園等保護者補助金-730万円以上-第二子-ない-ない
+    {
+      id: 410,
+      condition_id: 69,
+      status_id: 3
+    },
+    {
+      id: 411,
+      condition_id: 69,
+      status_id: 4
+    },
+    {
+      id: 412,
+      condition_id: 69,
+      status_id: 17
+    },
+    {
+      id: 413,
+      condition_id: 69,
+      status_id: 11
+    },
+    {
+      id: 414,
+      condition_id: 69,
+      status_id: 13
+    },
+    {
+      id: 415,
+      condition_id: 69,
+      status_id: 15
+    },
+    #私立幼稚園等保護者補助金-730万円以上-第三子-ある-ある
+    {
+      id: 416,
+      condition_id: 70,
+      status_id: 3
+    },
+    {
+      id: 417,
+      condition_id: 70,
+      status_id: 4
+    },
+    {
+      id: 418,
+      condition_id: 70,
+      status_id: 17
+    },
+    {
+      id: 419,
+      condition_id: 70,
+      status_id: 10
+    },
+    {
+      id: 420,
+      condition_id: 70,
+      status_id: 12
+    },
+    {
+      id: 421,
+      condition_id: 70,
+      status_id: 16
+    },
+    #私立幼稚園等保護者補助金-730万円以上-第三子-ある-ない
+    {
+      id: 422,
+      condition_id: 71,
+      status_id: 3
+    },
+    {
+      id: 423,
+      condition_id: 71,
+      status_id: 4
+    },
+    {
+      id: 424,
+      condition_id: 71,
+      status_id: 17
+    },
+    {
+      id: 425,
+      condition_id: 71,
+      status_id: 10
+    },
+    {
+      id: 426,
+      condition_id: 71,
+      status_id: 13
+    },
+    {
+      id: 427,
+      condition_id: 71,
+      status_id: 16
+    },
+    #私立幼稚園等保護者補助金-730万円以上-第三子-ない-ある
+    {
+      id: 428,
+      condition_id: 72,
+      status_id: 3
+    },
+    {
+      id: 429,
+      condition_id: 72,
+      status_id: 4
+    },
+    {
+      id: 430,
+      condition_id: 72,
+      status_id: 17
+    },
+    {
+      id: 431,
+      condition_id: 72,
+      status_id: 11
+    },
+    {
+      id: 432,
+      condition_id: 72,
+      status_id: 12
+    },
+    {
+      id: 433,
+      condition_id: 72,
+      status_id: 16
+    },
+    #私立幼稚園等保護者補助金-730万円以上-第三子-ない-ない
+    {
+      id: 434,
+      condition_id: 73,
+      status_id: 3
+    },
+    {
+      id: 435,
+      condition_id: 73,
+      status_id: 4
+    },
+    {
+      id: 436,
+      condition_id: 73,
+      status_id: 17
+    },
+    {
+      id: 437,
+      condition_id: 73,
+      status_id: 11
+    },
+    {
+      id: 438,
+      condition_id: 73,
+      status_id: 13
+    },
+    {
+      id: 439,
+      condition_id: 73,
+      status_id: 16
+    },
   ]
 )

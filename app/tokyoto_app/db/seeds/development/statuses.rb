@@ -17,5 +17,6 @@ Status.create!(
     { id: 14, status: "第1子"},
     { id: 15, status: "第2子"},
     { id: 16, status: "第3子以降"},
+    { id: 17, status: "市区町村民税所得割課税額(256,301円~)"},
   ]
 )

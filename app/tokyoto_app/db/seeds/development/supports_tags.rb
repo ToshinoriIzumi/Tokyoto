@@ -1,4 +1,4 @@
-SupportTag.create!(
+SupportsTag.create!(
   [
     { id: 1, support_id: 1, tag_id: 1 },
     { id: 2, support_id: 1, tag_id: 8 },

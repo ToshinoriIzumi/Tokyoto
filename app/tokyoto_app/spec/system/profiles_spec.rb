@@ -16,7 +16,7 @@ RSpec.describe "Profiles", type: :system do
 
         find("#profile_form_city_id").select("新宿区")
         fill_in 'profile_form[income]', with: '100'
-        find("#birth_0").set('2022/01/01')
+        find("#birth_form_0").set('2022/01/01')
         click_button '登録する'
         
         expect(current_path).to eq root_path
@@ -35,8 +35,8 @@ RSpec.describe "Profiles", type: :system do
         sleep 0.5
         find("#profile_form_city_id").select("新宿区")
         fill_in 'profile_form[income]', with: '100'
-        find("#birth_0").set('2021/01/01')
-        find("#birth_1").set('2022/01/01')
+        find("#birth_form_0").set('2021/01/01')
+        find("#birth_form_1").set('2022/01/01')
         click_button '登録する'
       
         visit profile_path
@@ -55,6 +55,7 @@ RSpec.describe "Profiles", type: :system do
       it '収入に500と入力すると5,000,000で更新されて500万円と表示される' do
         visit edit_profile_path
         fill_in 'profile_form[income]', with: '500'
+        find("#birth_form_0").set('2021/01/01')
         click_button '登録する'
         
         expect(current_path).to eq profile_path
@@ -64,7 +65,7 @@ RSpec.describe "Profiles", type: :system do
 
       it '子供の生年月日に2022/01/10を変更したら更新されて2022-01-10と表示される' do
         visit edit_profile_path
-        find("#birth_0").set('2022/01/10')
+        find("#birth_form_0").set('2022/01/10')
         click_button '登録する'
 
         expect(current_path).to eq profile_path

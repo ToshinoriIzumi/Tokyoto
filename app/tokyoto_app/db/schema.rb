@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_02_17_112041) do
+ActiveRecord::Schema.define(version: 2023_02_19_025738) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2023_02_17_112041) do
     t.date "birth"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "sibling_conposition", default: 0
     t.index ["user_id"], name: "index_children_on_user_id"
   end
 
@@ -62,6 +63,9 @@ ActiveRecord::Schema.define(version: 2023_02_17_112041) do
     t.string "user_application_limit"
     t.string "user_renewal_method"
     t.string "user_renewal_month"
+    t.string "additional_info_of_application"
+    t.string "application_form"
+    t.string "additional_info_conditions_supports"
     t.index ["age_id"], name: "index_conditions_supports_on_age_id"
     t.index ["city_id"], name: "index_conditions_supports_on_city_id"
     t.index ["condition_id", "support_id"], name: "index_conditions_supports_on_condition_id_and_support_id", unique: true
@@ -103,11 +107,12 @@ ActiveRecord::Schema.define(version: 2023_02_17_112041) do
   end
 
   create_table "incomes", force: :cascade do |t|
-    t.integer "money", null: false
     t.integer "is_myself", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["money", "is_myself"], name: "index_incomes_on_money_and_is_myself", unique: true
+    t.integer "min", null: false
+    t.integer "max", null: false
+    t.index ["min", "max", "is_myself"], name: "index_incomes_on_min_and_max_and_is_myself", unique: true
   end
 
   create_table "statuses", force: :cascade do |t|
@@ -123,6 +128,7 @@ ActiveRecord::Schema.define(version: 2023_02_17_112041) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "publish_state", null: false
+    t.string "contact_information"
     t.index ["support_name"], name: "index_supports_on_support_name", unique: true
   end
 

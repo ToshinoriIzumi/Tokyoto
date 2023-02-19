@@ -16,11 +16,11 @@
       <div class="flex items-center justify-between mt-4">
           <%#= link_to "公式サイト", support.url, target: "_blank", class: "text-blue-600 dark:text-blue-400 hover:underline" %>
           <div class="font-bold text-gray-700 cursor-pointer dark:text-gray-200">
-            <% if support.user_application_limit.empty? %>
-              <%= "締め切り： なし" %>
-            <% else %>
-              <%= "締め切り：" + support.user_application_limit %>
-            <% end %>
+            <%# if support.user_application_limit.empty? %>
+              <%#= "締め切り： なし" %>
+            <%# else %>
+              <%#= "締め切り：" + support.user_application_limit %>
+            <%# end %>
           </div>
       </div>
     </div>

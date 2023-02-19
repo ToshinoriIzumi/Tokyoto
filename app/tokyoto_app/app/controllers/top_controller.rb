@@ -12,7 +12,7 @@ class TopController < ApplicationController
   end
 
   def show
-    @support = Support.find(params[:id])
+    @conditions_support = ConditionsSupport.find(params[:id])
   end
 
   def privacy_policy

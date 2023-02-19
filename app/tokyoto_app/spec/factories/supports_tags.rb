@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :support_tag do
+  factory :supports_tag do
     association :support
     association :tag
   end

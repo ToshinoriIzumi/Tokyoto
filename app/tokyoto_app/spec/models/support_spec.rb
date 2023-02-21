@@ -18,6 +18,12 @@ RSpec.describe Support, type: :model do
       support.valid?
       expect(support.errors[:content]).to include("を入力してください")
     end
+
+    it 'publish_stateがなければ無効であること' do
+      support = build(:support, publish_state: nil)
+      support.valid?
+      expect(support.errors[:publish_state]).to include("を入力してください")
+    end
     
     it '支援名が一意でなければ無効であること' do
       support = create(:support)

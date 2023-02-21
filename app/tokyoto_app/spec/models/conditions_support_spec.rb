@@ -42,6 +42,18 @@ RSpec.describe ConditionsSupport, type: :model do
       conditions_support.valid?
       expect(conditions_support.errors[:url]).to include('を入力してください')
     end
+
+    it 'payment_limitがなければ無効であること' do
+      conditions_support = build(:conditions_support, payment_limit: nil)
+      conditions_support.valid?
+      expect(conditions_support.errors[:payment_limit]).to include('を入力してください')
+    end
+
+    it 'payment_frequencyがなければ無効であること' do
+      conditions_support = build(:conditions_support, payment_frequency: nil)
+      conditions_support.valid?
+      expect(conditions_support.errors[:payment_frequency]).to include('を入力してください')
+    end
   end
     
   describe 'scope' do

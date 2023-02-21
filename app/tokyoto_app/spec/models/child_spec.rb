@@ -12,4 +12,10 @@ RSpec.describe Child, type: :model do
     child.valid?
     expect(child.errors[:user]).to include("を入力してください")
   end
+
+  it '子供の年齢がなければ無効であること' do
+    child = build(:child, birth: nil)
+    child.valid?
+    expect(child.errors[:birth]).to include("を入力してください")
+  end
 end

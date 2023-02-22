@@ -5,7 +5,8 @@
 <div>収入（単位：万円）<%= show_income %>万円</div>
 <div>子どもの年齢
   <% @user.children.each do |child|%>
-    <%= child.age %>歳
+    <%= child.birth %>
+    <%= age(child.birth)%>
   <% end %>
 </div>
 

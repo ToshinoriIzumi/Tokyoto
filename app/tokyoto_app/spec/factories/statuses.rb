@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory :status do
-    status { 0 }
+    status { 'テスト条件' }
   end
 end

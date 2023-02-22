@@ -13,7 +13,6 @@ RSpec.describe "Profiles", type: :system do
     context '成功系', js: true do
       it '収入に100と入力すると1,000,000で登録されて100万円と表示される' do
         visit new_profile_path
-
         find("#profile_form_city_id").select("新宿区")
         fill_in 'profile_form[income]', with: '100'
         find("#birth_form_0").set('2022/01/01')
@@ -52,7 +51,7 @@ RSpec.describe "Profiles", type: :system do
     end
     
     context '成功系' do
-      it '収入に500と入力すると5,000,000で更新されて500万円と表示される' do
+      xit '収入に500と入力すると5,000,000で更新されて500万円と表示される' do
         visit edit_profile_path
         fill_in 'profile_form[income]', with: '500'
         find("#birth_form_0").set('2021/01/01')

@@ -1,6 +1,8 @@
+require 'date'
+
 FactoryBot.define do
   factory :child do
-    birth {'2023-01-01'}
+    birth { Date.new(2020, 1, 1) }
     association :user
   end
 end

@@ -1,6 +1,6 @@
 <div class="mx-5 my-10">
   <section class= "mb-10 basic-info text-center">
-  <h3 class= "font-bold text-4xl"><%= @support.support_name %></h3>
+  <h3 class= "font-bold text-4xl"><%= @conditions_support.support.support_name %></h3>
   </section>
   <table class="mb-10 table-fixed text-left text-gray-600">
       <thead class="text-sm text-center bg-gray-100">
@@ -19,7 +19,7 @@
                   制度内容
               </th>
               <td class="py-4 px-6">
-                  <%= @support.content %>
+                  <%= @conditions_support.support.content %>
               </td>
           </tr>
           <tr class="border-b dark:bg-gray-800">
@@ -27,7 +27,7 @@
                   申請方法
               </th>
               <td class="py-4 px-6">
-                  <%= @support.user_application_method %>
+                  <%= @conditions_support.user_application_method %>
               </td>
           </tr>
           <tr class="border-b dark:bg-gray-800">
@@ -35,7 +35,19 @@
                   申請期限
               </th>
               <td class="py-4 px-6">
-                  <%= @support.user_application_limit %>
+                  <%= @conditions_support.user_application_limit %>
+              </td>
+          </tr>
+          <tr class="border-b dark:bg-gray-800">
+              <th scope="row" class="py-4 px-6 font-bold text-center">
+                  対象条件
+              </th>
+              <td class="py-4 px-6">
+                  <% @conditions_support.condition.statuses.each do |status| %>
+                    <p>
+                        <%= status.status %>
+                    </p>
+                  <% end %>
               </td>
           </tr>
           <tr class="border-b dark:bg-gray-800">
@@ -43,7 +55,7 @@
                   公式サイト
               </th>
               <td class="py-4 px-6">
-                  <%#= link_to @support.url, @support.url %>
+                  <%= link_to @conditions_support.url, @conditions_support.url %>
               </td>
           </tr>
       </tbody>

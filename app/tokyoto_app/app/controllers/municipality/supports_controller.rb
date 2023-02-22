@@ -21,9 +21,9 @@ class Municipality::SupportsController < Municipality::BaseController
     if @support.invalid?
       flash.now[:alert] = '内容を確かめてください。'
       render :new
-    end 
+    end
   end
-  
+
   def create
     @support = Support.new(support_params)
     @support.save
@@ -43,7 +43,7 @@ class Municipality::SupportsController < Municipality::BaseController
   end
 
   def destroy
-    @support.support_tags.destroy
+    @support.supports_tags.destroy
     redirect_to municipality_supports_path, notice: '削除しました。'
   end
 
@@ -62,6 +62,6 @@ class Municipality::SupportsController < Municipality::BaseController
   end
 
   def search_flg
-    search_params.values.map {|params|} 
+    search_params.values.map {|params|}
   end
 end

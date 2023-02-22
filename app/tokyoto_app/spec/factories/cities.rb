@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :city do
     city_name { 'test_city' }
-    latitude { 35.6130639 }
-    longitude { 139.6996014 }
+    latitude { 35.5062641 }
+    longitude { 138.6457282 }
   end
 end

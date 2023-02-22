@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_02_01_140852) do
+ActiveRecord::Schema.define(version: 2023_02_17_112041) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,6 +58,10 @@ ActiveRecord::Schema.define(version: 2023_02_01_140852) do
     t.string "transfer_destination"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "user_application_method"
+    t.string "user_application_limit"
+    t.string "user_renewal_method"
+    t.string "user_renewal_month"
     t.index ["age_id"], name: "index_conditions_supports_on_age_id"
     t.index ["city_id"], name: "index_conditions_supports_on_city_id"
     t.index ["condition_id", "support_id"], name: "index_conditions_supports_on_condition_id_and_support_id", unique: true
@@ -113,26 +117,22 @@ ActiveRecord::Schema.define(version: 2023_02_01_140852) do
     t.index ["status"], name: "index_statuses_on_status", unique: true
   end
 
-  create_table "support_tags", force: :cascade do |t|
-    t.bigint "support_id", null: false
-    t.bigint "tag_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["support_id"], name: "index_support_tags_on_support_id"
-    t.index ["tag_id"], name: "index_support_tags_on_tag_id"
-  end
-
   create_table "supports", force: :cascade do |t|
     t.string "support_name", null: false
     t.text "content", null: false
-    t.text "user_application_method"
-    t.string "user_application_limit"
-    t.string "user_renewal_method"
-    t.string "user_renewal_month"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "publish_state", null: false
     t.index ["support_name"], name: "index_supports_on_support_name", unique: true
+  end
+
+  create_table "supports_tags", force: :cascade do |t|
+    t.bigint "support_id", null: false
+    t.bigint "tag_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["support_id"], name: "index_supports_tags_on_support_id"
+    t.index ["tag_id"], name: "index_supports_tags_on_tag_id"
   end
 
   create_table "tags", force: :cascade do |t|
@@ -165,6 +165,6 @@ ActiveRecord::Schema.define(version: 2023_02_01_140852) do
   add_foreign_key "conditions_supports_statuses", "conditions"
   add_foreign_key "conditions_supports_statuses", "statuses"
   add_foreign_key "hospitals", "cities"
-  add_foreign_key "support_tags", "supports"
-  add_foreign_key "support_tags", "tags"
+  add_foreign_key "supports_tags", "supports"
+  add_foreign_key "supports_tags", "tags"
 end

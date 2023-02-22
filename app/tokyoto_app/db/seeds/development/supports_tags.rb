@@ -1,4 +1,4 @@
-SupportTag.create!(
+SupportsTag.create!(
   [
     { id: 1, support_id: 1, tag_id: 1 },
     { id: 2, support_id: 1, tag_id: 8 },
@@ -17,5 +17,7 @@ SupportTag.create!(
     { id: 15, support_id: 14, tag_id: 7 },
     { id: 16, support_id: 15, tag_id: 7 },
     { id: 17, support_id: 16, tag_id: 2 },
+    { id: 18, support_id: 20, tag_id: 2 },
+    { id: 19, support_id: 20, tag_id: 6 },
   ]
 )

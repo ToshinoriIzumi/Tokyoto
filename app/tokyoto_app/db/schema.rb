@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2023_02_17_112041) do
 
   create_table "children", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.date "birth"
+    t.date "birth", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_children_on_user_id"
@@ -52,8 +52,8 @@ ActiveRecord::Schema.define(version: 2023_02_17_112041) do
     t.integer "payment", null: false
     t.bigint "age_id", null: false
     t.string "url", null: false
-    t.integer "payment_limit", default: 0
-    t.integer "payment_frequency", default: 0
+    t.integer "payment_limit", default: 0, null: false
+    t.integer "payment_frequency", default: 0, null: false
     t.string "payment_month"
     t.string "transfer_destination"
     t.datetime "created_at", precision: 6, null: false
@@ -122,7 +122,7 @@ ActiveRecord::Schema.define(version: 2023_02_17_112041) do
     t.text "content", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "publish_state", null: false
+    t.integer "publish_state", default: 0, null: false
     t.index ["support_name"], name: "index_supports_on_support_name", unique: true
   end
 

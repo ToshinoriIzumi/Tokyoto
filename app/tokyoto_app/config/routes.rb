@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   post "login", to: "user_sessions#create"
   delete "logout", to: "user_sessions#destroy"
   get "search", to: "top#search"
+  get "search_infos", to: "top#search_infos"
   resources :top, only: %i[index show]
   resources :users, only: %i[new create destroy]
   resource :profile

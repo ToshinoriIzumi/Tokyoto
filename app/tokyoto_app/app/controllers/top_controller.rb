@@ -9,6 +9,14 @@ class TopController < ApplicationController
 
   def search
     @results = @query_fix.result
+    @AA = @results.select(:support_id).distinct
+    binding.pry
+  end
+
+  def search_infos
+    binding.pry
+    @condtion_ids = params[:result]
+    @
   end
 
   def show

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_02_17_112041) do
+ActiveRecord::Schema.define(version: 2023_02_27_034520) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2023_02_17_112041) do
     t.date "birth"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "sibling_composition", default: 0, null: false
     t.index ["user_id"], name: "index_children_on_user_id"
   end
 
@@ -142,6 +143,14 @@ ActiveRecord::Schema.define(version: 2023_02_17_112041) do
     t.index ["name"], name: "index_tags_on_name", unique: true
   end
 
+  create_table "user_statuses", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.integer "is_status", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_user_statuses_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", null: false
     t.string "crypted_password"
@@ -167,4 +176,5 @@ ActiveRecord::Schema.define(version: 2023_02_17_112041) do
   add_foreign_key "hospitals", "cities"
   add_foreign_key "supports_tags", "supports"
   add_foreign_key "supports_tags", "tags"
+  add_foreign_key "user_statuses", "users"
 end

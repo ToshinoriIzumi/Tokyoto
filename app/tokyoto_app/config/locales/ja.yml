@@ -5,3 +5,17 @@ ja:
         draft: "下書き"
         published: "公開済み"
         publish_wait: "公開待ち"
+    child:
+      sibling_composition:
+        first_child: "第一子"
+        second_child: "第二子"
+        three_child: "第三子"
+        fourth_child: "第四子"
+        fifth_child: "第五子"
+        sixth_child: "第六子"
+  enumerize:
+    ProfileForm:
+      number_of_dependents:
+        one: '1人'
+        two: '2人'
+        three_than: '3人以上'

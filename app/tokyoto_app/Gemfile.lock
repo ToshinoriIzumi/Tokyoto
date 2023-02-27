@@ -96,6 +96,8 @@ GEM
       ruby2_keywords
     enum_help (0.0.19)
       activesupport (>= 3.0.0)
+    enumerize (2.5.0)
+      activesupport (>= 3.2)
     erubi (1.11.0)
     factory_bot (6.2.1)
       activesupport (>= 5.0.0)
@@ -350,6 +352,7 @@ DEPENDENCIES
   composite_primary_keys (~> 12.0)
   draper
   enum_help
+  enumerize
   factory_bot_rails
   jbuilder (~> 2.7)
   listen (~> 3.2)

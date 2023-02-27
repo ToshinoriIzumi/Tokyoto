@@ -35,6 +35,7 @@ gem 'cancancan', '3.3.0'
 gem 'pry-rails'
 gem 'draper'
 gem 'composite_primary_keys', '~> 12.0'
+gem 'enumerize'
 gem 'enum_help'
 gem 'rails-i18n'
 

@@ -37,8 +37,27 @@
       </button>
     </div>
   </div>
+  <div class="space-y-1">
+  <%= f.label :is_welfare, '生活保護' %>
+    <div class="mt-1">
+      <%= f.radio_button :is_welfare, true %>
+      <%= f.label :is_welfare, '受給している', value: true %>
+      <%= f.radio_button :is_welfare, false %>
+      <%= f.label :is_welfare, '受給していない', value: false %>
+    </div>
+  </div>
+  <div class="space-y-1">
+  <%= f.label :number_of_dependents, '扶養人数' %>
+    <div>
+      <% ProfileForm.number_of_dependents.options.each do |text, value| %>
+        <%= f.radio_button :number_of_dependents, value %>
+        <%= f.label :number_of_dependents, text, value: value %>
+      <% end %>
+    </div>
+  </div>
   <%= f.submit '登録する', class: "flex items-center justify-center w-full px-10 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-blue-600 rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" %>
 <% end %>
+</div>
 <div class="flex items-center justify-between">
   <div class="text-sm">
     <%= link_to "トップページへ", top_index_path, { class: "font-medium text-blue-600 hover:text-blue-500 mr-2" } %>

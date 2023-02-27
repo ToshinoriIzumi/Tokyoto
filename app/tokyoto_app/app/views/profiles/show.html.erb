@@ -3,10 +3,15 @@
 <div>ユーザーネーム <%= @user.user_name %>さん</div>
 <div>住んでいる地域 <%= show_city_name %></div>
 <div>収入（単位：万円）<%= show_income %>万円</div>
-<div>子どもの年齢
+<div>子どもの生年月日
   <% @user.children.each do |child|%>
-    <%= child.birth %>
-    <%= age(child.birth)%>
+    <%= child.sibling_composition %>
+    <%= child.age %>歳
+  <% end %>
+</div>
+<div>ステータス
+  <% @statuses.each do |status|%>
+    <%= status.status %>
   <% end %>
 </div>
 

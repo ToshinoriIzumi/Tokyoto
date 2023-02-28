@@ -1,4 +1,4 @@
-<p class="text-xl my-3">あなたが利用できる支援は、<%= conditions_supports.count %>件です。</p>
+<p class="text-xl my-3">対象支援は、<%= conditions_supports.count %>件です。</p>
 <% conditions_supports.each do |conditions_support| %>
   <section class="mb-6">
     <div class="max-w-7xl px-8 py-4 bg-white rounded-lg shadow-md dark:bg-gray-800">
@@ -13,8 +13,7 @@
 
       <div class="mt-2">
         <%#= link_to "#{conditions_support.support.support_name}", top_path(conditions_support.support), class: "text-2xl font-bold text-gray-700 dark:text-white hover:text-gray-600 dark:hover:text-gray-200 hover:underline" %>
-        <%= link_to "#{conditions_support.support.support_name}", search_infos_path(keyword: "#{conditions_support.support_id}", results: results.ids ), class: "text-2xl font-bold text-gray-700 dark:text-white hover:text-gray-600 dark:hover:text-gray-200 hover:underline" %>
-        <% binding.pry %>
+        <%= link_to "#{conditions_support.support.support_name}", get_selected_condition_supports_path(selected_support_id: conditions_support.support_id, result_ids: results.ids ), class: "text-2xl font-bold text-gray-700 dark:text-white hover:text-gray-600 dark:hover:text-gray-200 hover:underline" %>
       </div>
       <div class="flex items-center justify-between mt-4">
           <%#= link_to "公式サイト", conditions_support.support.url, class: "text-blue-600 dark:text-blue-400 hover:underline" %>

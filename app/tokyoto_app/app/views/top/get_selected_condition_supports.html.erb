@@ -1,0 +1,5 @@
+<div class="mx-5 my-10">
+  <%= render 'search_form' %>
+  <p class="text-2xl">条件別 制度一覧</p>
+  <%= render partial: "conditions_support_infos", locals: {conditions_supports: @conditions_supports } %>
+</div>

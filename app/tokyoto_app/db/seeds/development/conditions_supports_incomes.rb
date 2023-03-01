@@ -249,5 +249,10 @@ ConditionsSupportsIncome.create!(
       conditions_support_id: 61,
       income_id: 5
     },
+    {
+      id: 50,
+      conditions_support_id: 61,
+      income_id: 6
+    },
   ]
 )

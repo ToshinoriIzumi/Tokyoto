@@ -2242,5 +2242,11 @@ ConditionsSupportsStatus.create!(
       condition_id: 73,
       status_id: 16
     },
+    #養育費受け取り支援事業補助金（公正証書作成等手数料補助）
+    {
+      id: 440,
+      condition_id: 74,
+      status_id: 16
+    },
   ]
 )

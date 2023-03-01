@@ -5,6 +5,6 @@ Income.create!(
     { id: 3, money: 3600000, is_myself: 1 },
     { id: 4, money: 6800000, is_myself: 1 },
     { id: 5, money: 7300000, is_myself: 1 },
-
+    { id: 6, maney: "記載なし", is_myseif: 1 }
   ]
 )

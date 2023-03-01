@@ -15,7 +15,7 @@ class TopController < ApplicationController
   def get_selected_condition_supports
     @result_ids = params[:result_ids]
     @selected_support_id = params[:selected_support_id]
-    @conditions_supports = @result_ids.map {|id| ConditionsSupport.find_by(id: id.to_i, support_id: @selected_support_id.to_i)}
+    @conditions_supports = @result_ids.map {|id| ConditionsSupport.find_by(id: id.to_i, support_id: @selected_support_id.to_i)}.compact
   end
 
   def show

@@ -1,6 +1,5 @@
 
 class Income < ApplicationRecord
-  has_many :conditions_supports, dependent: :destroy
   has_many :conditions_supports_incomes, dependent: :destroy
   has_many :conditions_supports, through: :conditions_supports_incomes
 

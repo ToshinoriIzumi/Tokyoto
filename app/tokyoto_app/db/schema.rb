@@ -10,10 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_02_19_025738) do
+ActiveRecord::Schema.define(version: 2023_03_02_112928) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "addinfo_applications", force: :cascade do |t|
+    t.string "info_content", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "addinfo_conditions_supports", force: :cascade do |t|
+    t.string "info_content", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "ages", force: :cascade do |t|
     t.integer "min", null: false
@@ -21,6 +33,20 @@ ActiveRecord::Schema.define(version: 2023_02_19_025738) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["min", "max"], name: "index_ages_on_min_and_max", unique: true
+  end
+
+  create_table "application_forms", force: :cascade do |t|
+    t.string "application_form_name", null: false
+    t.string "application_form_url"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "application_methods", force: :cascade do |t|
+    t.string "application_method", null: false
+    t.integer "method_order", default: 0, null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "children", force: :cascade do |t|
@@ -59,18 +85,50 @@ ActiveRecord::Schema.define(version: 2023_02_19_025738) do
     t.string "transfer_destination"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "user_application_method"
     t.string "user_application_limit"
     t.string "user_renewal_method"
     t.string "user_renewal_month"
-    t.string "additional_info_of_application"
-    t.string "application_form"
-    t.string "additional_info_conditions_supports"
     t.index ["age_id"], name: "index_conditions_supports_on_age_id"
     t.index ["city_id"], name: "index_conditions_supports_on_city_id"
     t.index ["condition_id", "support_id"], name: "index_conditions_supports_on_condition_id_and_support_id", unique: true
     t.index ["condition_id"], name: "index_conditions_supports_on_condition_id"
     t.index ["support_id"], name: "index_conditions_supports_on_support_id"
+  end
+
+  create_table "conditions_supports_addinfo_applications", force: :cascade do |t|
+    t.bigint "addinfo_application_id", null: false
+    t.bigint "conditions_support_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["addinfo_application_id"], name: "addinfo_application_CN_intermediate_table"
+    t.index ["conditions_support_id"], name: "conditions_supports_AA_intermediate_table"
+  end
+
+  create_table "conditions_supports_addinfo_conditions_supports", force: :cascade do |t|
+    t.bigint "addinfo_conditions_support_id", null: false
+    t.bigint "conditions_support_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["addinfo_conditions_support_id"], name: "addinfo_conditions_support_CN_intermediate_table"
+    t.index ["conditions_support_id"], name: "conditions_supports_ACS_intermediate_table"
+  end
+
+  create_table "conditions_supports_applications_forms", force: :cascade do |t|
+    t.bigint "application_form_id", null: false
+    t.bigint "conditions_support_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["application_form_id"], name: "applications_form_CN_intermediate_table"
+    t.index ["conditions_support_id"], name: "conditions_supports_AF_intermediate_table"
+  end
+
+  create_table "conditions_supports_applications_methods", force: :cascade do |t|
+    t.bigint "application_method_id", null: false
+    t.bigint "conditions_support_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["application_method_id"], name: "applications_method_CN_intermediate_table"
+    t.index ["conditions_support_id"], name: "conditions_supports_AP_intermediate_table"
   end
 
   create_table "conditions_supports_incomes", force: :cascade do |t|
@@ -166,6 +224,14 @@ ActiveRecord::Schema.define(version: 2023_02_19_025738) do
   add_foreign_key "conditions_supports", "cities"
   add_foreign_key "conditions_supports", "conditions"
   add_foreign_key "conditions_supports", "supports"
+  add_foreign_key "conditions_supports_addinfo_applications", "addinfo_applications"
+  add_foreign_key "conditions_supports_addinfo_applications", "conditions_supports"
+  add_foreign_key "conditions_supports_addinfo_conditions_supports", "addinfo_conditions_supports"
+  add_foreign_key "conditions_supports_addinfo_conditions_supports", "conditions_supports"
+  add_foreign_key "conditions_supports_applications_forms", "application_forms"
+  add_foreign_key "conditions_supports_applications_forms", "conditions_supports"
+  add_foreign_key "conditions_supports_applications_methods", "application_methods"
+  add_foreign_key "conditions_supports_applications_methods", "conditions_supports"
   add_foreign_key "conditions_supports_incomes", "conditions_supports"
   add_foreign_key "conditions_supports_incomes", "incomes"
   add_foreign_key "conditions_supports_statuses", "conditions"

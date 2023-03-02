@@ -32,7 +32,6 @@ ConditionsSupport.create!(
       payment_month: "9月中旬(4~6月分),12月中旬(7~9月分),翌年3月(10-12月分),翌年6月中旬(1-3月)",
       transfer_destination: "指定した口座",
       user_application_method: "各幼稚園を通じて申請書等をお配りし(5月中旬~6月上旬)、各幼稚園を通じて申請",
-      application_form: "私立幼稚園等交付申請書兼付申請書兼請求書",
       additional_info_of_application: "※ひとり親世帯は申請書にチェックが必要"
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
@@ -63,7 +62,6 @@ ConditionsSupport.create!(
       payment_month: "9月中旬(4~6月分),12月中旬(7~9月分),翌年3月(10-12月分),翌年6月中旬(1-3月)",
       transfer_destination: "指定した口座",
       user_application_method: "各幼稚園を通じて申請書等をお配りし(5月中旬~6月上旬)、各幼稚園を通じて申請",
-      application_form: "①私立幼稚園等交付申請書兼付申請書兼請求書 ②令和4年度区市町村民税（非課税）証明書（原本又はコピー）又は令和4年度納税（決定）通知書（原本又はコピー)"
       additional_info_of_application: "・課税（非課税）証明書は、住民登録のあった区市町村で取得できます。※提出書類②は、同居・別居の如何を問わず、園児と生計を一にする方全員分を提出する必要があります。※ 指定都市で課税されている方は、旧税率（6％）にて算出した市民税所得割額を用いて補助金額を決定します。ひとり親は申請書にチェックが必要",
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
@@ -95,7 +93,6 @@ ConditionsSupport.create!(
       payment_month: "9月中旬(4~6月分),12月中旬(7~9月分),翌年3月(10-12月分),翌年6月中旬(1-3月)",
       transfer_destination: "指定した口座",
       user_application_method: "各幼稚園を通じて申請書等をお配りし(5月中旬~6月上旬)、各幼稚園を通じて申請",
-      application_form: "①私立幼稚園等交付申請書兼付申請書兼請求書 ②令和3年度区市町村民税（非課税）証明書（原本又はコピー）又は令和4年度納税（決定）通知書（原本又はコピー)"
       additional_info_of_application: "・課税（非課税）証明書は、住民登録のあった区市町村で取得できます。※提出書類②は、同居・別居の如何を問わず、園児と生計を一にする方全員分を提出する必要があります。※ 指定都市で課税されている方は、旧税率（6％）にて算出した市民税所得割額を用いて補助金額を決定します。ひとり親は申請書にチェックが必要",
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
@@ -126,7 +123,6 @@ ConditionsSupport.create!(
       payment_month: "9月中旬(4~6月分),12月中旬(7~9月分),翌年3月(10-12月分),翌年6月中旬(1-3月)",
       transfer_destination: "指定した口座",
       user_application_method: "各幼稚園を通じて申請書等をお配りし(5月中旬~6月上旬)、各幼稚園を通じて申請",
-      application_form: "①私立幼稚園等交付申請書兼付申請書兼請求書 ②令和3年度区市町村民税（非課税）証明書（原本又はコピー）又は令和4年度納税（決定）通知書（原本又はコピー) ③令和4年度区市町村民税（非課税）証明書（原本又はコピー）又は令和4年度納税（決定）通知書（原本又はコピー)"
       additional_info_of_application: "・課税（非課税）証明書は、住民登録のあった区市町村で取得できます。※提出書類②・③は、同居・別居の如何を問わず、園児と生計を一にする方全員分を提出する必要があります。※ 指定都市で課税されている方は、旧税率（6％）にて算出した市民税所得割額を用いて補助金額を決定します。ひとり親は申請書にチェックが必要",
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
@@ -157,7 +153,6 @@ ConditionsSupport.create!(
       payment_month: "9月中旬(4~6月分),12月中旬(7~9月分),翌年3月(10-12月分),翌年6月中旬(1-3月)",
       transfer_destination: "指定した口座",
       user_application_method: "各幼稚園を通じて申請書等をお配りし(5月中旬~6月上旬)、各幼稚園を通じて申請",
-      application_form: "私立幼稚園等交付申請書兼付申請書兼請求書",
       additional_info_of_application: "※ひとり親世帯は申請書にチェックが必要"
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
@@ -188,7 +183,6 @@ ConditionsSupport.create!(
       payment_month: "9月中旬(4~6月分),12月中旬(7~9月分),翌年3月(10-12月分),翌年6月中旬(1-3月)",
       transfer_destination: "指定した口座",
       ser_application_method: "各幼稚園を通じて申請書等をお配りし(5月中旬~6月上旬)、各幼稚園を通じて申請",
-      application_form: "①私立幼稚園等交付申請書兼付申請書兼請求書 ②令和4年度区市町村民税（非課税）証明書（原本又はコピー）又は令和4年度納税（決定）通知書（原本又はコピー)"
       additional_info_of_application: "・課税（非課税）証明書は、住民登録のあった区市町村で取得できます。※提出書類②は、同居・別居の如何を問わず、園児と生計を一にする方全員分を提出する必要があります。※ 指定都市で課税されている方は、旧税率（6％）にて算出した市民税所得割額を用いて補助金額を決定します。ひとり親は申請書にチェックが必要",
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
@@ -219,7 +213,6 @@ ConditionsSupport.create!(
       payment_month: "9月中旬(4~6月分),12月中旬(7~9月分),翌年3月(10-12月分),翌年6月中旬(1-3月)",
       transfer_destination: "指定した口座",
       user_application_method: "各幼稚園を通じて申請書等をお配りし(5月中旬~6月上旬)、各幼稚園を通じて申請",
-      application_form: "①私立幼稚園等交付申請書兼付申請書兼請求書 ②令和3年度区市町村民税（非課税）証明書（原本又はコピー）又は令和4年度納税（決定）通知書（原本又はコピー)"
       additional_info_of_application: "・課税（非課税）証明書は、住民登録のあった区市町村で取得できます。※提出書類②は、同居・別居の如何を問わず、園児と生計を一にする方全員分を提出する必要があります。※ 指定都市で課税されている方は、旧税率（6％）にて算出した市民税所得割額を用いて補助金額を決定します。ひとり親は申請書にチェックが必要",
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
@@ -250,7 +243,6 @@ ConditionsSupport.create!(
       payment_month: "9月中旬(4~6月分),12月中旬(7~9月分),翌年3月(10-12月分),翌年6月中旬(1-3月)",
       transfer_destination: "指定した口座",
       user_application_method: "各幼稚園を通じて申請書等をお配りし(5月中旬~6月上旬)、各幼稚園を通じて申請",
-      application_form: "①私立幼稚園等交付申請書兼付申請書兼請求書 ②令和3年度区市町村民税（非課税）証明書（原本又はコピー）又は令和4年度納税（決定）通知書（原本又はコピー) ③令和4年度区市町村民税（非課税）証明書（原本又はコピー）又は令和4年度納税（決定）通知書（原本又はコピー)"
       additional_info_of_application: "・課税（非課税）証明書は、住民登録のあった区市町村で取得できます。※提出書類②・③は、同居・別居の如何を問わず、園児と生計を一にする方全員分を提出する必要があります。※ 指定都市で課税されている方は、旧税率（6％）にて算出した市民税所得割額を用いて補助金額を決定します。ひとり親は申請書にチェックが必要",
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
@@ -281,7 +273,6 @@ ConditionsSupport.create!(
       payment_month: "9月中旬(4~6月分),12月中旬(7~9月分),翌年3月(10-12月分),翌年6月中旬(1-3月)",
       transfer_destination: "指定した口座",
       user_application_method: "各幼稚園を通じて申請書等をお配りし(5月中旬~6月上旬)、各幼稚園を通じて申請",
-      application_form: "私立幼稚園等交付申請書兼付申請書兼請求書",
       additional_info_of_application: "※ひとり親世帯は申請書にチェックが必要"
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
@@ -313,7 +304,6 @@ ConditionsSupport.create!(
       payment_month: "9月中旬(4~6月分),12月中旬(7~9月分),翌年3月(10-12月分),翌年6月中旬(1-3月)",
       transfer_destination: "指定した口座",
       ser_application_method: "各幼稚園を通じて申請書等をお配りし(5月中旬~6月上旬)、各幼稚園を通じて申請",
-      application_form: "①私立幼稚園等交付申請書兼付申請書兼請求書 ②令和4年度区市町村民税（非課税）証明書（原本又はコピー）又は令和4年度納税（決定）通知書（原本又はコピー)"
       additional_info_of_application: "・課税（非課税）証明書は、住民登録のあった区市町村で取得できます。※提出書類②は、同居・別居の如何を問わず、園児と生計を一にする方全員分を提出する必要があります。※ 指定都市で課税されている方は、旧税率（6％）にて算出した市民税所得割額を用いて補助金額を決定します。ひとり親は申請書にチェックが必要",
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
@@ -370,7 +360,6 @@ ConditionsSupport.create!(
       payment_month: "9月中旬(4~6月分),12月中旬(7~9月分),翌年3月(10-12月分),翌年6月中旬(1-3月)",
       transfer_destination: "指定した口座",
       user_application_method: "各幼稚園を通じて申請書等をお配りし(5月中旬~6月上旬)、各幼稚園を通じて申請",
-      application_form: "①私立幼稚園等交付申請書兼付申請書兼請求書 ②令和3年度区市町村民税（非課税）証明書（原本又はコピー）又は令和4年度納税（決定）通知書（原本又はコピー) ③令和4年度区市町村民税（非課税）証明書（原本又はコピー）又は令和4年度納税（決定）通知書（原本又はコピー)"
       additional_info_of_application: "・課税（非課税）証明書は、住民登録のあった区市町村で取得できます。※提出書類②・③は、同居・別居の如何を問わず、園児と生計を一にする方全員分を提出する必要があります。※ 指定都市で課税されている方は、旧税率（6％）にて算出した市民税所得割額を用いて補助金額を決定します。ひとり親は申請書にチェックが必要",
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
@@ -401,7 +390,6 @@ ConditionsSupport.create!(
       payment_month: "9月中旬(4~6月分),12月中旬(7~9月分),翌年3月(10-12月分),翌年6月中旬(1-3月)",
       transfer_destination: "指定した口座",
       user_application_method: "各幼稚園を通じて申請書等をお配りし(5月中旬~6月上旬)、各幼稚園を通じて申請",
-      application_form: "私立幼稚園等交付申請書兼付申請書兼請求書",
       additional_info_of_application: "※ひとり親世帯は申請書にチェックが必要"
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
@@ -433,7 +421,6 @@ ConditionsSupport.create!(
       payment_month: "9月中旬(4~6月分),12月中旬(7~9月分),翌年3月(10-12月分),翌年6月中旬(1-3月)",
       transfer_destination: "指定した口座",
       ser_application_method: "各幼稚園を通じて申請書等をお配りし(5月中旬~6月上旬)、各幼稚園を通じて申請",
-      application_form: "①私立幼稚園等交付申請書兼付申請書兼請求書 ②令和4年度区市町村民税（非課税）証明書（原本又はコピー）又は令和4年度納税（決定）通知書（原本又はコピー)"
       additional_info_of_application: "・課税（非課税）証明書は、住民登録のあった区市町村で取得できます。※提出書類②は、同居・別居の如何を問わず、園児と生計を一にする方全員分を提出する必要があります。※ 指定都市で課税されている方は、旧税率（6％）にて算出した市民税所得割額を用いて補助金額を決定します。ひとり親は申請書にチェックが必要",
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
@@ -465,7 +452,6 @@ ConditionsSupport.create!(
       payment_month: "9月中旬(4~6月分),12月中旬(7~9月分),翌年3月(10-12月分),翌年6月中旬(1-3月)",
       transfer_destination: "指定した口座",
       user_application_method: "各幼稚園を通じて申請書等をお配りし(5月中旬~6月上旬)、各幼稚園を通じて申請",
-      application_form: "①私立幼稚園等交付申請書兼付申請書兼請求書 ②令和3年度区市町村民税（非課税）証明書（原本又はコピー）又は令和4年度納税（決定）通知書（原本又はコピー)"
       additional_info_of_application: "・課税（非課税）証明書は、住民登録のあった区市町村で取得できます。※提出書類②は、同居・別居の如何を問わず、園児と生計を一にする方全員分を提出する必要があります。※ 指定都市で課税されている方は、旧税率（6％）にて算出した市民税所得割額を用いて補助金額を決定します。ひとり親は申請書にチェックが必要",
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
@@ -497,7 +483,6 @@ ConditionsSupport.create!(
       payment_month: "9月中旬(4~6月分),12月中旬(7~9月分),翌年3月(10-12月分),翌年6月中旬(1-3月)",
       transfer_destination: "指定した口座",
       user_application_method: "各幼稚園を通じて申請書等をお配りし(5月中旬~6月上旬)、各幼稚園を通じて申請",
-      application_form: "①私立幼稚園等交付申請書兼付申請書兼請求書 ②令和3年度区市町村民税（非課税）証明書（原本又はコピー）又は令和4年度納税（決定）通知書（原本又はコピー) ③令和4年度区市町村民税（非課税）証明書（原本又はコピー）又は令和4年度納税（決定）通知書（原本又はコピー)"
       additional_info_of_application: "・課税（非課税）証明書は、住民登録のあった区市町村で取得できます。※提出書類②・③は、同居・別居の如何を問わず、園児と生計を一にする方全員分を提出する必要があります。※ 指定都市で課税されている方は、旧税率（6％）にて算出した市民税所得割額を用いて補助金額を決定します。ひとり親は申請書にチェックが必要",
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
@@ -528,7 +513,6 @@ ConditionsSupport.create!(
       payment_month: "9月中旬(4~6月分),12月中旬(7~9月分),翌年3月(10-12月分),翌年6月中旬(1-3月)",
       transfer_destination: "指定した口座",
       user_application_method: "各幼稚園を通じて申請書等をお配りし(5月中旬~6月上旬)、各幼稚園を通じて申請",
-      application_form: "私立幼稚園等交付申請書兼付申請書兼請求書",
       additional_info_of_application: "※ひとり親世帯は申請書にチェックが必要"
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
@@ -560,7 +544,6 @@ ConditionsSupport.create!(
       payment_month: "9月中旬(4~6月分),12月中旬(7~9月分),翌年3月(10-12月分),翌年6月中旬(1-3月)",
       transfer_destination: "指定した口座",
       ser_application_method: "各幼稚園を通じて申請書等をお配りし(5月中旬~6月上旬)、各幼稚園を通じて申請",
-      application_form: "①私立幼稚園等交付申請書兼付申請書兼請求書 ②令和4年度区市町村民税（非課税）証明書（原本又はコピー）又は令和4年度納税（決定）通知書（原本又はコピー)"
       additional_info_of_application: "・課税（非課税）証明書は、住民登録のあった区市町村で取得できます。※提出書類②は、同居・別居の如何を問わず、園児と生計を一にする方全員分を提出する必要があります。※ 指定都市で課税されている方は、旧税率（6％）にて算出した市民税所得割額を用いて補助金額を決定します。ひとり親は申請書にチェックが必要",
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
@@ -592,7 +575,6 @@ ConditionsSupport.create!(
       payment_month: "9月中旬(4~6月分),12月中旬(7~9月分),翌年3月(10-12月分),翌年6月中旬(1-3月)",
       transfer_destination: "指定した口座",
       user_application_method: "各幼稚園を通じて申請書等をお配りし(5月中旬~6月上旬)、各幼稚園を通じて申請",
-      application_form: "①私立幼稚園等交付申請書兼付申請書兼請求書 ②令和3年度区市町村民税（非課税）証明書（原本又はコピー）又は令和4年度納税（決定）通知書（原本又はコピー)"
       additional_info_of_application: "・課税（非課税）証明書は、住民登録のあった区市町村で取得できます。※提出書類②は、同居・別居の如何を問わず、園児と生計を一にする方全員分を提出する必要があります。※ 指定都市で課税されている方は、旧税率（6％）にて算出した市民税所得割額を用いて補助金額を決定します。ひとり親は申請書にチェックが必要",
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
@@ -624,7 +606,6 @@ ConditionsSupport.create!(
       payment_month: "9月中旬(4~6月分),12月中旬(7~9月分),翌年3月(10-12月分),翌年6月中旬(1-3月)",
       transfer_destination: "指定した口座",
       user_application_method: "各幼稚園を通じて申請書等をお配りし(5月中旬~6月上旬)、各幼稚園を通じて申請",
-      application_form: "①私立幼稚園等交付申請書兼付申請書兼請求書 ②令和3年度区市町村民税（非課税）証明書（原本又はコピー）又は令和4年度納税（決定）通知書（原本又はコピー) ③令和4年度区市町村民税（非課税）証明書（原本又はコピー）又は令和4年度納税（決定）通知書（原本又はコピー)"
       additional_info_of_application: "・課税（非課税）証明書は、住民登録のあった区市町村で取得できます。※提出書類②・③は、同居・別居の如何を問わず、園児と生計を一にする方全員分を提出する必要があります。※ 指定都市で課税されている方は、旧税率（6％）にて算出した市民税所得割額を用いて補助金額を決定します。ひとり親は申請書にチェックが必要",
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
@@ -655,7 +636,6 @@ ConditionsSupport.create!(
       payment_month: "9月中旬(4~6月分),12月中旬(7~9月分),翌年3月(10-12月分),翌年6月中旬(1-3月)",
       transfer_destination: "指定した口座",
       user_application_method: "各幼稚園を通じて申請書等をお配りし(5月中旬~6月上旬)、各幼稚園を通じて申請",
-      application_form: "私立幼稚園等交付申請書兼付申請書兼請求書",
       additional_info_of_application: "※ひとり親世帯は申請書にチェックが必要"
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
@@ -687,7 +667,6 @@ ConditionsSupport.create!(
       payment_month: "9月中旬(4~6月分),12月中旬(7~9月分),翌年3月(10-12月分),翌年6月中旬(1-3月)",
       transfer_destination: "指定した口座",
       ser_application_method: "各幼稚園を通じて申請書等をお配りし(5月中旬~6月上旬)、各幼稚園を通じて申請",
-      application_form: "①私立幼稚園等交付申請書兼付申請書兼請求書 ②令和4年度区市町村民税（非課税）証明書（原本又はコピー）又は令和4年度納税（決定）通知書（原本又はコピー)"
       additional_info_of_application: "・課税（非課税）証明書は、住民登録のあった区市町村で取得できます。※提出書類②は、同居・別居の如何を問わず、園児と生計を一にする方全員分を提出する必要があります。※ 指定都市で課税されている方は、旧税率（6％）にて算出した市民税所得割額を用いて補助金額を決定します。ひとり親は申請書にチェックが必要",
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
@@ -719,7 +698,6 @@ ConditionsSupport.create!(
       payment_month: "9月中旬(4~6月分),12月中旬(7~9月分),翌年3月(10-12月分),翌年6月中旬(1-3月)",
       transfer_destination: "指定した口座",
       user_application_method: "各幼稚園を通じて申請書等をお配りし(5月中旬~6月上旬)、各幼稚園を通じて申請",
-      application_form: "①私立幼稚園等交付申請書兼付申請書兼請求書 ②令和3年度区市町村民税（非課税）証明書（原本又はコピー）又は令和4年度納税（決定）通知書（原本又はコピー)"
       additional_info_of_application: "・課税（非課税）証明書は、住民登録のあった区市町村で取得できます。※提出書類②は、同居・別居の如何を問わず、園児と生計を一にする方全員分を提出する必要があります。※ 指定都市で課税されている方は、旧税率（6％）にて算出した市民税所得割額を用いて補助金額を決定します。ひとり親は申請書にチェックが必要",
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
@@ -751,7 +729,6 @@ ConditionsSupport.create!(
       payment_month: "9月中旬(4~6月分),12月中旬(7~9月分),翌年3月(10-12月分),翌年6月中旬(1-3月)",
       transfer_destination: "指定した口座",
       user_application_method: "各幼稚園を通じて申請書等をお配りし(5月中旬~6月上旬)、各幼稚園を通じて申請",
-      application_form: "①私立幼稚園等交付申請書兼付申請書兼請求書 ②令和3年度区市町村民税（非課税）証明書（原本又はコピー）又は令和4年度納税（決定）通知書（原本又はコピー) ③令和4年度区市町村民税（非課税）証明書（原本又はコピー）又は令和4年度納税（決定）通知書（原本又はコピー)"
       additional_info_of_application: "・課税（非課税）証明書は、住民登録のあった区市町村で取得できます。※提出書類②・③は、同居・別居の如何を問わず、園児と生計を一にする方全員分を提出する必要があります。※ 指定都市で課税されている方は、旧税率（6％）にて算出した市民税所得割額を用いて補助金額を決定します。ひとり親は申請書にチェックが必要",
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
@@ -782,7 +759,6 @@ ConditionsSupport.create!(
       payment_month: "9月中旬(4~6月分),12月中旬(7~9月分),翌年3月(10-12月分),翌年6月中旬(1-3月)",
       transfer_destination: "指定した口座",
       user_application_method: "各幼稚園を通じて申請書等をお配りし(5月中旬~6月上旬)、各幼稚園を通じて申請",
-      application_form: "私立幼稚園等交付申請書兼付申請書兼請求書",
       additional_info_of_application: "※ひとり親世帯は申請書にチェックが必要"
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
@@ -814,8 +790,6 @@ ConditionsSupport.create!(
       payment_month: "9月中旬(4~6月分),12月中旬(7~9月分),翌年3月(10-12月分),翌年6月中旬(1-3月)",
       transfer_destination: "指定した口座",
       ser_application_method: "各幼稚園を通じて申請書等をお配りし(5月中旬~6月上旬)、各幼稚園を通じて申請",
-      application_form: "①私立幼稚園等交付申請書兼付申請書兼請求書 ②令和4年度区市町村民税（非課税）証明書（原本又はコピー）又は令和4年度納税（決定）通知書（原本又はコピー)"
-      additional_info_of_application: "・課税（非課税）証明書は、住民登録のあった区市町村で取得できます。※提出書類②は、同居・別居の如何を問わず、園児と生計を一にする方全員分を提出する必要があります。※ 指定都市で課税されている方は、旧税率（6％）にて算出した市民税所得割額を用いて補助金額を決定します。ひとり親は申請書にチェックが必要",
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
@@ -846,7 +820,6 @@ ConditionsSupport.create!(
       payment_month: "9月中旬(4~6月分),12月中旬(7~9月分),翌年3月(10-12月分),翌年6月中旬(1-3月)",
       transfer_destination: "指定した口座",
       user_application_method: "各幼稚園を通じて申請書等をお配りし(5月中旬~6月上旬)、各幼稚園を通じて申請",
-      application_form: "①私立幼稚園等交付申請書兼付申請書兼請求書 ②令和3年度区市町村民税（非課税）証明書（原本又はコピー）又は令和4年度納税（決定）通知書（原本又はコピー)"
       additional_info_of_application: "・課税（非課税）証明書は、住民登録のあった区市町村で取得できます。※提出書類②は、同居・別居の如何を問わず、園児と生計を一にする方全員分を提出する必要があります。※ 指定都市で課税されている方は、旧税率（6％）にて算出した市民税所得割額を用いて補助金額を決定します。ひとり親は申請書にチェックが必要",
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
@@ -878,7 +851,6 @@ ConditionsSupport.create!(
       payment_month: "9月中旬(4~6月分),12月中旬(7~9月分),翌年3月(10-12月分),翌年6月中旬(1-3月)",
       transfer_destination: "指定した口座",
       user_application_method: "各幼稚園を通じて申請書等をお配りし(5月中旬~6月上旬)、各幼稚園を通じて申請",
-      application_form: "①私立幼稚園等交付申請書兼付申請書兼請求書 ②令和3年度区市町村民税（非課税）証明書（原本又はコピー）又は令和4年度納税（決定）通知書（原本又はコピー) ③令和4年度区市町村民税（非課税）証明書（原本又はコピー）又は令和4年度納税（決定）通知書（原本又はコピー)"
       additional_info_of_application: "・課税（非課税）証明書は、住民登録のあった区市町村で取得できます。※提出書類②・③は、同居・別居の如何を問わず、園児と生計を一にする方全員分を提出する必要があります。※ 指定都市で課税されている方は、旧税率（6％）にて算出した市民税所得割額を用いて補助金額を決定します。ひとり親は申請書にチェックが必要",
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
@@ -909,7 +881,6 @@ ConditionsSupport.create!(
       payment_month: "9月中旬(4~6月分),12月中旬(7~9月分),翌年3月(10-12月分),翌年6月中旬(1-3月)",
       transfer_destination: "指定した口座",
       user_application_method: "各幼稚園を通じて申請書等をお配りし(5月中旬~6月上旬)、各幼稚園を通じて申請",
-      application_form: "私立幼稚園等交付申請書兼付申請書兼請求書",
       additional_info_of_application: "※ひとり親世帯は申請書にチェックが必要"
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
@@ -941,7 +912,6 @@ ConditionsSupport.create!(
       payment_month: "9月中旬(4~6月分),12月中旬(7~9月分),翌年3月(10-12月分),翌年6月中旬(1-3月)",
       transfer_destination: "指定した口座",
       ser_application_method: "各幼稚園を通じて申請書等をお配りし(5月中旬~6月上旬)、各幼稚園を通じて申請",
-      application_form: "①私立幼稚園等交付申請書兼付申請書兼請求書 ②令和4年度区市町村民税（非課税）証明書（原本又はコピー）又は令和4年度納税（決定）通知書（原本又はコピー)"
       additional_info_of_application: "・課税（非課税）証明書は、住民登録のあった区市町村で取得できます。※提出書類②は、同居・別居の如何を問わず、園児と生計を一にする方全員分を提出する必要があります。※ 指定都市で課税されている方は、旧税率（6％）にて算出した市民税所得割額を用いて補助金額を決定します。ひとり親は申請書にチェックが必要",
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
@@ -973,7 +943,6 @@ ConditionsSupport.create!(
       payment_month: "9月中旬(4~6月分),12月中旬(7~9月分),翌年3月(10-12月分),翌年6月中旬(1-3月)",
       transfer_destination: "指定した口座",
       user_application_method: "各幼稚園を通じて申請書等をお配りし(5月中旬~6月上旬)、各幼稚園を通じて申請",
-      application_form: "①私立幼稚園等交付申請書兼付申請書兼請求書 ②令和3年度区市町村民税（非課税）証明書（原本又はコピー）又は令和4年度納税（決定）通知書（原本又はコピー)"
       additional_info_of_application: "・課税（非課税）証明書は、住民登録のあった区市町村で取得できます。※提出書類②は、同居・別居の如何を問わず、園児と生計を一にする方全員分を提出する必要があります。※ 指定都市で課税されている方は、旧税率（6％）にて算出した市民税所得割額を用いて補助金額を決定します。ひとり親は申請書にチェックが必要",
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
@@ -1005,7 +974,6 @@ ConditionsSupport.create!(
       payment_month: "9月中旬(4~6月分),12月中旬(7~9月分),翌年3月(10-12月分),翌年6月中旬(1-3月)",
       transfer_destination: "指定した口座",
       user_application_method: "各幼稚園を通じて申請書等をお配りし(5月中旬~6月上旬)、各幼稚園を通じて申請",
-      application_form: "①私立幼稚園等交付申請書兼付申請書兼請求書 ②令和3年度区市町村民税（非課税）証明書（原本又はコピー）又は令和4年度納税（決定）通知書（原本又はコピー) ③令和4年度区市町村民税（非課税）証明書（原本又はコピー）又は令和4年度納税（決定）通知書（原本又はコピー)"
       additional_info_of_application: "・課税（非課税）証明書は、住民登録のあった区市町村で取得できます。※提出書類②・③は、同居・別居の如何を問わず、園児と生計を一にする方全員分を提出する必要があります。※ 指定都市で課税されている方は、旧税率（6％）にて算出した市民税所得割額を用いて補助金額を決定します。ひとり親は申請書にチェックが必要",
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
@@ -1036,7 +1004,6 @@ ConditionsSupport.create!(
       payment_month: "9月中旬(4~6月分),12月中旬(7~9月分),翌年3月(10-12月分),翌年6月中旬(1-3月)",
       transfer_destination: "指定した口座",
       user_application_method: "各幼稚園を通じて申請書等をお配りし(5月中旬~6月上旬)、各幼稚園を通じて申請",
-      application_form: "私立幼稚園等交付申請書兼付申請書兼請求書",
       additional_info_of_application: "※ひとり親世帯は申請書にチェックが必要"
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
@@ -1068,7 +1035,6 @@ ConditionsSupport.create!(
       payment_month: "9月中旬(4~6月分),12月中旬(7~9月分),翌年3月(10-12月分),翌年6月中旬(1-3月)",
       transfer_destination: "指定した口座",
       ser_application_method: "各幼稚園を通じて申請書等をお配りし(5月中旬~6月上旬)、各幼稚園を通じて申請",
-      application_form: "①私立幼稚園等交付申請書兼付申請書兼請求書 ②令和4年度区市町村民税（非課税）証明書（原本又はコピー）又は令和4年度納税（決定）通知書（原本又はコピー)"
       additional_info_of_application: "・課税（非課税）証明書は、住民登録のあった区市町村で取得できます。※提出書類②は、同居・別居の如何を問わず、園児と生計を一にする方全員分を提出する必要があります。※ 指定都市で課税されている方は、旧税率（6％）にて算出した市民税所得割額を用いて補助金額を決定します。ひとり親は申請書にチェックが必要",
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
@@ -1100,7 +1066,6 @@ ConditionsSupport.create!(
       payment_month: "9月中旬(4~6月分),12月中旬(7~9月分),翌年3月(10-12月分),翌年6月中旬(1-3月)",
       transfer_destination: "指定した口座",
       user_application_method: "各幼稚園を通じて申請書等をお配りし(5月中旬~6月上旬)、各幼稚園を通じて申請",
-      application_form: "①私立幼稚園等交付申請書兼付申請書兼請求書 ②令和3年度区市町村民税（非課税）証明書（原本又はコピー）又は令和4年度納税（決定）通知書（原本又はコピー)"
       additional_info_of_application: "・課税（非課税）証明書は、住民登録のあった区市町村で取得できます。※提出書類②は、同居・別居の如何を問わず、園児と生計を一にする方全員分を提出する必要があります。※ 指定都市で課税されている方は、旧税率（6％）にて算出した市民税所得割額を用いて補助金額を決定します。ひとり親は申請書にチェックが必要",
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
@@ -1132,7 +1097,6 @@ ConditionsSupport.create!(
       payment_month: "9月中旬(4~6月分),12月中旬(7~9月分),翌年3月(10-12月分),翌年6月中旬(1-3月)",
       transfer_destination: "指定した口座",
       user_application_method: "各幼稚園を通じて申請書等をお配りし(5月中旬~6月上旬)、各幼稚園を通じて申請",
-      application_form: "①私立幼稚園等交付申請書兼付申請書兼請求書 ②令和3年度区市町村民税（非課税）証明書（原本又はコピー）又は令和4年度納税（決定）通知書（原本又はコピー) ③令和4年度区市町村民税（非課税）証明書（原本又はコピー）又は令和4年度納税（決定）通知書（原本又はコピー)"
       additional_info_of_application: "・課税（非課税）証明書は、住民登録のあった区市町村で取得できます。※提出書類②・③は、同居・別居の如何を問わず、園児と生計を一にする方全員分を提出する必要があります。※ 指定都市で課税されている方は、旧税率（6％）にて算出した市民税所得割額を用いて補助金額を決定します。ひとり親は申請書にチェックが必要",
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
@@ -1163,7 +1127,6 @@ ConditionsSupport.create!(
       payment_month: "9月中旬(4~6月分),12月中旬(7~9月分),翌年3月(10-12月分),翌年6月中旬(1-3月)",
       transfer_destination: "指定した口座",
       user_application_method: "各幼稚園を通じて申請書等をお配りし(5月中旬~6月上旬)、各幼稚園を通じて申請",
-      application_form: "私立幼稚園等交付申請書兼付申請書兼請求書",
       additional_info_of_application: "※ひとり親世帯は申請書にチェックが必要"
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
@@ -1182,6 +1145,7 @@ ConditionsSupport.create!(
       幼稚園年中の次男 （第３子）
       ※1兄姉に国立・公立幼稚園、保育園、認定こども園、特別支援学校の幼稚部、児童心理治療施設通所部、児童発達支援、医療型児童発達支援の利用者がいる場合は、下の園児を第２子以降とみなします。"
     },
+    ##こっから
     ##私立幼稚園等保護者補助金-680万未満-第一子-ある-ない
     {
       id: 39,
@@ -1263,7 +1227,6 @@ ConditionsSupport.create!(
       payment_month: "9月中旬(4~6月分),12月中旬(7~9月分),翌年3月(10-12月分),翌年6月中旬(1-3月)",
       transfer_destination: "指定した口座",
       user_application_method: "各幼稚園を通じて申請書等をお配りし(5月中旬~6月上旬)、各幼稚園を通じて申請",
-      application_form: "私立幼稚園等交付申請書兼付申請書兼請求書",
       additional_info_of_application: "※ひとり親世帯は申請書にチェックが必要"
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
@@ -1374,7 +1337,6 @@ ConditionsSupport.create!(
       payment_month: "9月中旬(4~6月分),12月中旬(7~9月分),翌年3月(10-12月分),翌年6月中旬(1-3月)",
       transfer_destination: "指定した口座",
       user_application_method: "各幼稚園を通じて申請書等をお配りし(5月中旬~6月上旬)、各幼稚園を通じて申請",
-      application_form: "私立幼稚園等交付申請書兼付申請書兼請求書",
       additional_info_of_application: "※ひとり親世帯は申請書にチェックが必要"
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
@@ -1485,7 +1447,6 @@ ConditionsSupport.create!(
       payment_month: "9月中旬(4~6月分),12月中旬(7~9月分),翌年3月(10-12月分),翌年6月中旬(1-3月)",
       transfer_destination: "指定した口座",
       user_application_method: "各幼稚園を通じて申請書等をお配りし(5月中旬~6月上旬)、各幼稚園を通じて申請",
-      application_form: "私立幼稚園等交付申請書兼付申請書兼請求書",
       additional_info_of_application: "※ひとり親世帯は申請書にチェックが必要"
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
@@ -1596,7 +1557,6 @@ ConditionsSupport.create!(
       payment_month: "9月中旬(4~6月分),12月中旬(7~9月分),翌年3月(10-12月分),翌年6月中旬(1-3月)",
       transfer_destination: "指定した口座",
       user_application_method: "各幼稚園を通じて申請書等をお配りし(5月中旬~6月上旬)、各幼稚園を通じて申請",
-      application_form: "私立幼稚園等交付申請書兼付申請書兼請求書",
       additional_info_of_application: "※ひとり親世帯は申請書にチェックが必要"
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",

@@ -13,9 +13,11 @@ class TopController < ApplicationController
   end
 
   def get_selected_condition_supports
-    @result_ids = params[:result_ids]
-    @selected_support_id = params[:selected_support_id]
-    @conditions_supports = @result_ids.map {|id| ConditionsSupport.find_by(id: id.to_i, support_id: @selected_support_id.to_i)}.compact
+    result_ids = params[:result_ids].map { |id| id.to_i }
+    selected_support_id = params[:selected_support_id].to_i
+    @ids = ConditionsSupport.where(support_id: selected_support_id).pluck(:id).to_a + result_ids
+    set_conditions_supports_ids
+    @conditions_supports = @conditions_supports_ids.map {|id| ConditionsSupport.find(id)}
   end
 
   def show
@@ -35,5 +37,10 @@ class TopController < ApplicationController
     params[:query][:incomes_money_gt] =
       income_to_db(params[:query][:incomes_money_gt]) if !params[:query].nil?
     @query_fix = ConditionsSupport.ransack(params[:query])
+  end
+
+  def set_conditions_supports_ids
+    @conditions_supports_ids = []
+    @ids.uniq.each {|id| @conditions_supports_ids.push(id) if @ids.grep(id).size > 1}
   end
 end

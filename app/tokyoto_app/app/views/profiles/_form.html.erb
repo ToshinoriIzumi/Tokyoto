@@ -38,22 +38,12 @@
     </div>
   </div>
   <div class="space-y-1">
-  <%= f.label :is_welfare, '生活保護' %>
-    <div class="mt-1">
-      <%= f.radio_button :is_welfare, true %>
-      <%= f.label :is_welfare, '受給している', value: true %>
-      <%= f.radio_button :is_welfare, false %>
-      <%= f.label :is_welfare, '受給していない', value: false %>
-    </div>
+    <%= label_tag "生活保護の状況" %>
+    <%= select_tag "profile_form[public_assistance_stuation]", options_from_collection_for_select(@public_assistance_stuations, "id", "stuation"), class: "block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:border-transparent focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-300 border-gray-500" %>
   </div>
   <div class="space-y-1">
-  <%= f.label :number_of_dependents, '扶養人数' %>
-    <div>
-      <% ProfileForm.number_of_dependents.options.each do |text, value| %>
-        <%= f.radio_button :number_of_dependents, value %>
-        <%= f.label :number_of_dependents, text, value: value %>
-      <% end %>
-    </div>
+    <%= label_tag '扶養人数の状況' %>
+    <%= select_tag "profile_form[dependency_stuation]", options_from_collection_for_select(@dependency_stuations, "id", "stuation"), class: "block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:border-transparent focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-300 border-gray-500" %>
   </div>
   <%= f.submit '登録する', class: "flex items-center justify-center w-full px-10 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-blue-600 rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" %>
 <% end %>

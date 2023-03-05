@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_02_27_034520) do
+ActiveRecord::Schema.define(version: 2023_03_04_130250) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -88,6 +88,12 @@ ActiveRecord::Schema.define(version: 2023_02_27_034520) do
     t.index ["status_id"], name: "index_conditions_supports_statuses_on_status_id"
   end
 
+  create_table "family_stuations", force: :cascade do |t|
+    t.string "stuation", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "hospitals", force: :cascade do |t|
     t.bigint "city_id", null: false
     t.string "name", null: false
@@ -143,6 +149,15 @@ ActiveRecord::Schema.define(version: 2023_02_27_034520) do
     t.index ["name"], name: "index_tags_on_name", unique: true
   end
 
+  create_table "user_family_stuations", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "family_stuation_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["family_stuation_id"], name: "index_user_family_stuations_on_family_stuation_id"
+    t.index ["user_id"], name: "index_user_family_stuations_on_user_id"
+  end
+
   create_table "user_statuses", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.integer "is_status", null: false
@@ -176,5 +191,7 @@ ActiveRecord::Schema.define(version: 2023_02_27_034520) do
   add_foreign_key "hospitals", "cities"
   add_foreign_key "supports_tags", "supports"
   add_foreign_key "supports_tags", "tags"
+  add_foreign_key "user_family_stuations", "family_stuations"
+  add_foreign_key "user_family_stuations", "users"
   add_foreign_key "user_statuses", "users"
 end

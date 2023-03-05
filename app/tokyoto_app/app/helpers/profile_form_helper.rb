@@ -4,16 +4,16 @@ module ProfileFormHelper
   # end
 
   def show_city_name
-    @city.city_name if @user.city_id
+    @city.city_name if current_user.city_id
   end
 
   def show_income
-    @user.income if @user.income
+    current_user.income if current_user.income
   end
 
   def show_children_birth
-    if @user.children
-      @user.children.each do |child|
+    if current_user.children
+      current_user.children.each do |child|
         child.birth
       end
     end

@@ -162,5 +162,7 @@ ConditionsSupportsApplicationsForm.create!(
     { id: 142, application_form_id: 1, conditions_support_id: 73},
     { id: 143, application_form_id: 2, conditions_support_id: 73},
     { id: 144, application_form_id: 3, conditions_support_id: 73},
+    ## 入園料金補助金（私立幼稚園)
+    { id: 145, application_form_id: 4, conditions_support_id: 1},
   ]
 )

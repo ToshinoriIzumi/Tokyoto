@@ -135,10 +135,32 @@ ConditionsSupportsApplicationsForm.create!(
     { id: 118, application_form_id: 1, conditions_support_id: 61},
     { id: 119, application_form_id: 2, conditions_support_id: 61},
     { id: 120, application_form_id: 3, conditions_support_id: 61},
+    ##私立幼稚園等保護者補助金-730万以上-第一子
+    { id: 121, application_form_id: 1, conditions_support_id: 62},
+    { id: 122, application_form_id: 1, conditions_support_id: 63},
+    { id: 123, application_form_id: 2, conditions_support_id: 63},
+    { id: 124, application_form_id: 1, conditions_support_id: 64},
+    { id: 125, application_form_id: 3, conditions_support_id: 64},
+    { id: 126, application_form_id: 1, conditions_support_id: 65},
+    { id: 127, application_form_id: 2, conditions_support_id: 65},
+    { id: 128, application_form_id: 3, conditions_support_id: 65},
+    ##私立幼稚園等保護者補助金-730万以上-第二子
+    { id: 129, application_form_id: 1, conditions_support_id: 66},
+    { id: 130, application_form_id: 1, conditions_support_id: 67},
+    { id: 131, application_form_id: 2, conditions_support_id: 67},
+    { id: 132, application_form_id: 1, conditions_support_id: 68},
+    { id: 133, application_form_id: 3, conditions_support_id: 68},
+    { id: 134, application_form_id: 1, conditions_support_id: 69},
+    { id: 135, application_form_id: 2, conditions_support_id: 69},
+    { id: 136, application_form_id: 3, conditions_support_id: 69},
+    ##私立幼稚園等保護者補助金-730万以上-第三子
+    { id: 137, application_form_id: 1, conditions_support_id: 70},
+    { id: 138, application_form_id: 1, conditions_support_id: 71},
+    { id: 139, application_form_id: 2, conditions_support_id: 71},
+    { id: 140, application_form_id: 1, conditions_support_id: 72},
+    { id: 141, application_form_id: 3, conditions_support_id: 72},
+    { id: 142, application_form_id: 1, conditions_support_id: 73},
+    { id: 143, application_form_id: 2, conditions_support_id: 73},
+    { id: 144, application_form_id: 3, conditions_support_id: 73},
   ]
 )
-
-
-{ id: 1, application_form_name: "私立幼稚園等交付申請書兼付申請書兼請求書" },
-{ id: 2, application_form_name: "令和4年度区市町村民税（非課税）証明書（原本又はコピー）又は令和4年度納税（決定）通知書（原本又はコピー)" },
-{ id: 3, application_form_name: "令和3年度区市町村民税（非課税）証明書（原本又はコピー）又は令和3年度納税（決定）通知書（原本又はコピー)" },

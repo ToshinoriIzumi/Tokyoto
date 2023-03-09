@@ -8,14 +8,9 @@ class TopController < ApplicationController
   end
 
   def search
-    @results = @query_fix.result
-    @results_distinct = @results.select(:support_id).distinct
-  end
-
-  def get_selected_condition_supports
-    @result_ids = params[:result_ids]
-    @selected_support_id = params[:selected_support_id]
-    @conditions_supports = @result_ids.map {|id| ConditionsSupport.find_by(id: id.to_i, support_id: @selected_support_id.to_i)}
+    @searched_condition_supports = @query_fix.result
+      .select(:support_id)
+      .distinct
   end
 
   def show

@@ -3,7 +3,7 @@ class Income < ApplicationRecord
   has_many :conditions_supports_incomes, dependent: :destroy
   has_many :conditions_supports, through: :conditions_supports_incomes
 
-  validates :min, presence: true, uniqueness: { scope: [:max, :ismyself] }
+  validates :min, presence: true, uniqueness: { scope: [:max, :is_myself] }
   validates :max, presence:true
   validates :is_myself, presence: true
 

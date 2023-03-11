@@ -88,6 +88,7 @@ ActiveRecord::Schema.define(version: 2023_03_02_112928) do
     t.string "user_application_limit"
     t.string "user_renewal_method"
     t.string "user_renewal_month"
+    t.string "contact_information"
     t.index ["age_id"], name: "index_conditions_supports_on_age_id"
     t.index ["city_id"], name: "index_conditions_supports_on_city_id"
     t.index ["condition_id", "support_id"], name: "index_conditions_supports_on_condition_id_and_support_id", unique: true
@@ -185,7 +186,6 @@ ActiveRecord::Schema.define(version: 2023_03_02_112928) do
     t.text "content", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "contact_information"
     t.integer "publish_state", default: 0, null: false
     t.index ["support_name"], name: "index_supports_on_support_name", unique: true
   end

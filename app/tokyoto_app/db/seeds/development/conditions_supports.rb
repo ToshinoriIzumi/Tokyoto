@@ -15,6 +15,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-生活保護-第一子-ある-ある
     {
@@ -32,6 +33,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-生活保護-第一子-ある-ない
     {
@@ -49,6 +51,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-生活保護-第一子-ない-ある
     {
@@ -66,6 +69,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-生活保護-第一子-ない-ない
     {
@@ -83,6 +87,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-生活保護-第二子-ある-ある
     {
@@ -100,6 +105,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-生活保護-第二子-ある-ない
     {
@@ -117,6 +123,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-生活保護-第二子-ない-ある
     {
@@ -134,6 +141,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-生活保護-第二子-ない-ない
     {
@@ -151,6 +159,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
 ##私立幼稚園等保護者補助金-生活保護-第三子-ある-ある
     {
@@ -168,6 +177,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-生活保護-第三子-ある-ない
     {
@@ -185,6 +195,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-生活保護-第三子-ない-ある
     {
@@ -202,6 +213,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-生活保護-第三子-ない-ない
     {
@@ -219,6 +231,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-住民税非課税および住民税所得割非課税-第一子-ある-ある
     {
@@ -236,6 +249,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-住民税非課税および住民税所得割非課税-第一子-ある-ない
     {
@@ -253,6 +267,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-住民税非課税および住民税所得割非課税-第一子-ない-ある
     {
@@ -270,6 +285,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-住民税非課税および住民税所得割非課税-第一子-ない-ない
     {
@@ -287,6 +303,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-住民税非課税および住民税所得割非課税-第二子-ある-ある
     {
@@ -304,6 +321,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-住民税非課税および住民税所得割非課税-第二子-ある-ない
     {
@@ -321,6 +339,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-住民税非課税および住民税所得割非課税-第二子-ない-ある
     {
@@ -338,6 +357,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-住民税非課税および住民税所得割非課税-第二子-ない-ない
     {
@@ -355,6 +375,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-住民税非課税および住民税所得割非課税-第三子-ある-ある
     {
@@ -372,6 +393,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-住民税非課税および住民税所得割非課税-第三子-ある-ない
     {
@@ -389,6 +411,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-住民税非課税および住民税所得割非課税-第三子-ない-ある
     {
@@ -406,6 +429,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-住民税非課税および住民税所得割非課税-第三子-ない-ない
     {
@@ -423,6 +447,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-360万未満-第一子-ある-ある
     {
@@ -440,6 +465,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-360万未満-第一子-ある-ない
     {
@@ -457,6 +483,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-360万未満-第一子-ない-ある
     {
@@ -474,6 +501,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-360万未満-第一子-ない-ない
     {
@@ -491,6 +519,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-360万未満-第二子-ある-ある
     {
@@ -508,6 +537,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-360万未満-第二子-ある-ない
     {
@@ -525,6 +555,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-360万未満-第二子-ない-ある
     {
@@ -542,6 +573,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-360万未満-第二子-ない-ない
     {
@@ -559,6 +591,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-360万未満-第三子-ある-ある
     {
@@ -575,7 +608,8 @@ ConditionsSupport.create!(
       transfer_destination: "指定した口座",
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
-      user_renewal_month: "記載なし"
+      user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-360万未満-第三子-ある-ない
     {
@@ -593,6 +627,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409",
     },
     ##私立幼稚園等保護者補助金-360万未満-第三子-ない-ある
     {
@@ -610,6 +645,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-360万未満-第三子-ない-ない
     {
@@ -627,6 +663,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409",
     },
     ##私立幼稚園等保護者補助金-680万未満-第一子-ある-ある
     {
@@ -644,6 +681,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-680万未満-第一子-ある-ない
     {
@@ -658,7 +696,7 @@ ConditionsSupport.create!(
       payment_frequency: 3,
       payment_month: "9月中旬(4~6月分),12月中旬(7~9月分),翌年3月(10-12月分),翌年6月中旬(1-3月)",
       transfer_destination: "指定した口座",
-
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-680万未満-第一子-ない-ある
     {
@@ -676,6 +714,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-680万未満-第一子-ない-ない
     {
@@ -693,6 +732,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-680万未満-第二子-ある-ある
     {
@@ -710,6 +750,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-680万未満-第二子-ある-ない
     {
@@ -727,6 +768,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-680万未満-第二子-ない-ある
     {
@@ -744,6 +786,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-680万未満-第二子-ない-ない
     {
@@ -761,6 +804,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-680万未満-第三子-ある-ある
     {
@@ -778,6 +822,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-680万未満-第三子-ある-ない
     {
@@ -795,6 +840,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-680万未満-第三子-ない-ある
     {
@@ -812,6 +858,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-680万未満-第三子-ない-ない
     {
@@ -829,6 +876,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-730万未満-第一子-ある-ある
     {
@@ -846,6 +894,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-730万未満-第一子-ある-ない
     {
@@ -863,6 +912,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-730万未満-第一子-ない-ある
     {
@@ -880,6 +930,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-730万未満-第一子-ない-ない
     {
@@ -897,6 +948,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-730万未満-第二子-ある-ある
     {
@@ -914,6 +966,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-730万未満-第二子-ある-ない
     {
@@ -931,6 +984,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-730万未満-第二子-ない-ある
     {
@@ -948,6 +1002,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-730万未満-第二子-ない-ない
     {
@@ -965,6 +1020,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-730万未満-第三子-ある-ある
     {
@@ -982,6 +1038,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-730万未満-第三子-ある-ない
     {
@@ -999,6 +1056,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-730万未満-第三子-ない-ある
     {
@@ -1016,6 +1074,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-730万未満-第三子-ない-ない
     {
@@ -1033,6 +1092,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-730万以上-第一子-ある-ある
     {
@@ -1050,6 +1110,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-730万以上-第一子-ある-ない
     {
@@ -1067,6 +1128,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-730万以上-第一子-ない-ある
     {
@@ -1084,6 +1146,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-730万以上-第一子-ない-ない
     {
@@ -1101,6 +1164,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-730万以上-第二子-ある-ある
     {
@@ -1118,6 +1182,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-730万以上-第二子-ある-ない
     {
@@ -1135,6 +1200,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-730万以上-第二子-ない-ある
     {
@@ -1152,6 +1218,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-730万以上-第二子-ない-ない
     {
@@ -1169,6 +1236,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-730万以上-第三子-ある-ある
     {
@@ -1186,6 +1254,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-730万以上-第三子-ある-ない
     {
@@ -1203,6 +1272,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-730万以上-第三子-ない-ある
     {
@@ -1220,6 +1290,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
     ##私立幼稚園等保護者補助金-730万以上-第三子-ない-ない
     {
@@ -1237,6 +1308,7 @@ ConditionsSupport.create!(
       user_application_limit: "記載なし",
       user_renewal_method: "記載なし",
       user_renewal_month: "記載なし",
+      contact_information: "庶務課庶務係 私立幼稚園担当,電話：03-5246-1236,ファクス：03-5246-1409"
     },
   ]
 )

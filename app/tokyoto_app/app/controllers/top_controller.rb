@@ -15,6 +15,12 @@ class TopController < ApplicationController
     @conditions_support = ConditionsSupport.find(params[:id])
   end
 
+  def privacy_policy
+  end
+
+  def terms_of_use
+  end
+
   private
 
   def set_query

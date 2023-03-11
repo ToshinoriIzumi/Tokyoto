@@ -12,6 +12,9 @@ Rails.application.routes.draw do
   get "hospitals/index", to: "hospitals#index"
   get "hospitals/search", to: "hospitals#search"
   get "map/hospitals", to: "map/hospitals#index"
+  get "terms_of_use", to: "top#terms_of_use"
+  
+  get "privacy_policy", to: "top#privacy_policy"
   
   namespace :municipality do
     resources :supports do

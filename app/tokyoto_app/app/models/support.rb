@@ -3,7 +3,7 @@ class Support < ApplicationRecord
   has_many :supports_tags
   has_many :tags, through: :supports_tags
 
-  validates :support_name, presence: true
+  validates :support_name, presence: true, uniqueness: true
   validates :content, presence: true
   validates :publish_state, presence: true
 

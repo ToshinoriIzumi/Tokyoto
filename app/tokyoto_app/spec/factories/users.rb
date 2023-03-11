@@ -1,11 +1,11 @@
 FactoryBot.define do
   factory :user do
-    first_name { "user" }
-    last_name { 'test' }
+    user_name { 'user_name' }
     sequence(:email) { |n| "testuser_#{n}@example.com" }
     password { 'password' }
     password_confirmation { 'password' }
     role { 0 }
+    income { 5000000 }
 
     trait :with_profile do
       user_name { "テスト" }

@@ -16,7 +16,7 @@ class ConditionsSupport < ApplicationRecord
   has_many :addinfo_applications, through: :conditions_supports_addinfo_applications
 
   has_many :conditions_supports_addinfo_conditions_supports, dependent: :destroy
-  has_many :addinfo_conditions_support, through: :conditions_supports_addinfo_conditions_supports
+  has_many :addinfo_conditions_supports, through: :conditions_supports_addinfo_conditions_supports
 
   validates :payment, presence: true
   validates :url, presence: true

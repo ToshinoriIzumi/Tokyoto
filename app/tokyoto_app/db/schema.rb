@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_03_02_112928) do
+ActiveRecord::Schema.define(version: 2023_03_12_085954) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -101,6 +101,7 @@ ActiveRecord::Schema.define(version: 2023_03_02_112928) do
     t.bigint "conditions_support_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["addinfo_application_id", "conditions_support_id"], name: "addinfo_applicant_conditions_support_unique", unique: true
     t.index ["addinfo_application_id"], name: "addinfo_application_CN_intermediate_table"
     t.index ["conditions_support_id"], name: "conditions_supports_AA_intermediate_table"
   end
@@ -110,6 +111,7 @@ ActiveRecord::Schema.define(version: 2023_03_02_112928) do
     t.bigint "conditions_support_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["addinfo_conditions_support_id", "conditions_support_id"], name: "addinfo_conditions_support_conditions_support_unique", unique: true
     t.index ["addinfo_conditions_support_id"], name: "addinfo_conditions_support_CN_intermediate_table"
     t.index ["conditions_support_id"], name: "conditions_supports_ACS_intermediate_table"
   end
@@ -119,6 +121,7 @@ ActiveRecord::Schema.define(version: 2023_03_02_112928) do
     t.bigint "conditions_support_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["application_form_id", "conditions_support_id"], name: "application_form_conditions_support_unique", unique: true
     t.index ["application_form_id"], name: "applications_form_CN_intermediate_table"
     t.index ["conditions_support_id"], name: "conditions_supports_AF_intermediate_table"
   end
@@ -128,6 +131,7 @@ ActiveRecord::Schema.define(version: 2023_03_02_112928) do
     t.bigint "conditions_support_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["application_method_id", "conditions_support_id"], name: "application_method_conditions_support_unique", unique: true
     t.index ["application_method_id"], name: "applications_method_CN_intermediate_table"
     t.index ["conditions_support_id"], name: "conditions_supports_AP_intermediate_table"
   end
@@ -137,6 +141,7 @@ ActiveRecord::Schema.define(version: 2023_03_02_112928) do
     t.bigint "income_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["conditions_support_id", "income_id"], name: "income_conditions_support_unique", unique: true
     t.index ["conditions_support_id"], name: "index_conditions_supports_incomes_on_conditions_support_id"
     t.index ["income_id"], name: "index_conditions_supports_incomes_on_income_id"
   end
@@ -146,6 +151,7 @@ ActiveRecord::Schema.define(version: 2023_03_02_112928) do
     t.bigint "status_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["condition_id", "status_id"], name: "status_conditions_support_unique", unique: true
     t.index ["condition_id"], name: "index_conditions_supports_statuses_on_condition_id"
     t.index ["status_id"], name: "index_conditions_supports_statuses_on_status_id"
   end
@@ -195,6 +201,7 @@ ActiveRecord::Schema.define(version: 2023_03_02_112928) do
     t.bigint "tag_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["support_id", "tag_id"], name: "index_supports_tags_on_support_id_and_tag_id", unique: true
     t.index ["support_id"], name: "index_supports_tags_on_support_id"
     t.index ["tag_id"], name: "index_supports_tags_on_tag_id"
   end

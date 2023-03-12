@@ -7,8 +7,8 @@ class ProfileForm
   attribute :city_id, :integer
   attribute :income, :integer
   attribute :births
-  attribute :public_assistance_stuation, :string #生活保護
-  attribute :dependency_stuation, :string #扶養人数状況
+  attribute :public_assistance_situation, :string #生活保護
+  attribute :dependency_situation, :string #扶養人数状況
 
   # バリデーション他に付けたほうが良いものあるか？
   validates :city_id, presence: true
@@ -31,11 +31,11 @@ class ProfileForm
       create_children
     end
 
-    if user.user_family_stuations.present?
-      UserFamilyStuation.where(user_id: id).destroy_all
-      create_user_family_stuation(user)
+    if user.user_family_situations.present?
+      UserFamilySituation.where(user_id: id).destroy_all
+      create_user_family_situation(user)
     else
-      create_user_family_stuation(user)
+      create_user_family_situation(user)
     end
   end
   
@@ -58,34 +58,34 @@ class ProfileForm
     Child.insert_all(children)
   end
 
-  def create_user_family_stuation(user)
-    stuations = [
-      public_assistance_stuation.to_i,
-      dependency_stuation.to_i,
+  def create_user_family_situation(user)
+    situations = [
+      public_assistance_situation.to_i,
+      dependency_situation.to_i,
     ]
 
-    child_stuation = ''
+    child_situation = ''
     if births.size == 1 || births.size == 2
-      child_stuation = '第' + births.size.to_s + '子'
+      child_situation = '第' + births.size.to_s + '子'
     else
-      child_stuation = '第3子以降'
+      child_situation = '第3子以降'
     end
 
-    stuations.push(
-      FamilyStuation.find_by(stuation: child_stuation).id.to_s
+    situations.push(
+      FamilySituation.find_by(situation: child_situation).id.to_s
     )
 
-    family_stuations = []
-    stuations.each do |stuation|
-      family_stuations.push(
+    family_situations = []
+    situations.each do |situation|
+      family_situations.push(
         {
           user_id: user.id,
-          family_stuation_id: stuation,
+          family_situation_id: situation,
           created_at: Time.now,
           updated_at: Time.now
         }
       )
     end
-    UserFamilyStuation.insert_all(family_stuations)
+    UserFamilySituation.insert_all(family_situations)
   end
 end

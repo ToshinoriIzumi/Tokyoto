@@ -1,9 +1,9 @@
 class ProfilesController < ApplicationController
   before_action :set_cities, only: [:new, :create, :edit, :update]
   before_action :set_births, only: [:create, :update]
-  before_action :set_child_stuation, only: [:new, :edit]
-  before_action :set_public_assistance_stuation, only: [:new, :edit]
-  before_action :set_dependency_stuation, only: [:new, :edit]
+  before_action :set_child_situation, only: [:new, :edit]
+  before_action :set_public_assistance_situation, only: [:new, :edit]
+  before_action :set_dependency_situation, only: [:new, :edit]
 
   def new
     @profile_form = ProfileForm.new
@@ -37,8 +37,8 @@ class ProfilesController < ApplicationController
       city_id: user.city_id,
       income: user.income,
       births: @births,
-      public_assistance_stuation: current_user.retrieve_public_assistance_stuation,
-      dependency_stuation: current_user.retrieve_dependency_stuation,
+      public_assistance_situation: current_user.retrieve_public_assistance_situation,
+      dependency_situation: current_user.retrieve_dependency_situation,
     )
   end
 
@@ -60,21 +60,21 @@ class ProfilesController < ApplicationController
       :city_id,
       :income,
       { births: [] },
-      :public_assistance_stuation,
-      :dependency_stuation
+      :public_assistance_situation,
+      :dependency_situation
     )
   end
 
-  def set_public_assistance_stuation
-    @public_assistance_stuations = FamilyStuation.where_public_assistance_stuation
+  def set_public_assistance_situation
+    @public_assistance_situations = FamilySituation.where_public_assistance_situation
   end
 
-  def set_dependency_stuation
-    @dependency_stuations = FamilyStuation.where_dependency_stuation
+  def set_dependency_situation
+    @dependency_situations = FamilySituation.where_dependency_situation
   end
 
-  def set_child_stuation
-    @child_stuations = FamilyStuation.where_child_stuation
+  def set_child_situation
+    @child_situations = FamilySituation.where_child_situation
   end
 
   def set_cities

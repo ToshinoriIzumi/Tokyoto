@@ -11,7 +11,7 @@ table_names = [
   'supports_tags',
   'conditions_supports_incomes',
   'conditions_supports_statuses',
-  'family_stuation'
+  'family_situation'
 ]
 
 begin

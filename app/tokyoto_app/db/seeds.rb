@@ -19,6 +19,7 @@ table_names = [
   'conditions_supports_applications_forms',
   'conditions_supports_addinfo_applications',
   'conditions_supports_addinfo_conditions_supports',
+  'family_situation'
 ]
 
 begin

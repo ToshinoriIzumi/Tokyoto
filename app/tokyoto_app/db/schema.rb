@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 2023_03_12_085954) do
     t.date "birth", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "sibling_conposition", default: 0
+    t.integer "sibling_composition", default: 0, null: false
     t.index ["user_id"], name: "index_children_on_user_id"
   end
 
@@ -156,6 +156,12 @@ ActiveRecord::Schema.define(version: 2023_03_12_085954) do
     t.index ["status_id"], name: "index_conditions_supports_statuses_on_status_id"
   end
 
+  create_table "family_situations", force: :cascade do |t|
+    t.string "situation", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "hospitals", force: :cascade do |t|
     t.bigint "city_id", null: false
     t.string "name", null: false
@@ -213,6 +219,15 @@ ActiveRecord::Schema.define(version: 2023_03_12_085954) do
     t.index ["name"], name: "index_tags_on_name", unique: true
   end
 
+  create_table "user_family_situations", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "family_situation_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["family_situation_id"], name: "index_user_family_situations_on_family_situation_id"
+    t.index ["user_id"], name: "index_user_family_situations_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", null: false
     t.string "crypted_password"
@@ -246,4 +261,6 @@ ActiveRecord::Schema.define(version: 2023_03_12_085954) do
   add_foreign_key "hospitals", "cities"
   add_foreign_key "supports_tags", "supports"
   add_foreign_key "supports_tags", "tags"
+  add_foreign_key "user_family_situations", "family_situations"
+  add_foreign_key "user_family_situations", "users"
 end

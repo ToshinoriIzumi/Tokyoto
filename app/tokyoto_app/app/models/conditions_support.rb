@@ -6,6 +6,18 @@ class ConditionsSupport < ApplicationRecord
   has_many :conditions_supports_incomes, dependent: :destroy
   has_many :incomes, through: :conditions_supports_incomes
 
+  has_many :conditions_supports_applications_methods, dependent: :destroy
+  has_many :application_methods, through: :conditions_supports_applications_methods
+
+  has_many :conditions_supports_applications_forms, dependent: :destroy
+  has_many :application_forms, through: :conditions_supports_applications_forms
+
+  has_many :conditions_supports_addinfo_applications, dependent: :destroy
+  has_many :addinfo_applications, through: :conditions_supports_addinfo_applications
+
+  has_many :conditions_supports_addinfo_conditions_supports, dependent: :destroy
+  has_many :addinfo_conditions_supports, through: :conditions_supports_addinfo_conditions_supports
+
   validates :payment, presence: true
   validates :url, presence: true
   validates :payment_limit, presence: true

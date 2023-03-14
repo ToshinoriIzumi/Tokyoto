@@ -26,8 +26,8 @@ class ConditionsSupport < ApplicationRecord
   enum payment_limit: { fixed_amount: 0, monthly_limit: 1 , upper_limit: 2, full_payment: 3, partial_payment: 4 }
   enum payment_frequency: { lump: 0, every_one_month: 1 , every_two_months: 2, every_three_months: 3, every_four_months: 4, non_listed: 5, no_transfers: 6 }
 
-  scope :age_search, -> (number){ joins(:age).where("min <= ? and ? <= max", number, number)}
-  scope :income_search, -> (number){ joins(:incomes).where("min <= ? and ? <= max", number, number)}
+  scope :age_search, -> (number){ joins(:age).where("ages.min <= ? and ? <= ages.max", number, number)}
+  scope :income_search, -> (number){ joins(:incomes).where("incomes.min <= ? and ? <= incomes.max", number, number)}
 
   def self.ransackable_scopes(auth_object = nil)
     %i[age_search income_search]

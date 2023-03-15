@@ -35,4 +35,9 @@ class TopController < ApplicationController
       income_to_db(params[:query][:incomes_money_gt]) if !params[:query].nil?
     @query_fix = ConditionsSupport.ransack(params[:query])
   end
+
+  def set_conditions_supports_ids
+    @conditions_supports_ids = []
+    @ids.uniq.each {|id| @conditions_supports_ids.push(id) if @ids.grep(id).size > 1}
+  end
 end

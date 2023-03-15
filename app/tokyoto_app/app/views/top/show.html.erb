@@ -2,6 +2,17 @@
     <section class= "mb-10 basic-info text-center">
         <h3 class= "font-bold text-4xl"><%= @conditions_support.support.support_name %></h3>
     </section>
+    <div class="border-b dark:bg-gray-800">
+        <div class="flex justify-center items-center py-4 px-6">
+        <div class="text-3xl font-bold text-center mr-4">
+            支給額(年額)
+        </div>
+        <div class="text-5xl font-bold text-gray-700 dark:text-gray-400">
+            <%= number_to_currency(@conditions_support.payment, unit: '円', precision: 0) %>
+        </div>
+        </div>
+    </div>
+    </table>
     <table class="mb-10 table-fixed text-left text-gray-600">
         <thead class="text-sm text-center bg-gray-100">
             <tr>
@@ -28,7 +39,7 @@
                 </th>
                 <td class="py-4 px-6">
                     <% @conditions_support.condition.statuses.each do |status| %>
-                        <p><%= status.status %></p>
+                        <p class="mb-1"><%= replace_head_of_line_to_interpoint(status.status) %></p>
                     <% end %>
                 </td>
             </tr>
@@ -38,8 +49,8 @@
                 </th>
                 <td class="py-4 px-6">
                     <% @conditions_support.addinfo_conditions_supports.each do |addinfo_conditions_support| %>
-                        <p>
-                            <%= addinfo_conditions_support.info_content %>
+                        <p class="mb-3 border-b-2">
+                            <%= replace_head_of_line_to_interpoint(addinfo_conditions_support.info_content) %>
                         </p>
                     <% end %>
                 </td>
@@ -50,8 +61,8 @@
                 </th>
                 <td class="py-4 px-6">
                     <% @conditions_support.application_methods.each do |application_method| %>
-                        <p>
-                            <%= application_method.application_method %>
+                        <p class="mb-1">
+                            <%= replace_head_of_line_to_interpoint(application_method.application_method) %>
                         </p>
                     <% end %>
                 </td>
@@ -60,11 +71,24 @@
                 <th scope="row" class="py-4 px-6 font-bold text-center">
                     申請書類
                 </th>
+                
                 <td class="py-4 px-6">
                     <% @conditions_support.application_forms.each do |application_form| %>
-                        <p>
-                            <%= application_form.application_form_name %>
-                        </p>
+                            <p class="mb-1">
+                                <%= replace_head_of_line_to_interpoint(application_form.application_form_name) %> <br>
+                            </p>
+                    <% end %>
+                </td>
+            </tr>
+            <tr class="border-b dark:bg-gray-800">
+                <th scope="row" class="py-4 px-6 font-bold text-center">
+                    申請書類URL
+                </th>
+                <td class="py-4 px-6">
+                    <% @conditions_support.application_forms.each do |application_form| %>
+                            <p class="mb-1">
+                                <%= application_form.application_form_url %>
+                            </p>
                     <% end %>
                 </td>
             </tr>
@@ -78,22 +102,38 @@
             </tr>
             <tr class="border-b dark:bg-gray-800">
                 <th scope="row" class="py-4 px-6 font-bold text-center">
-                    申請についての追記事項
+                    更新方法
                 </th>
                 <td class="py-4 px-6">
-                    <% @conditions_support.addinfo_applications.each do |addinfo_application| %>
-                        <p>
-                            <%= addinfo_application.info_content %>
-                        </p>
-                    <% end %>
+                    <%= @conditions_support.user_renewal_method %>
                 </td>
             </tr>
             <tr class="border-b dark:bg-gray-800">
                 <th scope="row" class="py-4 px-6 font-bold text-center">
-                    支給額(年額)
+                    更新月
                 </th>
                 <td class="py-4 px-6">
-                    <%= @conditions_support.payment %>円
+                    <%= @conditions_support.user_renewal_month %>
+                </td>
+            </tr>
+            <tr class="border-b dark:bg-gray-800">
+                <th scope="row" class="py-4 px-6 font-bold text-center">
+                    お問い合わせ先
+                </th>
+                <td class="py-4 px-6">
+                    <%= replace_comma_to_interpoint(@conditions_support.contact_information) %>
+                </td>
+            </tr>
+            <tr class="border-b dark:bg-gray-800">
+                <th scope="row" class="py-4 px-6 font-bold text-center">
+                    申請についての追記事項
+                </th>
+                <td class="py-4 px-6">
+                    <% @conditions_support.addinfo_applications.each do |addinfo_application| %>
+                        <p class="mb-1">
+                            <%= replace_head_of_line_to_interpoint(addinfo_application.info_content) %>
+                        </p>
+                    <% end %>
                 </td>
             </tr>
             <tr class="border-b dark:bg-gray-800">

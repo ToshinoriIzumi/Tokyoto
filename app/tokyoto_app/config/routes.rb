@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   post "login", to: "user_sessions#create"
   delete "logout", to: "user_sessions#destroy"
   get "search", to: "top#search"
-  get "get_selected_condition_supports", to: "top#get_selected_condition_supports"
   resources :top, only: %i[index show]
   resources :users, only: %i[new create destroy]
   resource :profile
@@ -14,6 +13,7 @@ Rails.application.routes.draw do
   get "hospitals/search", to: "hospitals#search"
   get "map/hospitals", to: "map/hospitals#index"
   get "terms_of_use", to: "top#terms_of_use"
+  get "conditions_supports", to: "conditions_supports#search"
   
   get "privacy_policy", to: "top#privacy_policy"
   

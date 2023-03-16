@@ -249,5 +249,66 @@ ConditionsSupportsIncome.create!(
       conditions_support_id: 61,
       income_id: 5
     },
+    #私立幼稚園等保護者補助金-730万以上
+    {
+      id: 50,
+      conditions_support_id: 62,
+      income_id: 6
+    },
+    {
+      id: 51,
+      conditions_support_id: 63,
+      income_id: 6
+    },
+    {
+      id: 52,
+      conditions_support_id: 64,
+      income_id: 6
+    },
+    {
+      id: 53,
+      conditions_support_id: 65,
+      income_id: 6
+    },
+    {
+      id: 54,
+      conditions_support_id: 66,
+      income_id: 6
+    },
+    {
+      id: 55,
+      conditions_support_id: 67,
+      income_id: 6
+    },
+    {
+      id: 56,
+      conditions_support_id: 68,
+      income_id: 6
+    },
+    {
+      id: 57,
+      conditions_support_id: 69,
+      income_id: 6
+    },
+    {
+      id: 58,
+      conditions_support_id: 70,
+      income_id: 6
+    },
+    {
+      id: 59,
+      conditions_support_id: 71,
+      income_id: 6
+    },
+    {
+      id: 60,
+      conditions_support_id: 72,
+      income_id: 6
+    },
+    {
+      id: 61,
+      conditions_support_id: 73,
+      income_id: 6
+    },
   ]
 )

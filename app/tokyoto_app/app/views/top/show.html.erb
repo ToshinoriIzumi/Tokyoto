@@ -29,10 +29,38 @@
         </tr>
         <tr class="border-b dark:bg-gray-800">
           <th scope="row" class="py-4 px-6 font-bold text-center">
+            対象条件
+          </th>
+          <td class="py-4 px-6">
+            <% conditions_support.condition.statuses.each do |status| %>
+              <p>
+                <%= status.status %>
+              </p>
+            <% end %>
+          </td>
+        </tr>
+        <tr class="border-b dark:bg-gray-800">
+          <th scope="row" class="py-4 px-6 font-bold text-center">
+            制度についての追記事項
+          </th>
+          <td class="py-4 px-6">
+            <% conditions_support.addinfo_conditions_supports.each do |addinfo_conditions_support| %>
+              <p>
+                <%= addinfo_conditions_support.info_content %>
+              </p>
+            <% end %>
+          </td>
+        </tr>
+        <tr class="border-b dark:bg-gray-800">
+          <th scope="row" class="py-4 px-6 font-bold text-center">
             申請方法
           </th>
           <td class="py-4 px-6">
-            <%= conditions_support.user_application_method %>
+            <% conditions_support.application_methods.each do |application_method| %>
+              <p>
+                <%= application_method.application_method %>
+              </p>
+            <% end %>
           </td>
         </tr>
         <tr class="border-b dark:bg-gray-800">
@@ -46,22 +74,18 @@
         </tr>
         <tr class="border-b dark:bg-gray-800">
           <th scope="row" class="py-4 px-6 font-bold text-center">
-            対象条件
-          </th>
-          <td class="py-4 px-6">
-            <% conditions_support.condition.statuses.each do |status| %>
-              <p>
-                <%= status.status %>
-              </p>
-            <% end %>
-          </td>
-        </tr>
-        <tr class="border-b dark:bg-gray-800">
-          <th scope="row" class="py-4 px-6 font-bold text-center">
             地区名
           </th>
           <td class="py-4 px-6">
             <%= conditions_support.city.city_name %>
+          </td>
+        </tr>
+        <tr class="border-b dark:bg-gray-800">
+          <th scope="row" class="py-4 px-6 font-bold text-center">
+            支給額(年額)
+          </th>
+          <td class="py-4 px-6">
+            <%= conditions_support.payment %>円
           </td>
         </tr>
         <tr class="border-b dark:bg-gray-800">

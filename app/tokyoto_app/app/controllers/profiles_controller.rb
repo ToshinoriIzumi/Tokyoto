@@ -1,6 +1,9 @@
 class ProfilesController < ApplicationController
   before_action :set_cities, only: [:new, :create, :edit, :update]
   before_action :set_births, only: [:create, :update]
+  before_action :set_child_situation, only: [:new, :edit]
+  before_action :set_public_assistance_situation, only: [:new, :edit]
+  before_action :set_dependency_situation, only: [:new, :edit]
 
   def new
     @profile_form = ProfileForm.new
@@ -19,11 +22,9 @@ class ProfilesController < ApplicationController
   end
 
   def show
-    @user = User.find(current_user.id)
-    @profile_form = ProfileForm.new(id: @user.id)
     @city = City.find(current_user.city_id)
   end
-
+  
   def edit
     user = current_user
     @births = []
@@ -35,7 +36,9 @@ class ProfilesController < ApplicationController
       id: user.id,
       city_id: user.city_id,
       income: user.income,
-      births: @births
+      births: @births,
+      public_assistance_situation: current_user.retrieve_public_assistance_situation,
+      dependency_situation: current_user.retrieve_dependency_situation,
     )
   end
 
@@ -53,7 +56,25 @@ class ProfilesController < ApplicationController
   private
 
   def profile_params
-    params.require(:profile_form).permit(:city_id, :income, { births: [] })
+    params.require(:profile_form).permit(
+      :city_id,
+      :income,
+      { births: [] },
+      :public_assistance_situation,
+      :dependency_situation
+    )
+  end
+
+  def set_public_assistance_situation
+    @public_assistance_situations = FamilySituation.load_public_assistance_situation
+  end
+
+  def set_dependency_situation
+    @dependency_situations = FamilySituation.load_dependency_situation
+  end
+
+  def set_child_situation
+    @child_situations = FamilySituation.load_child_situation
   end
 
   def set_cities
@@ -63,4 +84,5 @@ class ProfilesController < ApplicationController
   def set_births
     @births = profile_params[:births]
   end
+
 end

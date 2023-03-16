@@ -6,6 +6,5 @@ class CreateIncomes < ActiveRecord::Migration[6.0]
 
       t.timestamps
     end
-    add_index :incomes, [:money, :is_myself], unique: true
   end
 end

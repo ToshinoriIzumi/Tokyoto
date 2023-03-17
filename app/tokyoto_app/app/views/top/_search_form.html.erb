@@ -9,8 +9,8 @@
       <%= f.search_field :city_city_name_cont, class: "block mb-4 p-4 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500",placeholder: "記入例（港区）" %>
     </div>
     <div class="flex-1">
-      <%= f.label :incomes_money_gt, "所得額" , class: "inline-block mb-2 text-xl font-medium text-gray-600 dark:text-gray-300" %><p class="inline-block">（単位：万円）<p>
-      <%#= f.number_field :incomes_money_gt, class: "block mb-4 p-4 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500",placeholder: "記入例（300）" %>
+      <%= f.label :income_search, "所得額" , class: "inline-block mb-2 text-xl font-medium text-gray-600 dark:text-gray-300" %><p class="inline-block">（単位：万円）<p>
+      <%= f.number_field :income_search, class: "block mb-4 p-4 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500",placeholder: "記入例（300）" %>
     </div>
     <div class="flex-1">
       <%= f.label :age_search, "子供の年齢" , class: "block mb-2 text-xl font-medium text-gray-600 dark:text-gray-300" %>

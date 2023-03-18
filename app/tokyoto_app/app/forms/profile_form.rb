@@ -23,19 +23,26 @@ class ProfileForm
     user = User.find(id) # find_byのほうが良い？
     return false if invalid?
 
-    user.update(city_id: city_id, income: income)
-    if user.children.present?
-      Child.where(user_id: id).destroy_all
-      create_children
-    else
-      create_children
-    end
+    begin
+      ActiveRecord::Base.transaction do
+        user.update(city_id: city_id, income: income)
+        if user.children.present?
+          Child.where(user_id: id).destroy_all
+          create_children
+        else
+          create_children
+        end
 
-    if user.user_family_situations.present?
-      UserFamilySituation.where(user_id: id).destroy_all
-      create_user_family_situation(user)
-    else
-      create_user_family_situation(user)
+        if user.user_family_situations.present?
+          UserFamilySituation.where(user_id: id).destroy_all
+          create_user_family_situation(user)
+        else
+          create_user_family_situation(user)
+        end
+      end
+    rescue  => e
+      ActiveRecord::Rollback
+      return false
     end
   end
   

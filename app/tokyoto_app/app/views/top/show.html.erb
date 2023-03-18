@@ -6,7 +6,7 @@
   <div class="font-bold text-2xl">申請できる条件は<span id="conditions-supports-count"><%= @support.conditions_supports.count %></span>種類あります。</div>
   <h4 class= "font-bold text-2xl">条件の変更</h4>
   <%= render partial: 'search_conditions_form', locals: { support_id: @support.id } %>
-  <% @support.conditions_supports.each_with_index do |conditions_support, index| %>
+  <% @support.conditions_supports.each do |conditions_support| %>
     <table class="conditions-supports mb-10 table-fixed text-left text-gray-600" id="<%= conditions_support.id %>">
       <thead class="text-sm text-center bg-gray-100">
         <tr>

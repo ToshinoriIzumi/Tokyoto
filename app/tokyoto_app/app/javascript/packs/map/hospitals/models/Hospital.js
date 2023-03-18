@@ -1,5 +1,5 @@
 import Ajax from "./Ajax";
-import { HOSPITAL_API_URL } from "./../config/const";
+import { KOCOTTO_URL } from "./../../../../packs/const";
 
 class Hospital {
     constructor(id, name, latitude, longitude, url, phone_number) {
@@ -13,7 +13,7 @@ class Hospital {
 
     static async search_by(city_id) {
         const res = await Ajax.get(
-            `${HOSPITAL_API_URL}/hospitals/search`,
+            `${KOCOTTO_URL}/hospitals/search`,
             {city_id: city_id}
         );
         return { 

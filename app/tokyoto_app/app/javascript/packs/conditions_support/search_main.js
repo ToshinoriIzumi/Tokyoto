@@ -1,4 +1,5 @@
 import axios from "axios";
+import { KOCOTTO_URL } from "../const";
 
 document.addEventListener('turbolinks:load', () => {
     const searchButton = document.getElementById('change-condition-button');
@@ -13,7 +14,7 @@ document.addEventListener('turbolinks:load', () => {
             }
 
             axios.get(
-                "http://localhost:3000/conditions_supports", {
+                `${KOCOTTO_URL}/conditions_supports`, {
                     params: params
                 }
             ).then((res) => {

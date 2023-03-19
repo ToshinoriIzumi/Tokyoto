@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root "top#index"
+  get "top", to: "top#top"
   get "login", to: "user_sessions#new"
   post "login", to: "user_sessions#create"
   delete "logout", to: "user_sessions#destroy"
@@ -13,9 +14,9 @@ Rails.application.routes.draw do
   get "hospitals/search", to: "hospitals#search"
   get "map/hospitals", to: "map/hospitals#index"
   get "terms_of_use", to: "top#terms_of_use"
-  
+
   get "privacy_policy", to: "top#privacy_policy"
-  
+
   namespace :municipality do
     resources :supports do
       post "preview", on: :collection

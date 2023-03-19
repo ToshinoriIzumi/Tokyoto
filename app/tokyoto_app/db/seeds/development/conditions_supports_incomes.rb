@@ -310,5 +310,66 @@ ConditionsSupportsIncome.create!(
       conditions_support_id: 73,
       income_id: 6
     },
+    #私立幼稚園等保護者補助金-生活保護-270万円以下
+    {
+      id: 62,
+      conditions_support_id: 2,
+      income_id: 2
+    },
+    {
+      id: 63,
+      conditions_support_id: 3,
+      income_id: 2
+    },
+    {
+      id: 64,
+      conditions_support_id: 4,
+      income_id: 2
+    },
+    {
+      id: 65,
+      conditions_support_id: 5,
+      income_id: 2
+    },
+    {
+      id: 66,
+      conditions_support_id: 6,
+      income_id: 2
+    },
+    {
+      id: 67,
+      conditions_support_id: 7,
+      income_id: 2
+    },
+    {
+      id: 68,
+      conditions_support_id: 8,
+      income_id: 2
+    },
+    {
+      id: 69,
+      conditions_support_id: 9,
+      income_id: 2
+    },
+    {
+      id: 70,
+      conditions_support_id: 10,
+      income_id: 2
+    },
+    {
+      id: 71,
+      conditions_support_id: 11,
+      income_id: 2
+    },
+    {
+      id: 72,
+      conditions_support_id: 12,
+      income_id: 2
+    },
+    {
+      id: 73,
+      conditions_support_id: 13,
+      income_id: 2
+    },
   ]
 )

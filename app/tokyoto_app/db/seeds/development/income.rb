@@ -1,5 +1,6 @@
 Income.create!(
   [
+    #所得が関係ない場合
     { id: 1, min: 0, max: 1000000000, is_myself: 0 },
     #生活保護以上で270万円未満の場合
     { id: 2, min: 0, max: 2700000, is_myself: 1 },

@@ -20,9 +20,13 @@ class ProfilesController < ApplicationController
       render :new
     end
   end
-
+  
   def show
-    @city = City.find(current_user.city_id)
+    if current_user.city_id.present?
+      @city = City.find(current_user.city_id)
+    else
+      redirect_to new_profile_path, alert: 'プロフィール情報を登録してください。'
+    end
   end
   
   def edit

@@ -44,13 +44,13 @@ class ConditionsSupportSearchService
       return [] if condition_ids.size == 0
       conditions_support_ids = []
       condition_ids.each do |condition_id|
-        condition_support = ConditionsSupport.find_by(
+        condition_supports = ConditionsSupport.where(
           support_id: support_id,
           condition_id: condition_id,
           city_id: city_id
         )
-        next if condition_support == nil
-        conditions_support_ids.push(condition_support.id)
+        next if condition_supports == nil
+        condition_supports.to_a.each { |condition_support| conditions_support_ids.push(condition_support.id) }
       end
       return conditions_support_ids
     end

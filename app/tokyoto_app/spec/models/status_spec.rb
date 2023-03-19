@@ -1,21 +1,21 @@
 require 'rails_helper'
 
 RSpec.describe Status, type: :model do
-  it '請求者があれば有効であること' do
-    status = Status.new(status: 0)
+  it '条件がある場合、有効であること' do
+    status = build(:status)
     expect(status).to be_valid
   end
-
-  it '請求者がなければ無効であること' do
-    status = Status.new(status: nil)
+  
+  it '条件がない場合、無効であること' do
+    status = build(:status, status: nil)
     status.valid?
-    expect(status.errors[:status]).to include("can't be blank")
+    expect(status.errors[:status]).to include("を入力してください")
   end
-
-  xit '請求者が一意でなければ無効であること' do
-    Status.create(status: 0)
-    status = Status.new(status: 0)
-    status.valid?
-    expect(status.errors[:status]).to include("has been taken")
+  
+  it 'statusが一意でなければ無効であること' do
+    status = create(:status)
+    another_status = build(:status, status: status.status)
+    another_status.valid?
+    expect(another_status.errors[:status]).to include("はすでに存在します")
   end
 end

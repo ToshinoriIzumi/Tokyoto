@@ -8,9 +8,18 @@ table_names = [
   'conditions_supports',
   'hospitals',
   'tags',
-  'support_tags',
+  'supports_tags',
   'conditions_supports_incomes',
   'conditions_supports_statuses',
+  'application_methods',
+  'application_forms',
+  'addinfo_applications',
+  'addinfo_conditions_supports',
+  'conditions_supports_applications_methods',
+  'conditions_supports_applications_forms',
+  'conditions_supports_addinfo_applications',
+  'conditions_supports_addinfo_conditions_supports',
+  'family_situation'
 ]
 
 begin

@@ -1,0 +1,26 @@
+{
+  "application": "/packs/asserts",
+  "entrypoints": {
+    "application": {
+      "": [
+        "/packs/asserts"
+      ]
+    },
+    "map/hospitals/application": {},
+    "map/hospitals/config/const": {},
+    "map/hospitals/controllers/GoogleMapController": {},
+    "map/hospitals/main": {},
+    "map/hospitals/models/Ajax": {},
+    "map/hospitals/models/GoogleMap": {},
+    "map/hospitals/models/Hospital": {},
+    "map/hospitals/views/GoogleMapView": {},
+    "rails_admin": {}
+  },
+  "media/webfonts/fa-solid-900.eot": "/packs/media/webfonts/fa-solid-900-0c6bfc66.eot",
+  "media/webfonts/fa-solid-900.svg": "/packs/media/webfonts/fa-solid-900-37bc7099.svg",
+  "media/webfonts/fa-solid-900.ttf": "/packs/media/webfonts/fa-solid-900-b9625119.ttf",
+  "media/webfonts/fa-solid-900.woff": "/packs/media/webfonts/fa-solid-900-d745348d.woff",
+  "media/webfonts/fa-solid-900.woff2": "/packs/media/webfonts/fa-solid-900-d824df7e.woff2",
+  "vendors~actioncable.js": "/packs/js/vendors~actioncable-48379381bcdf66d52874.chunk.js",
+  "vendors~actioncable.js.map": "/packs/js/vendors~actioncable-48379381bcdf66d52874.chunk.js.map"
+}

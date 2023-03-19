@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :conditions_supports_status do
-    status { nil }
-    conditions_support { nil }
+    association :condition
+    association :status    
   end
 end

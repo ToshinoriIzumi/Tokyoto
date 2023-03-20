@@ -1,4 +1,5 @@
 <div class="mx-5 my-10">
+<<<<<<< HEAD
     <section class= "mb-10 basic-info text-center">
         <h3 class= "font-bold text-4xl"><%= @conditions_support.support.support_name %></h3>
     </section>
@@ -145,6 +146,107 @@
                 </td>
             </tr>
         </tbody>
+=======
+  <section class= "mb-10 basic-info text-center">
+    <h3 class= "font-bold text-4xl"><%= @support.support_name %></h3>
+  </section>
+
+  <div class="font-bold text-2xl">申請できる条件は<span id="conditions-supports-count"><%= @support.conditions_supports.count %></span>種類あります。</div>
+  <h4 class= "font-bold text-2xl">条件の変更</h4>
+  <%= render partial: 'search_conditions_form', locals: { support_id: @support.id } %>
+  <% @support.conditions_supports.each do |conditions_support| %>
+    <table class="conditions-supports mb-10 table-fixed text-left text-gray-600" id="<%= conditions_support.id %>">
+      <thead class="text-sm text-center bg-gray-100">
+        <tr>
+          <th scope="col" class="w-1/6 py-3 px-6">
+            項目
+          </th>
+          <th scope="col" class="py-3 px-6 text-left">
+            内容
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="border-b dark:bg-gray-800">
+          <th scope="row" class="py-4 px-6 font-bold text-center">
+            制度内容
+          </th>
+          <td class="py-4 px-6">
+            <%= @support.content %>
+          </td>
+        </tr>
+        <tr class="border-b dark:bg-gray-800">
+          <th scope="row" class="py-4 px-6 font-bold text-center">
+            対象条件
+          </th>
+          <td class="py-4 px-6">
+            <% conditions_support.condition.statuses.each do |status| %>
+              <p>
+                <%= status.status %>
+              </p>
+            <% end %>
+          </td>
+        </tr>
+        <tr class="border-b dark:bg-gray-800">
+          <th scope="row" class="py-4 px-6 font-bold text-center">
+            制度についての追記事項
+          </th>
+          <td class="py-4 px-6">
+            <% conditions_support.addinfo_conditions_supports.each do |addinfo_conditions_support| %>
+              <p>
+                <%= addinfo_conditions_support.info_content %>
+              </p>
+            <% end %>
+          </td>
+        </tr>
+        <tr class="border-b dark:bg-gray-800">
+          <th scope="row" class="py-4 px-6 font-bold text-center">
+            申請方法
+          </th>
+          <td class="py-4 px-6">
+            <% conditions_support.application_methods.each do |application_method| %>
+              <p>
+                <%= application_method.application_method %>
+              </p>
+            <% end %>
+          </td>
+        </tr>
+        <tr class="border-b dark:bg-gray-800">
+          <th scope="row" class="py-4 px-6 font-bold text-center">
+            申請期限
+          </th>
+
+          <td class="py-4 px-6">
+              <%= conditions_support.user_application_limit %>
+          </td>
+        </tr>
+        <tr class="border-b dark:bg-gray-800">
+          <th scope="row" class="py-4 px-6 font-bold text-center">
+            地区名
+          </th>
+          <td class="py-4 px-6">
+            <%= conditions_support.city.city_name %>
+          </td>
+        </tr>
+        <tr class="border-b dark:bg-gray-800">
+          <th scope="row" class="py-4 px-6 font-bold text-center">
+            支給額(年額)
+          </th>
+          <td class="py-4 px-6">
+            <%= conditions_support.payment %>円
+          </td>
+        </tr>
+        <tr class="border-b dark:bg-gray-800">
+          <th scope="row" class="py-4 px-6 font-bold text-center">
+            公式サイト
+          </th>
+          <td class="py-4 px-6">
+            <%= link_to conditions_support.url, conditions_support.url %>
+          </td>
+        </tr>
+      </tbody>
+>>>>>>> develop
     </table>
-    <%= link_to "制度一覧に戻る", root_path, class: "mx-10" %>
+  <% end %>
+  <%= link_to "制度一覧に戻る", root_path, class: "mx-10" %>
 </div>

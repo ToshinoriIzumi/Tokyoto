@@ -4,4 +4,6 @@ class Status < ApplicationRecord
 
   validates :status, presence: true, uniqueness: true
 
+  scope :load_public_assistance, -> { where("status LIKE ?", "生活保護") }
+  scope :load_children_counts, -> { where("status LIKE ?", "%子%") }
 end

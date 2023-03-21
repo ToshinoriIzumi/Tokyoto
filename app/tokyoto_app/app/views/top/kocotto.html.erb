@@ -1,9 +1,7 @@
 <section class="bg-white dark:bg-gray-900 w-full">
   <section class="bg-yellow-200 w-full">
     <div>
-      <div class="w-full">
-        <%= image_tag('top_image.png') %>
-      </div>
+        <%= image_tag('top_image.png',class: "w-screen bg-cover") %>
     </div>
     <div class="px-6 py-10 mx-10">
       <p class="text-yellow-700 font-bold text-5xl text-center">KOCOTTOって？</p>
@@ -64,17 +62,32 @@
   </svg>
   <section>
     <p class="text-yellow-700 font-bold text-5xl text-right pr-10">わたしたちって？</p>
-    <p class="text-yellow-700 font-bold text-xl text-right pr-10">東京都知事ハッカソンで初W受賞しました。</p>
-    <iframe class="pl-10" width="500" height="300" src="https://www.youtube.com/embed/BzzQ6SJuSbg?start=60" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    <!--iframe width="250" height="150" src="https://www.youtube.com/embed/cYivWAMLeJo?start=10546" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></-iframe-->
-    <div class="text-right pr-24 pb-20">
-      <%= link_to  "のぞいてみる？","https://odhackathon.metro.tokyo.lg.jp/result/", class: "py-2 px-4 bg-orange-300 hover:bg-orange-200 focus:ring-orange-500 focus:ring-offset-orange-200 text-yellow-700 transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg inline-block w-1/4 text-2xl"%>
+    <p class="text-yellow-700 font-bold text-xl text-right pr-10 pt-5 mb-0">東京都知事ハッカソンで初W受賞しました。</p>
+    <div class="flex">
+      <div>
+        <iframe class="pl-10" width="500" height="300" src="https://www.youtube.com/embed/BzzQ6SJuSbg?start=60" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <!--iframe width="250" height="150" src="https://www.youtube.com/embed/cYivWAMLeJo?start=10546" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></-iframe-->
+      </div>
+      <div class="pr-10 px-5 w-full text-right">
+        <div class="pl-5 pb-5">
+        　<p class="text-xl">参加者63組の中からFinalステージ出場</p>
+          <p class="text-xl pl-5">審査員特別賞 行政ニーズ賞</p>
+          <p class="text-xl pl-5">オーディエンス賞</p>
+        </div>
+        <div class="pl-5 text-base">
+          <p>子育てをしているひとり親は<span class="text-yellow-700 font-bold">ひとりじゃない</span>。</p>
+          <p>そんな思いで集まった7個のエンジニアの卵。</p>
+        </div>
+        <div class="text-right p-10">
+        <%= link_to  "のぞいてみる？","https://odhackathon.metro.tokyo.lg.jp/result/", class: "py-2 px-4 bg-orange-300 hover:bg-orange-200 focus:ring-orange-500 focus:ring-offset-orange-200 text-yellow-700 transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg w-1/4 text-2xl"%>
+        </div>
+      </div>
     </div>
   </section>
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
     <path fill="#ffedd5" fill-opacity="1" d="M0,256L34.3,234.7C68.6,213,137,171,206,138.7C274.3,107,343,85,411,85.3C480,85,549,107,617,128C685.7,149,754,171,823,192C891.4,213,960,235,1029,213.3C1097.1,192,1166,128,1234,117.3C1302.9,107,1371,149,1406,170.7L1440,192L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path>
   </svg>
   <section class="bg-orange-200">
-    <p class="text-yellow-700 font-bold text-3xl">みんなの声</p>
+    <!--p class="text-yellow-700 font-bold text-3xl">みんなの声</-p-->
   </section>
 </section>

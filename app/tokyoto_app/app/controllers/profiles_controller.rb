@@ -27,6 +27,13 @@ class ProfilesController < ApplicationController
     else
       redirect_to new_profile_path, alert: 'プロフィール情報を登録してください。'
     end
+
+    @supports = SupportsSearchService.search_by(
+      current_user.family_situations.find_by("situation like '生活保護%'").situation,
+      current_user.family_situations.find_by("situation like '%子'").situation,
+      current_user.city_id
+    )
+    
   end
   
   def edit

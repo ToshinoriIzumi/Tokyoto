@@ -5,9 +5,9 @@
         <%= image_tag('top_image.png') %>
       </div>
     </div>
-    <div class="container px-6 py-10">
-      <p class="text-yellow-700 font-bold text-3xl">KOCOTTOって？</p>
-        <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-16 md:grid-cols-2 xl:grid-cols-3">
+    <div class="px-6 py-10 mx-10">
+      <p class="text-yellow-700 font-bold text-5xl text-center">KOCOTTOって？</p>
+        <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 grid-cols-3">
             <div class="space-y-3">
                 <span class="inline-block p-3 text-yellow-700 bg-blue-100 rounded-full dark:text-white dark:bg-blue-500">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -54,19 +54,22 @@
                 </a>
             </div>
         </div>
-        <%= link_to  "やってみよう！", root_path, class: "py-2 px-4 bg-orange-300 hover:bg-orange-200 focus:ring-orange-500 focus:ring-offset-orange-200 text-yellow-700 w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"%>
+        <div class="mt-16 text-center">
+          <%= link_to  "やってみよう！", root_path, class: "py-2 px-4 bg-orange-300 hover:bg-orange-200 focus:ring-orange-500 focus:ring-offset-orange-200 text-yellow-700 transition ease-in duration-200 text-center font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg inline-block w-1/4 text-2xl"%>
+        </div>
     </div>
   </section>
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
     <path fill="#fef9c3" fill-opacity="1" d="M0,96L48,122.7C96,149,192,203,288,197.3C384,192,480,128,576,106.7C672,85,768,107,864,149.3C960,192,1056,256,1152,256C1248,256,1344,192,1392,160L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
   </svg>
   <section>
-    <p class="text-yellow-700 font-bold text-3xl">わたしたちって？</p>
-    <p class="text-yellow-700 font-bold text-xl">東京都知事ハッカソンで初W受賞しました。</p>
-    <iframe width="250" height="150" src="https://www.youtube.com/embed/BzzQ6SJuSbg?start=60" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    <p>行政ニーズ賞とオーディエンス賞を受賞</p>
-    <iframe width="250" height="150" src="https://www.youtube.com/embed/cYivWAMLeJo?start=10546" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    <%= link_to  "のぞいてみる？","https://odhackathon.metro.tokyo.lg.jp/result/", class: "py-2 px-4 bg-orange-300 hover:bg-orange-200 focus:ring-orange-500 focus:ring-offset-orange-200 text-yellow-700 w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"%>
+    <p class="text-yellow-700 font-bold text-5xl text-right pr-10">わたしたちって？</p>
+    <p class="text-yellow-700 font-bold text-xl text-right pr-10">東京都知事ハッカソンで初W受賞しました。</p>
+    <iframe class="pl-10" width="500" height="300" src="https://www.youtube.com/embed/BzzQ6SJuSbg?start=60" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <!--iframe width="250" height="150" src="https://www.youtube.com/embed/cYivWAMLeJo?start=10546" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></-iframe-->
+    <div class="text-right pr-24 pb-20">
+      <%= link_to  "のぞいてみる？","https://odhackathon.metro.tokyo.lg.jp/result/", class: "py-2 px-4 bg-orange-300 hover:bg-orange-200 focus:ring-orange-500 focus:ring-offset-orange-200 text-yellow-700 transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg inline-block w-1/4 text-2xl"%>
+    </div>
   </section>
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
     <path fill="#ffedd5" fill-opacity="1" d="M0,256L34.3,234.7C68.6,213,137,171,206,138.7C274.3,107,343,85,411,85.3C480,85,549,107,617,128C685.7,149,754,171,823,192C891.4,213,960,235,1029,213.3C1097.1,192,1166,128,1234,117.3C1302.9,107,1371,149,1406,170.7L1440,192L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path>

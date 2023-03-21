@@ -71,7 +71,7 @@ class ProfilesController < ApplicationController
   end
 
   def set_public_assistance_situation
-    @public_assistance_situations = FamilySituation.load_public_assistance_situation
+    @public_assistance_situations = FamilySituation.load_public_assistance_situation.reverse
   end
 
   def set_dependency_situation

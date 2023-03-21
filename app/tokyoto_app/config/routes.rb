@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get "hospitals/search", to: "hospitals#search"
   get "map/hospitals", to: "map/hospitals#index"
   get "terms_of_use", to: "top#terms_of_use"
+  get "conditions_supports", to: "conditions_supports#search"
 
   get "privacy_policy", to: "top#privacy_policy"
 

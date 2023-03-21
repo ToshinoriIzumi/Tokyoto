@@ -1,0 +1,1 @@
+export const KOCOTTO_URL = 'http://localhost:3000';

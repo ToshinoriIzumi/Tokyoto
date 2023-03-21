@@ -3,14 +3,10 @@
     <%= link_to image_tag('kocotto_logo.png', size: '75x75'), root_path%>
     <span class="ml-3 text-xl"> Kocotto</span>
     <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-    <a href="#" class="relative block">
-      <img alt="profil" src="/images/person/1.jpg" class="mx-auto object-cover rounded-full h-16 w-16 "/>
-    </a>
-    <% if current_user.user_name.present? %>
+      <!--a href="#" class="relative block">
+        <%= image_tag 'kocotto_logo.png', class: "mr-5 mx-auto object-cover rounded-full h-16 w-16" %>
+      </!--a-->
       <%= link_to "#{current_user.user_name}さん", profile_path ,class: "mr-5 hover:text-gray-900" %>
-    <% else %>
-      <%= link_to "#{current_user.last_name + current_user.first_name}さん", profile_path ,class: "mr-5 hover:text-gray-900" %>
-    <% end %>
       <%= link_to 'ログアウト', logout_path, method: :delete ,class: "mr-5 hover:text-gray-900" %>
       <%= link_to '病院検索', map_hospitals_path, class: "mr-5 hover:text-gray-900"%>
     </nav>

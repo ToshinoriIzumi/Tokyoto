@@ -11,7 +11,7 @@ RSpec.describe "Users", type: :system do
         click_link '退会する'
       }.to change(User, :count).by(-1)
 
-      expect(current_path).to eq root_path
+      expect(current_path).to eq top_index_path
       within('header') {
         expect(page).to have_content('新規登録')
       }

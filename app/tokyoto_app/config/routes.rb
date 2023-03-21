@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  root "top#index"
+  root "top#kocotto"
   get "kocotto", to: "top#kocotto"
   get "login", to: "user_sessions#new"
   post "login", to: "user_sessions#create"

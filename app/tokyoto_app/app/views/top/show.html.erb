@@ -3,12 +3,22 @@
     <section class= "mb-10 basic-info text-center">
       <h3 class= "font-bold text-4xl"><%= @support.support_name %></h3>
     </section>
-
-    <div class="font-bold text-2xl">申請できる条件は<span id="conditions-supports-count"><%= @support.conditions_supports.count %></span>種類あります。</div>
-    <h4 class= "font-bold text-2xl">条件の変更</h4>
-    <%= render partial: 'search_conditions_form', locals: { support_id: @support.id } %>
-    <% @support.conditions_supports.each do |conditions_support| %>
-      <table class="conditions-supports mb-10 table-fixed text-left text-gray-600" id="<%= conditions_support.id %>">
+  <div class="font-bold text-2xl">申請できる条件は<span id="conditions-supports-count"><%= @support.conditions_supports.count %></span>種類あります。</div>
+  <h4 class= "font-bold text-2xl">条件の変更</h4>
+  <%= render partial: 'search_conditions_form', locals: { support_id: @support.id } %>
+  <% @support.conditions_supports.each_with_index do |conditions_support, index| %>
+    <% bg_class = index.even? ? 'bg-whrite' : 'bg-orange-100' %>
+    <table class="conditions-supports mb-10 table-fixed text-left text-gray-600 <%= bg_class %>" id="<%= conditions_support.id %>">
+      <div class="items-center">
+        <div class="conditions-supports items-center py-4 px-6" id="<%= conditions_support.id %>">
+          <div class="text-3xl font-bold text-center mr-4">
+            支給額(年額)
+          </div>
+          <div class="conditions-supports text-5xl text-center font-bold text-gray-700 dark:text-gray-400" id="<%= conditions_support.id %>">
+            <%= conditions_support.payment %>円
+          </div>
+        </div>
+      </div>
         <thead class="text-sm text-center bg-gray-100">
           <tr>
             <th scope="col" class="w-1/6 py-3 px-6">
@@ -35,7 +45,7 @@
             <td class="py-4 px-6">
               <% conditions_support.condition.statuses.each do |status| %>
                 <p>
-                  <%= status.status %>
+                  <%= replace_head_of_line_to_interpoint(status.status) %>
                 </p>
               <% end %>
             </td>
@@ -46,8 +56,8 @@
             </th>
             <td class="py-4 px-6">
               <% conditions_support.addinfo_conditions_supports.each do |addinfo_conditions_support| %>
-                <p>
-                  <%= addinfo_conditions_support.info_content %>
+                <p class="mb-3 border-b-2">
+                  <%= replace_head_of_line_to_interpoint(addinfo_conditions_support.info_content) %>
                 </p>
               <% end %>
             </td>
@@ -68,7 +78,6 @@
             <th scope="row" class="py-4 px-6 font-bold text-center">
               申請期限
             </th>
-
             <td class="py-4 px-6">
                 <%= conditions_support.user_application_limit %>
             </td>
@@ -82,12 +91,12 @@
             </td>
           </tr>
           <tr class="border-b dark:bg-gray-800">
-            <th scope="row" class="py-4 px-6 font-bold text-center">
-              支給額(年額)
-            </th>
-            <td class="py-4 px-6">
-              <%= conditions_support.payment %>円
-            </td>
+              <th scope="row" class="py-4 px-6 font-bold text-center">
+                  お問い合わせ先
+              </th>
+              <td class="py-4 px-6">
+                  <%= replace_comma_to_interpoint(conditions_support.contact_information) %>
+              </td>
           </tr>
           <tr class="border-b dark:bg-gray-800">
             <th scope="row" class="py-4 px-6 font-bold text-center">
@@ -98,8 +107,7 @@
             </td>
           </tr>
         </tbody>
-      </table>
-    <% end %>
-    <%= link_to "制度一覧に戻る", top_index_path, class: "mx-10" %>
-  </div>
+    </table>
+  <% end %>
+  <%= link_to "制度一覧に戻る", top_index_path, class: "mx-10" %>
 </div>

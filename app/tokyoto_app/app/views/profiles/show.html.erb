@@ -1,20 +1,57 @@
-<h1>プロフィール詳細</h1>
-<div>メールアドレス <%= current_user.email %></div>
-<div>ユーザーネーム <%= current_user.user_name %>さん</div>
-<div>住んでいる地域 <%= show_city_name %></div>
-<div>収入（単位：万円）<%= show_income %>万円</div>
-<div>子どもの生年月日
-  <% current_user.children.each_with_index do |child, index|%>
-    <%= "第" + (index + 1).to_s + "子:" %>
-    <%= child.age %>歳
-  <% end %>
-</div>
-<div>ステータス
-  <% current_user.family_situations.each do |family_situation|%>
-    <%= family_situation.situation %>
-  <% end %>
-</div>
-
-<%= link_to  "プロフィールを編集する", edit_profile_path %>
-<%= link_to "トップページへ", top_index_path %>
-<%= link_to "退会する", user_path(current_user.id), method: :delete, "data-confirm" => "本当に退会しますか？" %>
+<section class="bg-gray-100/50">
+  <div class="container max-w-2xl mx-auto shadow-md min-h-500">
+    <div class="p-4 border-t-2 border-indigo-400 rounded-lg bg-gray-100/5 ">
+      <div class="max-w-sm mx-auto md:w-full md:mx-0">
+        <div class="inline-flex items-center space-x-4">
+          <!--a href="#" class="relative block">
+            <%= image_tag 'kocotto_logo.png', class: "mx-auto object-cover rounded-full h-16 w-16" %>
+          </!--a-->
+          <h1 class="text-gray-600">
+              <%= @user.user_name %>さん
+          </h1>
+        </div>
+      </div>
+    </div>
+    <hr/>
+    <div class="space-y-6 bg-white">
+      <div class="items-center w-full p-4 space-y-4 text-gray-500 md:inline-flex md:space-y-0">
+        <h2 class="max-w-sm mx-auto md:w-1/3">
+            Personal info
+        </h2>
+        <div class="max-w-sm mx-auto space-y-5 md:w-2/3">
+          <div>
+            <div class="relative">
+                居住地域: <%= show_city_name %>
+            </div>
+          </div>
+          <div>
+            <div class="relative ">
+              ユーザーの収入: <%= show_income %>万円
+            </div>
+          </div>
+          <div>
+            <div class="relative ">
+                <% current_user.children.each_with_index do |child, index|%>
+                  <%= "第" + (index + 1).to_s + "子:" %>
+                  <%= child.age %>歳
+                <% end %>
+            </div>
+          </div>
+          <div>
+            <div class="relative ">
+              <p>ステータス:
+              <% current_user.family_situations.each do |family_situation|%>
+                <%= family_situation.situation %>
+              <% end %>
+              </p>
+            </div>
+          </div>
+          <div>
+            <%= link_to  "編集", edit_profile_path, class: "py-2 px-4  bg-blue-600 hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-blue-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg"%>
+            <%= link_to "退会", user_path(current_user.id), method: :delete, "data-confirm" => "本当に退会しますか？", class: "py-2 px-4  bg-pink-600 hover:bg-pink-700 focus:ring-pink-500 focus:ring-offset-pink-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg"%>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

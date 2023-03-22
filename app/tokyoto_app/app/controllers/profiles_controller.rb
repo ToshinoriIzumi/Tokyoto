@@ -20,22 +20,23 @@ class ProfilesController < ApplicationController
       render :new
     end
   end
-  
+
   def show
+    @user = User.find(current_user.id)
     if current_user.city_id.present?
       @city = City.find(current_user.city_id)
     else
       redirect_to new_profile_path, alert: 'プロフィール情報を登録してください。'
     end
   end
-  
+
   def edit
     user = current_user
     @births = []
     user.children.each do |child|
       @births.push(child.birth)
     end
-    
+
     @profile_form = ProfileForm.new(
       id: user.id,
       city_id: user.city_id,
@@ -70,7 +71,7 @@ class ProfilesController < ApplicationController
   end
 
   def set_public_assistance_situation
-    @public_assistance_situations = FamilySituation.load_public_assistance_situation
+    @public_assistance_situations = FamilySituation.load_public_assistance_situation.reverse
   end
 
   def set_dependency_situation

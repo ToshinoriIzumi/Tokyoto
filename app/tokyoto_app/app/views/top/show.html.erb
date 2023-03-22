@@ -9,11 +9,8 @@
   <% @support.conditions_supports.each_with_index do |conditions_support, index| %>
     <% bg_class = index.even? ? 'bg-whrite' : 'bg-orange-100' %>
     <table class="conditions-supports mb-10 table-fixed text-left text-gray-600 <%= bg_class %>" id="<%= conditions_support.id %>">
-      <div class="flex items-center">
-        <div class="conditions-supports w-1/3 text-4xl text-center" id="<%= conditions_support.id %>">
-          <%= "No.#{index+1}" %>
-        </div>
-        <div class="conditions-supports items-center py-4 px-6 w-1/2" id="<%= conditions_support.id %>">
+      <div class="items-center">
+        <div class="conditions-supports items-center py-4 px-6" id="<%= conditions_support.id %>">
           <div class="text-3xl font-bold text-center mr-4">
             支給額(年額)
           </div>

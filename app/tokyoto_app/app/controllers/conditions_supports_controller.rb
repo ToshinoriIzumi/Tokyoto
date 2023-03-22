@@ -1,9 +1,7 @@
-require Rails.root.join('app/services/conditions_supports_search_service.rb')
-
 class ConditionsSupportsController < ApplicationController
     skip_before_action :require_login
     def search
-        conditions_support_ids = ConditionsSupportSearchService.search_by(
+        conditions_support_ids = ConditionsSupportsSearchService.search_by(
             params[:support_id], 
             params[:public_assistance], 
             params[:children_counts],

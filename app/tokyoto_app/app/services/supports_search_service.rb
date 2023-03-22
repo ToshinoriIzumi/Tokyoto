@@ -1,19 +1,18 @@
-class ConditionsSupportsSearchService
+class SupportsSearchService
   class << self
-    def search_by(support_id, public_assistance, children_counts, city_id)
-      search_conditions_supports_id(
+    def search_by(public_assistance, children_counts, city_id)
+      search_supports(
         search_conditions_id(
           search_statues(public_assistance, children_counts)
         ),
-        support_id,
         city_id
       ) 
     end
 
     private
     def search_statues(public_assistance, children_counts)
-      Status.where(id: public_assistance)
-        .or(Status.where(id: children_counts))
+      Status.where(status: public_assistance)
+        .or(Status.where(status: children_counts))
         .select(:id)
         .distinct
     end
@@ -40,19 +39,25 @@ class ConditionsSupportsSearchService
       return condition_ids
     end
 
-    def search_conditions_supports_id(condition_ids, support_id, city_id)
+    def search_supports(condition_ids, city_id)        
       return [] if condition_ids.size == 0
-      conditions_support_ids = []
+      supports = []
+      support_ids = []
       condition_ids.each do |condition_id|
         condition_supports = ConditionsSupport.where(
-          support_id: support_id,
           condition_id: condition_id,
           city_id: city_id
         )
         next if condition_supports == nil
-        condition_supports.to_a.each { |condition_support| conditions_support_ids.push(condition_support.id) }
+        condition_supports.to_a.each do |condition_support|
+          if support_ids.include?(condition_support.support_id)
+            next
+          end
+          supports.push(condition_support.support)
+          support_ids.push(condition_support.support_id)
+        end
       end
-      return conditions_support_ids
+      return supports
     end
   end
 end

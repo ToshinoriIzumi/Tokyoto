@@ -14,28 +14,35 @@ class ProfilesController < ApplicationController
     @profile_form = ProfileForm.new(profile_params)
     @profile_form.id = current_user.id
     if @profile_form.save
-      redirect_to root_path, notice: 'プロフィールを登録しました。'
+      redirect_to top_index_path, notice: 'プロフィールを登録しました。'
     else
       flash.now[:alert] = 'プロフィールを登録できませんでした。'
       render :new
     end
   end
-  
+
   def show
     if current_user.city_id.present?
       @city = City.find(current_user.city_id)
     else
       redirect_to new_profile_path, alert: 'プロフィール情報を登録してください。'
     end
+
+    @supports = SupportsSearchService.search_by(
+      current_user.family_situations.find_by("situation like '生活保護%'").situation,
+      current_user.family_situations.find_by("situation like '%子'").situation,
+      current_user.city_id
+    )
+    
   end
-  
+
   def edit
     user = current_user
     @births = []
     user.children.each do |child|
       @births.push(child.birth)
     end
-    
+
     @profile_form = ProfileForm.new(
       id: user.id,
       city_id: user.city_id,

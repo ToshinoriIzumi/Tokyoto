@@ -27,6 +27,9 @@ class TopController < ApplicationController
   def terms_of_use
   end
 
+  def top
+  end
+
   private
 
   def set_query

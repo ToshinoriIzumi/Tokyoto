@@ -1,8 +1,8 @@
-<div class="mx-5 my-10">
-  <section class= "mb-10 basic-info text-center">
-    <h3 class= "font-bold text-4xl"><%= @support.support_name %></h3>
-  </section>
-
+<div class="container px-3 md:px-5 py-3 mx-auto">
+  <div class="mx-5 my-10">
+    <section class= "mb-10 basic-info text-center">
+      <h3 class= "font-bold text-4xl"><%= @support.support_name %></h3>
+    </section>
   <div class="font-bold text-2xl">申請できる条件は<span id="conditions-supports-count"><%= @support.conditions_supports.count %></span>種類あります。</div>
   <h4 class= "font-bold text-2xl">条件の変更</h4>
   <%= render partial: 'search_conditions_form', locals: { support_id: @support.id } %>
@@ -109,5 +109,5 @@
         </tbody>
     </table>
   <% end %>
-  <%= link_to "制度一覧に戻る", root_path, class: "mx-10" %>
+  <%= link_to "制度一覧に戻る", top_index_path, class: "mx-10" %>
 </div>

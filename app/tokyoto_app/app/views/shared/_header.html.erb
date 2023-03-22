@@ -8,8 +8,9 @@
     <% else %>
       <%= link_to "#{current_user.last_name + current_user.first_name}さん", profile_path ,class: "mr-5 hover:text-gray-900" %>
     <% end %>
-      <%= link_to 'ログアウト', logout_path, method: :delete ,class: "mr-5 hover:text-gray-900" %>
+      <%= link_to '支援検索', top_index_path,class: "mr-5 hover:text-gray-900" %>
       <%= link_to '病院検索', map_hospitals_path, class: "mr-5 hover:text-gray-900"%>
+      <%= link_to 'ログアウト', logout_path, method: :delete ,class: "mr-5 hover:text-gray-900" %>
     </nav>
   </div>
 </header>

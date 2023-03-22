@@ -85,11 +85,6 @@ test:
 #
 production:
   <<: *default
-  database: tokyoto_app_development
-  host: db
-  port: 5432
-  username: rails_user
-  password: giajkeigjagag
   # database: tokyoto_app_production
   # username: tokyoto_app
   # password: <%= ENV['TOKYOTO_APP_DATABASE_PASSWORD'] %>

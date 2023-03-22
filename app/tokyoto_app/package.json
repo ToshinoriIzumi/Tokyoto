@@ -5,8 +5,9 @@
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
-    "@rails/webpacker": "4.3.0",
+    "@rails/webpacker": "5.4.3",
     "axios": "^0.27.2",
+    "node-sass": "^8.0.0",
     "rails_admin": "3.0.0",
     "turbolinks": "^5.2.0"
   },
@@ -14,5 +15,6 @@
   "devDependencies": {
     "@webpack-cli/serve": "^1.7.0",
     "webpack-dev-server": "~3"
-  }
+  },
+  "packageManager": "yarn@1.22.19"
 }

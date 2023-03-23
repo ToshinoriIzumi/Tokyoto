@@ -8,16 +8,24 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to login_path, notice: '新規登録に成功しました'
+      auto_login(@user)
+      redirect_to new_profile_path, notice: 'ユーザー情報を登録しました'
+      info_profile
     else
-      flash.now[:alert] = '新規登録に失敗しました'
+      flash.now[:alert] = 'ユーザー情報の登録に失敗しました。'
       render :new
     end
+  end
+
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    redirect_to :root, notice: '退会しました。'
   end
 
   private
 
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation)
+    params.require(:user).permit(:email, :password, :password_confirmation, :user_name)
   end
 end

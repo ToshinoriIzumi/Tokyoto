@@ -1,0 +1,2 @@
+// ここにGoogleMap用のキーを設定して下さい。
+export const GOOGLE_MAP_API_KEY = '';

@@ -1,13 +1,12 @@
-<!-- component -->
-<header>
-  <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
-    <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-      <%= link_to image_tag('kocotto_logo.png', size: '50x50'), root_path %>
-      
-      <div class="flex items-center lg:order-2">
-        <%= link_to 'ログイン', login_path, class: "text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800" %>
-        <%= link_to '新規登録', new_user_path, class: "text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" %>
-      </div>
-    </div>
-  </nav>
+<header class="text-gray-600 body-font shadow">
+  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <%= link_to image_tag('kocotto_logo.png', size: '75x75'), root_path%>
+    <span class="ml-3 text-xl"> Kocotto</span>
+    <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+      <%= link_to '支援検索', top_index_path,class: "mr-5 hover:text-gray-900" %>
+      <%= link_to '新規登録', new_user_path, class: "mr-5 hover:text-gray-900"%>
+      <%= link_to 'ログイン', login_path, class: "mr-5 hover:text-gray-900"%>
+      <%= link_to '病院検索', map_hospitals_path, class: "mr-5 hover:text-gray-900"%>
+    </nav>
+  </div>
 </header>

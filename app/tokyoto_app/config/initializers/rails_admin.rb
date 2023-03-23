@@ -7,7 +7,7 @@ RailsAdmin.config do |config|
   ## == Devise ==
   config.authenticate_with do
     require_login
-    redirect_to root_path unless current_user.admin?
+    redirect_to top_index_path unless current_user.admin?
   end
 
   config.current_user_method(&:current_user)

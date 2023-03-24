@@ -371,5 +371,180 @@ ConditionsSupportsIncome.create!(
       conditions_support_id: 13,
       income_id: 2
     },
+    {
+      id: 74,
+      conditions_support_id: 100,
+      income_id: 9
+    },
+    {
+      id: 75,
+      conditions_support_id: 100,
+      income_id: 10
+    },
+    {
+      id: 76,
+      conditions_support_id: 101,
+      income_id: 11
+    },
+    {
+      id: 77,
+      conditions_support_id: 101,
+      income_id: 12
+    },
+    {
+      id: 78,
+      conditions_support_id: 102,
+      income_id: 11
+    },
+    {
+      id: 79,
+      conditions_support_id: 102,
+      income_id: 12
+    },
+    {
+      id: 80,
+      conditions_support_id: 103,
+      income_id: 13
+    },
+    {
+      id: 81,
+      conditions_support_id: 103,
+      income_id: 14
+    },
+    {
+      id: 82,
+      conditions_support_id: 104,
+      income_id: 13
+    },
+    {
+      id: 83,
+      conditions_support_id: 104,
+      income_id: 14
+    },
+    {
+      id: 84,
+      conditions_support_id: 105,
+      income_id: 13
+    },
+    {
+      id: 85,
+      conditions_support_id: 105,
+      income_id: 14
+    },
+    {
+      id: 86,
+      conditions_support_id: 106,
+      income_id: 7
+    },
+    {
+      id: 87,
+      conditions_support_id: 106,
+      income_id: 8
+    },
+    # {
+    #   id: 88,
+    #   conditions_support_id: 107,
+    #   income_id: 16
+    # },
+    # {
+    #   id: 89,
+    #   conditions_support_id: 107,
+    #   income_id: 8
+    # },
+    # {
+    #   id: 90,
+    #   conditions_support_id: 108,
+    #   income_id: 17
+    # },
+    # {
+    #   id: 91,
+    #   conditions_support_id: 108,
+    #   income_id: 12
+    # },
+    # {
+    #   id: 92,
+    #   conditions_support_id: 109,
+    #   income_id: 17
+    # },
+    # {
+    #   id: 93,
+    #   conditions_support_id: 109,
+    #   income_id: 12
+    # },
+    # {
+    #   id: 94,
+    #   conditions_support_id: 110,
+    #   income_id: 18
+    # },
+    # {
+    #   id: 95,
+    #   conditions_support_id: 110,
+    #   income_id: 14
+    # },
+    # {
+    #   id: 96,
+    #   conditions_support_id: 111,
+    #   income_id: 18
+    # },
+    # {
+    #   id: 97,
+    #   conditions_support_id: 111,
+    #   income_id: 14
+    # }, 
+    # {
+    #   id: 98,
+    #   conditions_support_id: 112,
+    #   income_id: 18
+    # },
+    # {
+    #   id: 99,
+    #   conditions_support_id: 112,
+    #   income_id: 14
+    # },
+    # {
+    #   id: 100,
+    #   conditions_support_id: 113,
+    #   income_id: 15
+    # },
+    # {
+    #   id: 101,
+    #   conditions_support_id: 113,
+    #   income_id: 8
+    # },
+    {
+      id: 102,
+      conditions_support_id: 114,
+      income_id: 20
+    },
+    {
+      id: 103,
+      conditions_support_id: 115,
+      income_id: 21
+    },
+    {
+      id: 104,
+      conditions_support_id: 116,
+      income_id: 21
+    },
+    {
+      id: 105,
+      conditions_support_id: 117,
+      income_id: 22
+    },
+    {
+      id: 106,
+      conditions_support_id: 118,
+      income_id: 22
+    },
+    {
+      id: 107,
+      conditions_support_id: 119,
+      income_id: 22
+    },
+    {
+      id: 108,
+      conditions_support_id: 120,
+      income_id: 19
+    },
   ]
 )

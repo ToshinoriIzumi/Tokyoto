@@ -2242,5 +2242,112 @@ ConditionsSupportsStatus.create!(
       condition_id: 73,
       status_id: 16
     },
+    
+    {
+      id: 464,
+      condition_id: 100,
+      status_id: 19
+    },
+    {
+      id: 465,
+      condition_id: 100,
+      status_id: 14
+    },
+    {
+      id: 466,
+      condition_id: 101,
+      status_id: 20
+    },
+    {
+      id: 467,
+      condition_id: 101,
+      status_id: 14
+    },
+    {
+      id: 468,
+      condition_id: 102,
+      status_id: 20
+    },
+    {
+      id: 469,
+      condition_id: 102,
+      status_id: 15
+    },
+    {
+      id: 470,
+      condition_id: 103,
+      status_id: 21
+    },
+    {
+      id: 471,
+      condition_id: 103,
+      status_id: 14
+    },
+    {
+      id: 472,
+      condition_id: 104,
+      status_id: 21
+    },
+    {
+      id: 473,
+      condition_id: 104,
+      status_id: 15
+    },
+    {
+      id: 474,
+      condition_id: 105,
+      status_id: 21
+    },
+    {
+      id: 475,
+      condition_id: 105,
+      status_id: 16
+    },
+    {
+      id: 476,
+      condition_id: 106,
+      status_id: 29
+    },
+    {
+      id: 477,
+      condition_id: 106,
+      status_id: 14
+    },
+
+    # {
+    #   id: 437,
+    #   condition_id: 74,
+    #   status_id: 22
+    # },
+    # {
+    #   id: 438,
+    #   condition_id: 74,
+    #   status_id: 23
+    # },
+    # {
+    #   id: 439,
+    #   condition_id: 74,
+    #   status_id: 24
+    # },
+    # {
+    #   id: 440,
+    #   condition_id: 74,
+    #   status_id: 25
+    # },
+    # {
+    #   id: 441,
+    #   condition_id: 74,
+    #   status_id: 26
+    # },
+    # {
+    #   id: 442,
+    #   condition_id: 74,
+    #   status_id: 27
+    # },
+    # {
+    #   id: 443,
+    #   condition_id: 74,
+    #   status_id: 28
+    # },
   ]
 )
